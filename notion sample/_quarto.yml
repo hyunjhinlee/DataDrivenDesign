@@ -1,0 +1,22 @@
+project:
+  type: book
+  output-dir: docs
+
+lang: ko-KR
+
+book:
+  title: "bitPublish를 이용하여 notionsample북만들기"
+  chapters:
+    - index.qmd
+    - chap_exams.qmd
+    - chap_intro_bitpublish.qmd
+    - chap_solve_exercise.qmd
+    - chap_tips.qmd
+
+  cover-image: hexlogo/bitPublish_logo.png    
+bibliography: references.bib
+link-citations: false
+keep-tex: false
+citation_package: biblatex
+biblatexoptions: [backend=biber,nohashothers=true, maxcitenames =2,bibstyle=authoryear,citestyle=authoryear]
+            
