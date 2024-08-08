@@ -1,0 +1,31 @@
+# Load necessary libraries
+library(dplyr)
+library(ggplot2)
+
+# Load the CSV file
+df <- read.csv("health_data.csv")
+
+# Filter data for group A
+df_A <- df %>% filter(group == "A")
+
+# Perform one-sample t-test
+t_test_result <- t.test(df_A$daily_steps, mu = 8000, alternative = "greater")
+
+# Print the result
+print(t_test_result)
+
+# Conclusion based on p-value
+if (t_test_result$p.value < 0.05) {
+  cat("가설이 채택되었습니다: AI 맞춤 관리 기능 도입 후 사용자들의 일일 평균 걸음 수가 8000보를 넘었습니다.\n")
+} else {
+  cat("가설이 기각되었습니다: AI 맞춤 관리 기능 도입 후 사용자들의 일일 평균 걸음 수가 8000보를 넘지 않았습니다.\n")
+}
+
+# Visualize the daily steps distribution
+ggplot(df_A, aes(x = daily_steps)) +
+  geom_histogram(binwidth = 500, fill = "blue", alpha = 0.7) +
+  geom_vline(aes(xintercept = mean(daily_steps)), color = "red", linetype = "dashed", size = 1) +
+  labs(title = "Distribution of Daily Steps for Group A",
+       x = "Daily Steps",
+       y = "Frequency") +
+  theme_minimal()

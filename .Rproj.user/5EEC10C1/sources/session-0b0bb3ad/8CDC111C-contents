@@ -1,0 +1,16 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var paragraphs = document.querySelectorAll("p");
+
+    paragraphs.forEach(function(paragraph) {
+        var text = paragraph.innerHTML;
+        var parts = text.split(">");
+
+        // 모든 > 이전 부분을 강조
+        if (parts.length > 1) {
+            for (let i = 0; i < parts.length - 1; i++) {
+                parts[i] = '<span class="highlight">' + parts[i] + '</span>';
+            }
+            paragraph.innerHTML = parts.join('>');
+        }
+    });
+});

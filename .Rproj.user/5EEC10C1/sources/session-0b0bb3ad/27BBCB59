@@ -1,0 +1,24 @@
+{
+    "id": "27BBCB59",
+    "path": "/cloud/project/aa/_extensions/bit2r/bitPublish/init_environments.R",
+    "project_path": "aa/_extensions/bit2r/bitPublish/init_environments.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1723057184481.0,
+    "source_on_save": false,
+    "relative_order": 26,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1723046598,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1723046598,
+    "read_only": false,
+    "read_only_alternatives": []
+}

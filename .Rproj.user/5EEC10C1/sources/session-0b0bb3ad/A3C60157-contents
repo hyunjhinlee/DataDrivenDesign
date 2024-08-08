@@ -1,0 +1,108 @@
+/* 기본 본문 스타일 */
+body {
+  font-family: Sans-Serif;
+  max-width: 940px;
+  margin: 0 auto;
+  font-size: 16px;
+  padding-bottom: 140px;
+  line-height: 1.6;
+}
+
+/* 단락과 목록의 상하 여백 */
+p, ul, ol {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+/* 목록 들여쓰기 */
+ul, ol {
+  
+  padding-left: 1.5em;
+}
+
+/* 목록 항목의 상하 여백 */
+li {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/* 중첩된 목록의 여백 */
+ul ul, ul ol, ol ul, ol ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/* 제목 (헤딩 없음) */
+.title {
+  font-size: 2.4em;
+  margin-top: 3.2em;
+  margin-bottom: 1.2em;
+  line-height: 1.2;
+  padding-bottom: 0.1em;
+}
+
+/* 큰 카테고리 (# 사용) */
+h1 {
+  font-size: 2.4em;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  line-height: 1.2;
+  padding-bottom: 0.1em;
+}
+
+/* 첫 번째 주 제목의 상단 여백 */
+h1:first-of-type {
+  margin-top: 3.2em;
+}
+
+/* 세부 카테고리 (## 사용) */
+h2 {
+  font-size: 16px;
+  margin-top: 4em;
+  margin-bottom: 1.6em;
+  line-height: 1.6;
+  padding-bottom: 0.2em;
+}
+
+/* h2 폰트 크기 선택지 */
+h2.original {
+  font-size: 20px;
+  margin-top: 4em;
+  margin-bottom: 1.6em;
+  line-height: 2;
+  padding-bottom: 0.2em;
+}
+
+/* 문서 끝 부분 여백 */
+.tail {
+  margin-bottom: 120px;
+}
+
+/* 하이라이트와 설명 스타일 */
+h2.highlight, h3.highlight, h4.highlight, h5.highlight, h6.highlight,
+h2 .highlight, h3 .highlight, h4 .highlight, h5 .highlight, h6 .highlight {
+  color: darkorange !important;
+}
+
+h2.explain, h3.explain, h4.explain, h5.explain, h6.explain,
+h2 .explain, h3 .explain, h4 .explain, h5 .explain, h6 .explain,
+p.explain, p .explain, li.explain, li .explain {
+  color: darkgreen !important;
+}
+
+/* 강조 색상 */
+strong {
+  color: darkorange;
+  font-weight: normal;
+}
+
+/* 강조 오리지널 */
+strong.original {
+  font-weight: bold;
+}
+
+/* callout-warning 스타일 */
+.callout-warning {
+  margin-top: 44px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,26 @@
+project:
+  type: book
+  output-dir: docs
+
+lang: ko-KR
+
+book:
+  title: "bitPublish를 이용하여 한글 책 조판하기"
+  chapters:
+    - part: "머릿말"
+      chapters:
+        - index.qmd
+    - ch1.qmd
+    - references.qmd
+
+toc: true
+bibliography: references.bib
+link-citations: false
+keep-tex: false
+citation_package: biblatex
+biblatexoptions: 
+  - backend=biber
+  - nohashothers=true
+  - maxcitenames=2
+  - bibstyle=authoryear
+  - citestyle=authoryear

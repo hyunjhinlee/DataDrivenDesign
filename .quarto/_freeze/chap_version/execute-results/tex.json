@@ -1,0 +1,19 @@
+{
+  "hash": "639d497d2da72c288d710d2c1d192068",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Version {#sec-version}\n\n\n\n\n\n\n\n\n\n이 장에서는 \\`bitPublish'의 버전에 대한 정보를 제공합니다.\n\n## version 0.1\n\n### version 0.1.2\n\n-   **2023-05-27**\n\n-   예제 문서에 버전 정보를 담은 chapter 추가\n\n    -   chap_version.qmd\n\n## version 0.2\n\n### version 0.2.0\n\n-   **2023-06-01**\n\n-   pdf와 html에서 공통으로 작동하는 정보 블록 정의\n\n    -   infobox\n        -   information, caution, warning, tip\n    -   팬독 청크 이용\n\n-   pdf와 html에서 공통으로 작동하는 이야기 블록 정의\n\n    -   quote_block()\n    -   R 함수 이용\n\n### version 0.2.1\n\n-   **2023-06-05**\n\n-   pdf와 html에서 공통으로 작동하는 타이틀 박스 블록 정의\n\n    -   PDF\n        -   titlebox 명령\n    -   HTML\n        -   titlebox 태그\n    -   멀티 아웃 포맷\n        -   titlebox_block() 함수\n\n### version 0.2.2\n\n-   **2023-06-07**\n\n-   Table 크로스-레퍼런스의 구현 (#31)\n\n-   HTML의 일부 크로스-레퍼런스 미적용 문제 및 Latex 패키지 로드 명령이 출력되는 문제 해결 (#29, thanks to youngjinkim81)\n\n-   chapter label을 LaTeX 형식 대신, 멀티 아웃 포맷을 위해서 마크다운 형식으로 변경\n\n### version 0.2.3\n\n-   **2023-06-11**\n\n-   유니코드 인덱스를 처리하는 방법 개선\n\n    -   초성을 기준으로 찾아보기 정상적으로 동작\n    -   Not Yet\n\n-   예제 블록의 멀티 아웃 포맷 지원 (#36)\n\n    -   Quarto에서 제공하는 정리(theorems)의 변형을 이용\n\n### version 0.2.4\n\n-   **2023-06-22**\n\n-   유니코드 인덱스를 처리하는 방법 개선 (#32, #44 thanks to 이재호)\n\n    -   초성을 기준으로 찾아보기 정상적으로 동작\n\n### version 0.2.5\n\n-   **2023-06-29**\n\n-   HTML 아웃 포맷의 R 그래픽스 비정상 출력 문제 해결 (#30)\n\n    -   ragg 패키지 이용\n\n### version 0.2.6\n\n-   **2023-07-02**\n\n-   참고문헌 reference.bib 출력 관련 이슈 해결 (#46)\n\n    -   HTML 아웃 포맷에서 내용이 없는 참고문헌 chapter 출력문제 해결\n\n-   Github 파일 다운로드로 설치 시의 파일경로 문제 해결 방법 제시 (#45)\n\n    -   예제 문서의 **Troubleshooting** chapter에 기술\n\n### version 0.2.7\n\n-   **2023-07-07**\n\n-   table_with_caption() 오류 수정 (#49)\n\n    -   PDF 아웃 포맷에서 테이블의 헤더(변수 이름)가 `iris` 변수 이름으로 출력되는 문제\n\n### version 0.2.8\n\n-   **2023-07-13**\n\n-   연습문제 서식 개선 및 연습문제 해답 기능 추가 (#38)\n\n    -   연습문제 헤더 사용자 정의 지원\n        -   장(chapter) 레벨과 절(section) 레벨 중에서 선택\n        -   연습문제 이름을 사용자가 정의 가능\n            -   기본 이름은 **\"연습문제\"**이지만, \"Exercise\" 등으로 변경 가능\n    -   예제 본문에 연습문제 및 연습문제 해답 사용방법 추가\n\n### version 0.2.9\n\n-   **2023-08-06**\n\n-   HTML 아웃 포맷에서의 cover-image 사용 예제 추가 (#54)\n\n### version 0.3.0\n\n-   **2023-08-12**\n\n-   HTML 아웃 포맷을 웹북으로 출판하기 위한 데모를 github pages에 deploy (#55)\n\n    -   https://r2bit.com/bitPublish/\n\n-   판형 설정에서 용지크기를 46배판(B5)으로 설정 (#57)\n\n    -   기존에는 용지의 크기가 국배판(A4)였음\n\n-   geometry 패키지의 판형 설정 설명을 추가\n\n### version 0.4.0\n\n-   **2024-03-24**\n\n-   랜더링 시 오류 발생 오류 수정 (#59)\n\n    -   \"\\_extensions/bit2r/bitPublish/init_environments.R\" 파일의\n    -   table_with_caption() 함수 수정\n\n### version 0.4.1\n\n-   **2024-04-09**\n\n-   인용 및 서식에 대한 몇 가지 요청 사항 tips에 반영 (#61)\n\n    -   문서 내 인용 하이퍼 링크 제거\n        -   인쇄용\n    -   그림을 표로 인식시키고, 표의 label을 활용하고 싶음\n        -   이미지이지만 그 내용이 표인 경우\n    -   Code Script background\n        -   배경색이 흐려서 일반 프린터 출력 시 잘 보이지 않음 / 구분이 안됨\n\n### version 0.4.2\n\n-   **2024-06-08**\n\n-   서식 (소제목) 색상 변경 (#62)\n\n    -   Section, Subsection의 색상 변경\n        -   bitPublish.tex 파일 수정\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

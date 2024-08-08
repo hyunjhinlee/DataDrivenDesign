@@ -1,0 +1,84 @@
+/* 기본 본문 스타일 */
+body {
+  font-family: Sans-Serif;
+  max-width: 940px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  font-size: 16px; /* 기본 글자 크기 */
+  padding-bottom: 140px; /* 하단 여백 */
+  line-height: 1.6; /* 줄 간격 */
+}
+
+/* 단락과 목록의 상하 여백 */
+p, ul, ol {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+/* 목록 들여쓰기 */
+ul, ol {
+  padding-left: 1.5em;
+}
+
+/* 목록 항목의 상하 여백 */
+li {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/* 중첩된 목록의 여백 */
+ul ul, ul ol, ol ul, ol ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/* 주 제목 스타일 */
+h1 {
+  font-size: 2.4em; /* 글자 크기 */
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  line-height: 1.2;
+  padding-bottom: 0.1em;
+}
+
+/* 첫 번째 주 제목의 상단 여백 */
+h1:first-of-type {
+  margin-top: 3.2em;
+}
+
+/* h2 스타일 */
+h2 {
+  font-size: 16px; /* 본문과 동일한 글자 크기 */
+  margin-top: 4em; /* 상단 여백 확대 */
+  margin-bottom: 1.6em; /* 구분자와 본문 사이의 여백 확대 */
+  line-height: 1.6; /* 본문과 동일한 줄 간격 */
+  padding-bottom: 0.2em;
+}
+
+/* 문서 끝 부분 여백 */
+.tail {
+  margin-bottom: 120px;
+}
+
+/* 하이라이트와 설명 스타일 */
+h2.highlight, h3.highlight, h4.highlight, h5.highlight, h6.highlight,
+h2 .highlight, h3 .highlight, h4 .highlight, h5 .highlight, h6 .highlight {
+  color: darkorange !important;
+}
+
+h2.explain, h3.explain, h4.explain, h5.explain, h6.explain,
+h2 .explain, h3 .explain, h4 .explain, h5 .explain, h6 .explain,
+p.explain, p .explain, li.explain, li .explain {
+  color: darkgreen !important;
+}
+
+/* 강조 색상 */
+strong {
+  color: #ff6347; /* 강조 색상 설정 (Tomato) */
+}
+
+/* callout-warning 스타일 */
+.callout-warning {
+  margin-top: 44px;
+  margin-bottom: 20px;
+}
+

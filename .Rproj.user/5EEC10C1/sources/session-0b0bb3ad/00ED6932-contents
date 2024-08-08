@@ -1,0 +1,33 @@
+# Set seed for reproducibility
+set.seed(42)
+
+# Number of samples
+n_samples <- 100
+
+# Group A (AI 맞춤 관리 기능 도입 후)
+daily_steps_a <- rnorm(n_samples, mean = 8500, sd = 1000)
+sleep_hours_a <- rnorm(n_samples, mean = 7, sd = 1)
+water_intake_a <- rnorm(n_samples, mean = 2.5, sd = 0.5)
+exercise_minutes_a <- rnorm(n_samples, mean = 150, sd = 30)
+stress_level_a <- rnorm(n_samples, mean = 4, sd = 1)
+
+# Group B (AI 맞춤 관리 기능 도입 전)
+daily_steps_b <- rnorm(n_samples, mean = 7500, sd = 1000)
+sleep_hours_b <- rnorm(n_samples, mean = 6.5, sd = 1)
+water_intake_b <- rnorm(n_samples, mean = 2, sd = 0.5)
+exercise_minutes_b <- rnorm(n_samples, mean = 120, sd = 30)
+stress_level_b <- rnorm(n_samples, mean = 5, sd = 1)
+
+# Create data frame
+data <- data.frame(
+  group = rep(c("A", "B"), each = n_samples),
+  daily_steps = c(daily_steps_a, daily_steps_b),
+  sleep_hours = c(sleep_hours_a, sleep_hours_b),
+  water_intake = c(water_intake_a, water_intake_b),
+  exercise_minutes = c(exercise_minutes_a, exercise_minutes_b),
+  stress_level = c(stress_level_a, stress_level_b)
+)
+
+# Save to CSV
+write.csv(data, "health_data.csv", row.names = FALSE)
+

@@ -1,0 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const highlights = document.querySelectorAll('.highlight');
+  
+  highlights.forEach(highlight => {
+    highlight.addEventListener('click', function() {
+      this.style.fontWeight = this.style.fontWeight === 'bold' ? 'normal' : 'bold';
+    });
+  });
+
+  const headings = document.querySelectorAll('h2, h3');
+  
+  headings.forEach(heading => {
+    heading.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    });
+  });
+});
