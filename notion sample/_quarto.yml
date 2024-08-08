@@ -4,14 +4,15 @@ project:
 
 lang: ko-KR
 
+
 book:
   title: "bitPublish를 이용하여 notionsample북만들기"
   chapters:
     - index.qmd
-    - chap_exams.qmd
-    - chap_intro_bitpublish.qmd
-    - chap_solve_exercise.qmd
-    - chap_tips.qmd
+    - 1-1 UX 디자인의 오늘과 변화의 방향.qmd
+    - 1-2 UX 디자인과 데이터, AI.qmd
+    - 1-3 데이터 기반 디자인 (Data Driven Design).qmd
+
 
   cover-image: hexlogo/bitPublish_logo.png    
 bibliography: references.bib
