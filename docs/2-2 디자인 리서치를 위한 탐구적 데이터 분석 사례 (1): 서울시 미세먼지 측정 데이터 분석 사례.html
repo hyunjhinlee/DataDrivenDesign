@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.53">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="이현진">
+
+<title>6&nbsp; 2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례 – 데이터 기반 디자인과 A/B 테스팅</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./2-3 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례.html" rel="next">
+<link href="./2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis).html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis).html"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></a></li><li class="breadcrumb-item"><a href="./2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">데이터 기반 디자인과 A/B 테스팅</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/hyunjhinlee/DataDrivenDesign" title="소스 코드" class="quarto-navigation-tool px-1" aria-label="소스 코드"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="리더 모드 전환">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">머릿말: 이 책에서 다루는 것과 다루지 않는 것</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>part 1. UX 디자인과 데이터</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-1 UX 디자인의 오늘과 변화의 방향.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">1-1. UX 디자인의 오늘과 변화의 방향</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-2 UX 디자인과 데이터, AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">1-2. UX 디자인과 데이터, AI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-3 데이터 기반 디자인 (Data Driven Design).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">1-3. 데이터 기반 디자인 (Data Driven Design)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2-3 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">2-3 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2-4 EDA를 위한 데이터 분석 도구들.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">2-4 EDA를 위한 데이터 분석 도구들</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2-5 Lean UX 프로세스와 데이터 기반 디자인.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">2-5 Lean UX 프로세스와 데이터 기반 디자인</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#미세먼지-정보-앱-디자인을-위한-미세먼지-데이터-분석-사례-개요" id="toc-미세먼지-정보-앱-디자인을-위한-미세먼지-데이터-분석-사례-개요" class="nav-link active" data-scroll-target="#미세먼지-정보-앱-디자인을-위한-미세먼지-데이터-분석-사례-개요"><span class="header-section-number">6.0.1</span> 미세먼지 정보 앱 디자인을 위한 미세먼지 데이터 분석 사례 개요</a></li>
+  <li><a href="#유사-앱-서비스에-대한-앱스토어의-사용자-평가-데이터로-사용자-니즈-발견하기" id="toc-유사-앱-서비스에-대한-앱스토어의-사용자-평가-데이터로-사용자-니즈-발견하기" class="nav-link" data-scroll-target="#유사-앱-서비스에-대한-앱스토어의-사용자-평가-데이터로-사용자-니즈-발견하기"><span class="header-section-number">6.0.2</span> 1) 유사 앱 서비스에 대한 앱스토어의 사용자 평가 데이터로 사용자 니즈 발견하기</a></li>
+  <li><a href="#서울시-미세먼지-측정-데이터에-대한-탐구적-분석-인사이트-도출" id="toc-서울시-미세먼지-측정-데이터에-대한-탐구적-분석-인사이트-도출" class="nav-link" data-scroll-target="#서울시-미세먼지-측정-데이터에-대한-탐구적-분석-인사이트-도출"><span class="header-section-number">6.0.3</span> 2) 서울시 미세먼지 측정 데이터에 대한 탐구적 분석 인사이트 도출</a></li>
+  <li><a href="#미세먼지-측정-데이터의-변수-현황-및-디자인-인사이트" id="toc-미세먼지-측정-데이터의-변수-현황-및-디자인-인사이트" class="nav-link" data-scroll-target="#미세먼지-측정-데이터의-변수-현황-및-디자인-인사이트"><span class="header-section-number">6.0.4</span> 3) 미세먼지 측정 데이터의 변수 현황 및 디자인 인사이트</a></li>
+  <li><a href="#데이터-변수-패턴-기반의-디자인-컨셉-도출" id="toc-데이터-변수-패턴-기반의-디자인-컨셉-도출" class="nav-link" data-scroll-target="#데이터-변수-패턴-기반의-디자인-컨셉-도출"><span class="header-section-number">6.0.5</span> 4) 데이터 변수 패턴 기반의 디자인 컨셉 도출</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/hyunjhinlee/DataDrivenDesign/edit/main_ym/2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/hyunjhinlee/DataDrivenDesign/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis).html"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></a></li><li class="breadcrumb-item"><a href="./2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>앞 장에서 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일반적인 값과 비정상적인 값의 상태, 변수 간의 상관관계와 구조를 확인할 수 있다고 하였습니다. 이번에는 실제 데이터의 탐구적 분석 사례를 통하여 변수와 값의 현황과 패턴을 어떻게 도출하는지 살펴보도록 하겠습니다.</p>
+<section id="미세먼지-정보-앱-디자인을-위한-미세먼지-데이터-분석-사례-개요" class="level3" data-number="6.0.1">
+<h3 data-number="6.0.1" class="anchored" data-anchor-id="미세먼지-정보-앱-디자인을-위한-미세먼지-데이터-분석-사례-개요"><span class="header-section-number">6.0.1</span> 미세먼지 정보 앱 디자인을 위한 미세먼지 데이터 분석 사례 개요</h3>
+<p>다음의 데이터 분석 사례는 서울의 미세먼지 현황과 예보를 사용자들의 정보 요구에 맞게 안내해주는 앱 서비스를 디자인한다는 가정하에 공공 데이터(Pulblic data)로 공개되어 있는 서울시 미세먼지 측정 데이터를 탐구적 데이터 분석 기법을 사용하여 미세먼지 정보 앱 서비스 디자인을 위한 디자인 인사이트를 도출한 사례입니다. 이 사례는 빅데이터의 탐구적 분석 결과를 어떻게 디자인에 반영할 수 있는지를 연구하고자 제작한 가상 사례입니다.</p>
+<p>분석 사례에 사용한 공공 데이터는 다음과 같습니다.</p>
+<ul>
+<li>서울 25개 측정소의 10년간 미세먼지 현황 데이터 (2008-2018년, 10년간의 측정데이터)</li>
+<li>2018년 서울 25개 구의 시간별 미세먼지 및 기타 오염물질 측정값</li>
+<li>서울시 미세먼지/ 오염물질 측정소의 주소 정보</li>
+<li>2018년 서울기상관측소의 날씨 데이터 (온도, 습도, 풍향)</li>
+</ul>
+<p>여기에 서비스에 대한 사용자 니즈 관련 정보를 수집하기 위하여 목표 서비스와 비슷한 유사 앱 서비스에 대한 앱스토어의 사용자 평가 데이터 (‘미세미세’와 ‘에어비주얼’ 앱의 사용자 평가 데이터)도 분석하였습니다.</p>
+<p>이 데이터들을 통하여 서비스의 사용자 니즈를 도출하고, 사용자의 미세먼지 정보 요구를 만족하기 위하여 미세먼지 현황과 미세먼지 예보 정보를 어떻게 제공해야 하는지를 데이터 분석을 통하여 발견하였고, 이 인사이트들을 앱디자인의 콘셉트에 반영하였습니다.</p>
+</section>
+<section id="유사-앱-서비스에-대한-앱스토어의-사용자-평가-데이터로-사용자-니즈-발견하기" class="level3" data-number="6.0.2">
+<h3 data-number="6.0.2" class="anchored" data-anchor-id="유사-앱-서비스에-대한-앱스토어의-사용자-평가-데이터로-사용자-니즈-발견하기"><span class="header-section-number">6.0.2</span> 1) 유사 앱 서비스에 대한 앱스토어의 사용자 평가 데이터로 사용자 니즈 발견하기</h3>
+<p>다음의 [표 1]은 미세먼지 앱 ‘미세미세’, ’에어비주얼’의 앱 스토어 평가 데이터 내용 및 언급 건수입니다. 앱의 디자인은 자주 업데이트 되고, 여러 버전의 디자인 평가가 섞이게 되면 신뢰성이 떨어지므로 연구 시점인 2021년에 운영중인 디자인 버전에 대한 평가 데이터를 수집했습니다. (데이터 수집 기간: 2021.3.1-2021.5.31)</p>
+<p>사용자들의 앱 평가 내용을 사용자 정보 데이터와 앱 사용 시점 데이터, 평가에서 언급한 서비스 내용으로 분류하여 앱의 사용자 경험과 관련한 주요 키워드를 도출했습니다.</p>
+<p>[표 1] 미세먼지 앱 ‘미세미세’, ’에어비주얼’의 앱 스토어 평가 데이터 내용 및 언급 건수</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>주요 데이터 변수</th>
+<th></th>
+<th>미세미세 앱 평가내용 (총 188건 중 언급 건수)</th>
+<th>에어비주얼 앱 평가내용(총 109건 중 언급건수)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>사용자 데이터</td>
+<td>질병/가족구성 등</td>
+<td>폐질환(2)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>천식 / 비염 등 질병(3) 해외서 귀국(1) 육아(1) 온 가족 사용(3) | 육아(1) 타지역 친척 확인(1) | | 사용 상황 데이터 | 사용 시점 등 | 아침(3) 외출(1) 수시확인(2) | 해외 정보 확인(3) 운동, 야외활동(1) 아침(2) 환기(2) 외출(2) 수시확인(4) | | 서비스 내용 데이터 | 서비스 불만 및 오류 | 접속 오류(9) 위젯 불만 / 오류(11) 지도표기 오류(11) 시간표기 오류(5) 기타(7) | 위치 표기 오류(5) 와치 연동 오류(4) 위젯 오류(3) 기타(3) | | | 신뢰성 | 신뢰함(16) 신뢰성 제기(8) | 신뢰함(14) 신뢰성 제기(1) | | | 앱의 장점 | 편리한 디자인(22) 한눈에 보임(9) 상세 설명(6) 캐릭터 표현(8) 알림(4) | 편리한 디자인(4) 한눈에 보임(2) 상세 설명(7) 지역 정보(6) 바람 방향 정보(2) | | | 가치평가 (추천 / 감사 등) | 감사(29) 좋음(41) 잘 사용중(20) 추천 / 필수(14) | 감사(10) 좋음(28) 잘 사용중(5) 추천 / 필수(4) |</p>
+<p>앱 평가 키워드 분석을 통하여 제공 정보의 신뢰성과 정확성, 요약 설명과 상세 설명이 포함된 정보의 설명성이 중요한 가치라는 것을 발견했고, 신뢰성, 정확성, 설명성을 높이기 위하여 어떻게 정보를 제공해야하는지를 미세먼지 측정 데이터의 탐구적 분석을 통하여 알아보고자 합니다.</p>
+</section>
+<section id="서울시-미세먼지-측정-데이터에-대한-탐구적-분석-인사이트-도출" class="level3" data-number="6.0.3">
+<h3 data-number="6.0.3" class="anchored" data-anchor-id="서울시-미세먼지-측정-데이터에-대한-탐구적-분석-인사이트-도출"><span class="header-section-number">6.0.3</span> 2) 서울시 미세먼지 측정 데이터에 대한 탐구적 분석 인사이트 도출</h3>
+<ul>
+<li>변수와 값의 개념</li>
+</ul>
+<p>변수(Variable)는 데이터를 구성하는 각각의 항목을 의미합니다. 예를 들어, 사람의 키, 몸무게, 나이 등이 변수입니다. 이 데이터를 통해 다양한 정보를 얻을 수 있습니다. 이번에는 서울시 미세먼지 측정 데이터의 변수에 대해 알아보겠습니다. 값 (Value)은 변수가 가질 수 있는 실제 데이터를 의미합니다. 예를 들어, 사람의 키라는 변수의 값은 170cm, 180cm 등이 될 수 있습니다.</p>
+<p>[표 2]를 보면 시간, 측정소 번호, 미세먼지 값, 초미세먼지 값 등의 변수에 2018-01-01 00:00:00, 101, 29, 17 과 같이 한 사례에 측정된 값들이 1행에 할당되어 있습니다. 그리고 각 값은 시간, 숫자, 텍스트 등의 표현 형식을 가지며, 표현 형식에 따라 분석 방법이나 분석 결과가 달라지게 됩니다. 이렇게 변수 별로 동일한 형식의 값을 여러 사례 수집한 데이터를 분석함으로써 우리는 측정 시간과 측정 장소 별 미세먼지 농도의 현황과 같은 유용한 정보를 얻을 수 있습니다.</p>
+<p>[표 2] 서울시 미세먼지 측정 데이터(위)와 날씨 데이터(아래)의 변수 및 값의 형식</p>
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>시간(월,일,시간)</th>
+<th>측정소 번호</th>
+<th>미세먼지 값(10pm)</th>
+<th>초미세먼지 값(2.5pm)</th>
+<th>월(달)</th>
+<th>시간(시)</th>
+<th>측정소 위치(구)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2018-01-01</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>00:00:00</td>
+<td>101</td>
+<td>29</td>
+<td>17</td>
+<td>1</td>
+<td>0</td>
+<td>종로구</td>
+</tr>
+</tbody>
+</table>
+<p>서울 25개 측정소의 2018년 미세먼지 데이터 : 209,785개의 측정값 (서울 25개 측정소의 2008~2018년 10년간 미세먼지 데이터 : 2,150,195개의 측정값도 같은 형식임.)</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>시간(월,일,시간)</th>
+<th>기온</th>
+<th>풍속</th>
+<th>풍향</th>
+<th>습도</th>
+<th>풍향이름</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2018-01-01</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>00:00:00</td>
+<td>-3.2</td>
+<td>0.5</td>
+<td>110</td>
+<td>40</td>
+<td>동남동</td>
+</tr>
+</tbody>
+</table>
+<p>서울 기상 관측소 (108번 측정소)의 2018년 날씨 데이터 : 8,740개의 측정값</p>
+<ul>
+<li>1년 간의 시간 변화에 따른 미세먼지량의 변화를 선 그래프로 표현한 데이터 시각화 사례</li>
+</ul>
+<p>[표 2]의 시간 변수와 미세먼지 값, 초미세먼지 값 변수에 대한 값의 변화를 그래프로 시각화하면 다음과 같습니다. 이 그래프를 보고 전체적으로 x축의 4월, 12월 주변 구간에서 측정량이 높게 나타나고, 여름에는 미세먼지량이 적게 나타나고 있어 미세먼지 측정량은 계절 차이가 있다고 할 수 있습니다. 전체적으로 미세먼지(빨강) 그래프가 위쪽에 자리하여 측정량이 많고, 측정량의 변동 폭도 큼을 볼 수 있습니다. 매우 높은 수치를 보여주는 지점들도 미세먼지 측정량(빨강)입니다. 그에 비하여 초미세먼지(파랑)는 변동이 작고 고르게 발생하고 있는 현황을 발견할 수 있습니다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="mmm.png" class="img-fluid figure-img"></p>
+<figcaption>[그림 5] 2018년 서울시 미세먼지(적색)와 초미세먼지(청색)량의 측정값 현황</figcaption>
+</figure>
+</div>
+<p>[그림 5] 2018년 서울시 미세먼지(적색)와 초미세먼지(청색)량의 측정값 현황</p>
+<ul>
+<li>2018년 1-5월의 월별 일간 미세먼지 측정량 변화폭을 표현한 데이터 시각화 그래프 사례</li>
+</ul>
+<p>아래 그림은 미세먼지가 검출량이 높은 1~5월의 각 월별로 매일의 미세먼지 검출량의 범위가 드러나도록 한 그래프입니다. 막대 처럼 보이는 그래프 부분은 실제는 막대가 아니고 하루 동안의 미세먼지 측정량을 점으로 표현한 것이 모여서 막대처럼 보이고 있습니다. 시간 데이터 값을 월, 일로 분리하면 개별 하루의 측정 변화를 알아볼 수 있습니다. 이 그래프에서 4월 6일의 측정량 변화가 매우 큼을 확인하고, 4월 6일의 시간 별 측정 데이터를 시각화 하게 되었습니다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aaa.png" class="img-fluid figure-img"></p>
+<figcaption>[그림 6] 2018년 상반기(1-5월) 일별 미세먼지 측정량:미세먼지 시즌의 일별 측정량 변화를 보여준다. (회색 영역은 한국환경공단 기준 ‘미세먼지 나쁨’ 단계 범위)</figcaption>
+</figure>
+</div>
+<p>[그림 6] 2018년 상반기(1-5월) 일별 미세먼지 측정량:미세먼지 시즌의 일별 측정량 변화를 보여준다. (회색 영역은 한국환경공단 기준 ‘미세먼지 나쁨’ 단계 범위)</p>
+<ul>
+<li>2018년 4월 6일 하루 동안의 서울시 지역구별 미세먼지 측정량의 시각화 그래프 사례</li>
+</ul>
+<p>4월 6일의 미세먼지는 일간 변화량이 크고, 매우 나쁨 단계의 수치가 특정 시간대(오전 10시경~오후11시경)에 집중되어 있습니다. 시간 별 측정량 차이가 크므로 미세먼지 대표값을 표현할 때 일평균 값을 쓰면 안된다는 것을 알 수 있습니다. 그리고 측정량을 꺾은선으로 표현할 때 점차 높아졌다가 낮아지는 흐름이 발견되므로 시간을 구간으로 나누어 측정량 예측 공지를 할 수 있을 것입니다.</p>
+<p>측정소 지역별(구별) 특징을 보면 측정량을 다르지만, 시간별 측정 패턴이 다르지는 않아서 측정량의 흐름이 지역별로 동일하게 유지되고 있습니다. 매우 나쁨 단계의 측정량 범위(회색 영역 위쪽)가 너무 넓고, 같은 단계 안에서 측정량에 큰 차이가 존재합니다. 너무 넓은 변화 범위가 같은 단계로 표현되므로 매우 나쁨 단계를 더 나누어 세분화 표기할 필요가 있습니다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="bbb.png" class="img-fluid figure-img"></p>
+<figcaption>[그림 7]. 2018년 4월 6일(년간 미세먼지가 가장 심했던 날)의 시간별, 구별(지역별) 미세먼지 측정 현황(회색 영역은 한국환경공단 기준 ‘미세먼지 나쁨’ 범위)</figcaption>
+</figure>
+</div>
+<p>[그림 7]. 2018년 4월 6일(년간 미세먼지가 가장 심했던 날)의 시간별, 구별(지역별) 미세먼지 측정 현황(회색 영역은 한국환경공단 기준 ‘미세먼지 나쁨’ 범위)</p>
+<ul>
+<li>서울시 지역구별 미세먼지 아주 나쁨 값이 관측된 횟수 비교 시각화 사례</li>
+</ul>
+<p>아래 그림은 미세먼지 아주 나쁨 단계 값이 측정된 횟수를 비교한 막대 그래프입니다. 몇 개 지역은 미세먼지 아주 나쁨 상태가 더 자주 발생하고 있음을 알 수 있고, 지역별로 횟수 차이가 존재합니다. 그러므로 특정 지역에 거주하거나 방문하는 경우에는 좀 더 적극적으로 미세먼지 상황 정보를 제공할 필요가 있어 보입니다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ccc.png" class="img-fluid figure-img"></p>
+<figcaption>[그림 8].2018년 서울시 지역구별 미세먼지 ‘아주 나쁨’ 기준 이상 값이 측정된 횟수표</figcaption>
+</figure>
+</div>
+<p>[그림 8].2018년 서울시 지역구별 미세먼지 ‘아주 나쁨’ 기준 이상 값이 측정된 횟수표</p>
+<p>본 사례에서는 예시와 같이 다양한 변수 별, 변수 간 데이터 시각화 실험을 통하여 25건의 미세먼지와 초미세먼지 관련 변수들의 현황과 관계 패턴 및 인사이트들을 발견할 수 있었습니다. 탐구적 데이터 분석 작업의 특징은 데이터의 변수 별, 변수 간 시각화를 순차적으로 해보고, 의미 해석을 한 뒤, 그 다음에 어떤 시각화를 진행할지를 작업 과정 중에 판단하고, 앞선 분석에서 제기된 질문에 대한 답을 구하면서 단계적으로 진행하는 특징이 있습니다. 데이터 분석의 순차적이고, 가변적인 작업 과정은 디자인 리서치의 방법에서도 공통적으로 발견되는 특징입니다.</p>
+</section>
+<section id="미세먼지-측정-데이터의-변수-현황-및-디자인-인사이트" class="level3" data-number="6.0.4">
+<h3 data-number="6.0.4" class="anchored" data-anchor-id="미세먼지-측정-데이터의-변수-현황-및-디자인-인사이트"><span class="header-section-number">6.0.4</span> 3) 미세먼지 측정 데이터의 변수 현황 및 디자인 인사이트</h3>
+<p>[표 3]은 탐구적 데이터 분석을 통하여 발견한 서울시 미세먼지, 초미세먼지 데이터의 현황을 목록화하고, 각 결과를 바탕으로 디자인 인사이트를 도출한 사례입니다. 디자인 인사이트를 도출할 때는 1)의 사용자 니즈 발견에서 도출한 정보의 신뢰성, 정확성, 설명성 키워드를 연계하여 아이디어를 개발합니다.</p>
+<p>[표 3] 미세먼지 및 초미세먼지 측정 데이터의 질문 사항과 분석 결과 및 데이터 패턴을 반영한 디자인 인사이트</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>주요 변수관련 데이터의 질문 사항: 신뢰성, 데이터 제공 시점(년,월,일,시간)별 현황, 정보 설명성(요약, 상세(날씨, 지역)</th>
+<th>분석 결과: 변수 별 값의 현황과 변수 간 상관관계</th>
+<th>데이터 변수 패턴을 반영하는 디자인 인사이트</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>미세먼지량과 초미세먼지량은 서로 어떤 관계가 있는가.</td>
+<td>대체로 양의 상관관계에 있으나 기준값 이상의 초미세먼지가 기준값 이상의 미세먼지 보다 훨씬 자주 발생한다.</td>
+<td>미세먼지와 초미세먼지 데이터 패턴이 다르므로 내용을 따로 표현하고, 각 패턴에 맞는 표현 방법을 사용한다.</td>
+</tr>
+<tr class="even">
+<td>년간 미세먼지와 초미세먼지 현황은 어떤 특징을 가지나?</td>
+<td>각 해의 상반기(4월)까지 먼지 발생이 높고, 5-10월까지는 발생량이 낮다가 11월부터 높아진다. 초미세먼지도 같은 패턴을 보이며, 일별 변동이 크다.</td>
+<td>월별 미세먼지 발생 시즌에 따라 다른 표현으로 안내하는 정보 서비스가 필요하다. 발생량이 낮은 기간에는 앱 사용도가 낮을 것이다.</td>
+</tr>
+<tr class="odd">
+<td>월간 미세먼지와 초미세먼지 현황은 어떤 특징을 가지나?</td>
+<td>월 별 차이가 크다. 초미세먼지도 상반기가 많으나, 월별 먼지량의 차이가 상대적으로 작다.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>가을을 제외한 대부분의 달에서 기준량을 초과한다.</td>
+<td>초미세먼지 정보는 연중 중요도가 지속적으로 높고, 대부분 나쁨 기준량을 초과하여 경각심을 줄 필요가 있다.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>월간 미세면지와 시간별 미세먼지 현황은 어떤 관련성이 있나?</td>
+<td>미세먼지가 적은 달은 시간별 변동이 크지 않으나, 미세먼지량이 많은 달은 시간별 변동량이 크다.</td>
+<td>미세먼지 시즌에는 시간 별 측정량을 강조해야 한다.</td>
+</tr>
+<tr class="even">
+<td>미세먼지의 시간별 변화에 어떤 패턴이 있는가?</td>
+<td>미세먼지가 많은 날은 특정 시간 대에 먼지량이 집중되며, 아주 나쁨 수준에 매우 큰 편차가 존재한다. 기준 값보다 3-4배 많은 날도 있다.</td>
+<td>현재의 환경 공단 기준 4단계 경보는 아주 나쁨 단계의 심각성을 반영하지 못한다. 단계 구간의 변경이 필요하다.</td>
+</tr>
+<tr class="odd">
+<td>초미세먼지의 시간 별 변화에 어떤 패턴이 있는가?</td>
+<td>초미세먼지가 많은 날은 특정 시간대에 먼지량이 집중되나 편차가 적다.</td>
+<td>시간별 측정량을 강조하되, 일별 정보도 의미있게 다룬다.</td>
+</tr>
+<tr class="even">
+<td>한국환경공단의 미세먼지 측정 단계는 어떤 의미가 있나?</td>
+<td>4단계로 되어있는데, 시간별 변동이 크므로 하루 측정값의 평균을 사용하는 표준 단계 값은 정확하지 않다.</td>
+<td>정확한 정보 전달을 위해 미세먼지 측정 단계 값을 일별 국내 표준이 아닌 더</td>
+</tr>
+<tr class="odd">
+<td>정확한 단계로 제공해야 한다.(기존 앱도 더 상세한 국제 기준을 사용함)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>미세먼지, 초미세먼지와 날씨는 어떤 관계가 있나? 어떤 날씨 정보가 영향을 주나?</td>
+<td>기온, 습도, 풍속은 크게 관련이 없고, 서, 북향의 풍향이 많은 때에 미세먼지, 초미세먼지 발생 빈도가 높다. 풍향은 계절(달)별 먼지 발생에 영향을 미친다.</td>
+<td>풍향 정보가 미세먼지 발생과 연계되므로, 다른 날씨 정보보다 풍향 정보를 잘 연계하여 표현해야 한다.</td>
+</tr>
+<tr class="odd">
+<td>지역(측정소)별 미세먼지, 초미세먼지의 분포는 어떠한가? 지역별 차별화 표현이 필요한가?</td>
+<td>서울시의 구별 미세먼지 발생 패턴은 유사하다. 다만 특히 미세먼지 나쁨 단계 이상 빈도가 큰 지역이 존재한다.</td>
+<td>지역별로 표현 방식이 다를 필요는 없다. 그러나 발생 빈도가 높은 지역에 대한 경고 및 지역별 사용자 옵션으로 더 자세한 미세먼지 정보를 제공할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="데이터-변수-패턴-기반의-디자인-컨셉-도출" class="level3" data-number="6.0.5">
+<h3 data-number="6.0.5" class="anchored" data-anchor-id="데이터-변수-패턴-기반의-디자인-컨셉-도출"><span class="header-section-number">6.0.5</span> 4) 데이터 변수 패턴 기반의 디자인 컨셉 도출</h3>
+<p>[표 4]는 프로젝트 데이터의 주요 변수와 키워드 별 변수 패턴을 반영한 디자인 콘셉트 제안 예시입니다. 앱 서비스에서 제공하는 정보 내용과 정보 제공 방법을 변수 패턴이 반영된 정보 표현 방법으로 제시하였습니다. 이러한 정보 표현 방법을 앱의 화면 레이아웃과 GUI에 반영하여 디자인 해결안을 완성하면, 탐구적 데이터 분석 기법을 디자인 리서치에 사용한 디자인 해결안이 됩니다.</p>
+<p>[표 4] 프로젝트 데이터의 주요 변수와 키워드 별 변수 패턴을 반영한 디자인 콘셉트 제안 예시</p>
+<div class="line-block">주요 데이터 변수 | 변수 관련 키워드 | 주요 변수 패턴과 인사이트 | 변수 패턴을 반영한</div>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>디자인 콘셉트</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>사용자 데이터</td>
+<td>질병/ 가족 구성 등</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>사용자 특징</td>
+<td>특정 사용자 집단별 서비스 니즈와 상관 없이 서비스를 자주 사용하는 사용자의 필요 반영</td>
+<td>&lt;서비스를 자주 사용하는 사용자&gt;</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>서비스를 자주 사용하는(일별 사용 및 수시 사용) 일반 사용자를 타겟으로함.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>사용 상황 데이터</td>
+<td>사용 시점과 빈도, 환경(날씨, 지역)</td>
+<td>매일 및 수시 확인 시점 별 정보 니즈 반영</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>환경 정보는 지역 상황에 따라 필요성이 다름 날씨는 풍향만 미세먼지에 영향있음. | &lt;매일 확인&gt; 일별 통합 예측시 시간대별 예측 정보 제공 &lt;수시 확인&gt; 측정 시점(시간별) 정보, 1-3시간 후 추이 정보 강조 사용자 선택 옵션으로 지역별 날씨, 미세먼지 상세 정보 제공 | | 서비스 내용 데이터 (서비스 가치) | 정보의신뢰성/ 정확성 확보 | 년간 시즌/월별/일별/ 시간별 발생 패턴이 다름 | &lt;미세먼지 시즌 별 정보 표현 차별화&gt; 미세먼지 집중 기간 (11월-5월)과 그 외 기간의 정보 표현 차별화 여름 및 가을(6-10월)에는 미세먼지 정보 외 부가 생활 정보 제공 시간별 측정량 중심의 정보 표현 | | | 정보 설명성 (요약, 상세 설명) | 미세/초미세 먼지의 데이터 특징이 다름 일별 요약은 대표값으로 부적절함 미세먼지의 경우 아주 나쁨 단계 범위가 너무 넓음 | &lt;요약 설명&gt; 미세, 초미세먼지의 표현 방법 차별화 미세 먼지의 아주 나쁨 단계 세분화 (초미세먼지는 그대로 사용) 아주 나쁨 단계의 경각심 표현 강화 &lt;상세 설명&gt; 시간별 정보 중심으로 설명 사용자 옵션으로 사용자 요구에 따른 상세 설명 방법, 알림 방법 제공 | | | 관심 부가 서비스 | 알림, 위젯 등에서 요약 정보 요구 | &lt;정보 상황에 의한 알림/위젯 디자인&gt; 나쁨 빈도 높은 지역에는 알림 방법 강화 시간별 알림 및 관심 지역 중심의 알림, 위젯 디자인 제공 |</p>
+<p>이렇게 디자인 리서치에서 데이터 분석 기법을 사용하면, 적은 노력으로 다량, 장기간의 데이터를 수집 분석하는 것이 가능하여 디자인 리서치의 생산성이 높아집니다. 탐구적 데이터 분석 방법은 대규모이거나 분야간 협업이 중요한 프로젝트에서도 소통 효율을 높이는 데 기여합니다.(7)</p>
+<p>또한 이 사례와 같이 사용자에 대한 질적 연구 방법으로는 알 수 없는 콘텐츠 데이터(미세먼지 데이터)의 특징(신뢰성, 정확성, 설명성에 영향을 미치는 정보 속성들)을 데이터 분석 기법을 통하여 발견하고, 이를 디자인 콘셉트로 개발 할 수 있습니다. 이렇게 개발한 콘셉트로 디자인을 완성한 뒤에는 과연 이 디자인이 우리가 개선하고자 한 속성들(신뢰성, 정확성, 설명성)을 개선하였는지 검증해 볼 필요가 있겠죠. 이 검증 과정이 교재의 후반부에서 학습할 A/B 테스팅 입니다.</p>
+<p>(문헌 7) 이현진, 『데이터 드리븐 디자인』, UX리뷰, (2024), pp.100-143</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis).html" class="pagination-link" aria-label="2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis)</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./2-3 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례.html" class="pagination-link" aria-label="2-3 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">2-3 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>이 책은 소프트웨어 카펜트리 “R for Reproducible Scientific Analysis”를 번역한 것이 포함되어 있습니다.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/hyunjhinlee/DataDrivenDesign/edit/main_ym/2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/hyunjhinlee/DataDrivenDesign/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>순수하게 <a href="https://quarto.org/">쿼토(Quarto)</a>로 제작되었습니다.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
