@@ -8,7 +8,7 @@
 
 <meta name="author" content="이현진">
 
-<title>part 2. 디자인 리서치를 위한 탐구적 데이터 분석 – 데이터 기반 디자인과 A/B 테스팅</title>
+<title>ch5. Lean UX 프로세스와 데이터 기반 디자인 – 데이터 기반 디자인과 A/B 테스팅</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ch1. 디자인 리서치와 탐구적 데이터 분석.html" rel="next">
-<link href="./ch3. 데이터 기반 디자인 (Data Driven Design).html" rel="prev">
+<link href="./part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안.html" rel="next">
+<link href="./ch4. EDA를 위한 데이터 분석 도구들.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></a></li><li class="breadcrumb-item"><a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html"><span class="chapter-title">part 2. 디자인 리서치를 위한 탐구적 데이터 분석</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></a></li><li class="breadcrumb-item"><a href="./ch5. Lean UX 프로세스와 데이터 기반 디자인.html"><span class="chapter-title">ch5. Lean UX 프로세스와 데이터 기반 디자인</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">part 2. 디자인 리서치를 위한 탐구적 데이터 분석</span></a>
+  <a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">part 2. 디자인 리서치를 위한 탐구적 데이터 분석</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -186,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch5. Lean UX 프로세스와 데이터 기반 디자인.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch5. Lean UX 프로세스와 데이터 기반 디자인</span></a>
+  <a href="./ch5. Lean UX 프로세스와 데이터 기반 디자인.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ch5. Lean UX 프로세스와 데이터 기반 디자인</span></a>
   </div>
 </li>
       </ul>
@@ -279,15 +279,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#lean-design-process의-개념" id="toc-lean-design-process의-개념" class="nav-link active" data-scroll-target="#lean-design-process의-개념">Lean Design Process의 개념</a></li>
+  <li><a href="#lean-ux에-사용하는-주요-용어들" id="toc-lean-ux에-사용하는-주요-용어들" class="nav-link" data-scroll-target="#lean-ux에-사용하는-주요-용어들">Lean UX에 사용하는 주요 용어들</a></li>
+  <li><a href="#lean-ux-process-diagram-learn-build-measure-learn-의-반복" id="toc-lean-ux-process-diagram-learn-build-measure-learn-의-반복" class="nav-link" data-scroll-target="#lean-ux-process-diagram-learn-build-measure-learn-의-반복">Lean UX Process Diagram (Learn&gt; Build &gt; Measure &gt; Learn &gt;의 반복)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></a></li><li class="breadcrumb-item"><a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html"><span class="chapter-title">part 2. 디자인 리서치를 위한 탐구적 데이터 분석</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></a></li><li class="breadcrumb-item"><a href="./ch5. Lean UX 프로세스와 데이터 기반 디자인.html"><span class="chapter-title">ch5. Lean UX 프로세스와 데이터 기반 디자인</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">part 2. 디자인 리서치를 위한 탐구적 데이터 분석</span></h1>
+<h1 class="title"><span class="chapter-title">ch5. Lean UX 프로세스와 데이터 기반 디자인</span></h1>
 </div>
 
 
@@ -304,14 +312,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>이번 단원은 데이터 과학의 데이터 분석 방법론인 탐구적 데이터 분석 방법의 개요를 학습하고 탐구적 데이터 분석을 통하여 디자인 리서치를 어떻게 수행하는지의 사례들을 살펴봅니다. 또한 탐구적 데이터 분석 활동을 지원하는 데이터 분석 도구들의 장단점과 실무에서의 사용 현황들을 알아보고, 향후에 다양한 도구들을 사용할 수 있는 기초 소양을 준비합니다. 그리고 3단원 부터 본격적으로 시작되는 데이터 기반 디자인 실습 과제의 기본 방법론인 Lean UX 프로세스의 개념을 공부하여 실습 프로젝트 진행을 위한 기초를 다져보겠습니다.</p>
-<p><a href="./ch1. 디자인 리서치와 탐구적 데이터 분석.html">ch1. 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis)</a></p>
-<p><a href="./ch2.디자인 리서치를 위한 탐구적 데이터 분석 사례 (1).html">ch2.디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례</a></p>
-<p><a href="./ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2).html">ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례</a></p>
-<p><a href="./ch4. EDA를 위한 데이터 분석 도구들.html">ch4. EDA를 위한 데이터 분석 도구들</a></p>
-<p><a href="./ch5. Lean UX 프로세스와 데이터 기반 디자인.html">ch5. Lean UX 프로세스와 데이터 기반 디자인</a></p>
+<section id="lean-design-process의-개념" class="level3">
+<h3 class="anchored" data-anchor-id="lean-design-process의-개념">Lean Design Process의 개념</h3>
+<p>목표한 디자인 해결안을 완성하기까지 수행하는 디자인 활동의 내용과 방법, 과정을 정의하는 디자인 프로세스는 디자인의 대상과 사회, 기술적 요구 사항의 변화에 따라 변화하고 있습니다. 현대의 디자인 프로세스는 소프트웨어 기술과의 협업 과정, 비즈니스 방법의 변화에 영향을 받아 애자일(Agile) 디자인 프로세스, 린(Lean)디자인 프로세스라는 특별한 형식의 디자인 프로세스를 적용하는 사례가 많습니다.</p>
+<p>‘Lean’이라는 단어가 ‘기대다’, ‘의지하다’라는 의미가 있고 ‘군살이 없는’ 이라는 의미도 있으므로, 린 디자인 프로세스는 편하게 기대어서 하는 디자인, 군살없이 날씬하게 진행하는 디자인 프로세스라는 의미로 생각해볼 수 있습니다. 결국 이 말은 디자인을 하는데, 쓸데 없는 일을 과하게 하지 않고, 시간과 비용의 효율을 추구하는 디자인 방법이라는 뜻입니다. 제품이나 서비스의 생산 주기가 짧고, 소규모 조직으로도 서비스 운영이 가능해진 현대 산업계의 특징을 반영하여 빠른 시간에 적은 인원을 가지고, 꼭 필요한 작업만을 효율적으로 해서 디자인을 수행하는 것이 린 디자인 프로세스의 철학입니다. 이러한 린(Lean) 철학을 UX 디자인 방법론에 가져온 것이 Lean UX입니다. 그러므로 Lean UX는 UX 디자인의 과정에서 시간과 자원을 효과적으로 사용하여 결과물을 산출하는 방법론이겠죠. UX 디자인 업무가 전통적으로 시간과 조직 역량을 많이 필요로 했던 문제를 해결하고자 한 방법론이라고 하겠습니다. 린 UX는 디자인의 효율화를 추구하는 핵심적인 전략으로 정량 데이터를 적극적으로 활용합니다.</p>
+<p>’린 스타트업 실전 UX’라는 책에서 저자(Laura Klein)는 린 UX에 대하여 Lean 비즈니스 환경에 적합한 UX 디자인을 말하는 것으로, 어떤 성과 지표(KPI: Key Performance Indicator)가 비즈니스를 이끄는지 알아내고, 이러한 지표를 개선하기 위해 해결해야할 고객의 문제가 무엇인지 이해하고(Hypothesis), 고객의 어려움을 개선하는 데 필요한 아이디어를 구현한 다음(MVP: Minimum Viable Product), 그게 적합한 아이디어인지 검증(A/B testing)하는 것이라고 설명했습니다. (20)</p>
+<p>갑자기 낯선 용어들이 많이 나오죠? 괄호 안의 전문 용어들을 빼고 조금 쉽게 서술해 보면 린 UX는 어떤 비즈니스가 잘 되고 있는지를 측정하는 지표 값을 찾고, 이 값을 원하는 목표 값까지 달성하기 위하여 디자인을 수행한 뒤, 그 디자인이 성공했는지를 판단하기 위해 이전 디자인의 지표값과 개선 디자인의 지표값을 비교하여 평가한다는 의미입니다. 내용을 다시 해석해 보면 ‘지표 값’ 이라는 정량 데이터가 있고, 이 데이터를 ‘목표 값’의 정량 데이터로 변환 시키도록 디자인을 한 뒤, 디자인 개선 후의 ‘지표 값’이 ‘목표 값’ 수준으로 달성 되었는지를 정량적(통계적)으로 판단한다는 뜻이니, 전체적으로 정량 데이터의 측정과 평가를 중심으로 진행하는 디자인 방법론이네요. 그래서 Lean UX는 결국 데이터에 근거하여 디자인 의사 결정을 수행하는 데이터 기반 디자인 방법론의 하나입니다.</p>
+</section>
+<section id="lean-ux에-사용하는-주요-용어들" class="level3">
+<h3 class="anchored" data-anchor-id="lean-ux에-사용하는-주요-용어들">Lean UX에 사용하는 주요 용어들</h3>
+<p>Lean UX를 수행하기 위하여 이해해야하는 KPI, Hypothesis, MVP, A/B 테스팅의 개념을 아래와 같이 정리하였습니다. 각각의 개념은 이후의 실습 프로젝트를 수행하면서 더 명확하게 이해할 수 있을 것입니다.</p>
+<ul>
+<li><p>KPI(Key Performance Indicator)</p>
+<p><strong>KPI</strong>는 조직이나 프로젝트의 목표 달성 정도를 측정하는 데 사용되는 핵심 성과 지표를 의미합니다. KPI를 통해 프로젝트의 진행 상황을 모니터링하고, 목표 달성을 위해 필요한 조치를 취할 수 있습니다. 예를 들어, 새로운 앱의 성공을 측정하기 위한 KPI로 월간 활성 사용자 수, 사용자 유지율, 평균 세션 시간 등을 KPI로 설정하고, 이 값으로 앱의 성과를 평가하고 필요한 개선점을 파악할 수 있습니다.</p>
+<p>주요 특징:</p>
+<ol type="1">
+<li>구체적이고 측정 가능함: 명확하고 구체적으로 정의되어야 하며, 수치로 측정 가능해야 합니다.</li>
+<li>목표 지향적: 조직이나 프로젝트의 목표와 직접적으로 연결되어 있어야 합니다.</li>
+<li>주기적 평가: 정기적으로 평가하여 진행 상황을 모니터링합니다.</li>
+</ol></li>
+<li><p>Hypothesis</p>
+<p><strong>가설</strong>은 특정한 질문이나 문제에 대한 예상 답변을 제시하는 것입니다. 제품이나 기능의 개발 전, 이를 통해 어떤 결과가 나올지를 미리 예측하고 테스트하는 과정을 의미합니다. Lean UX에서는 가설을 바탕으로 실험을 진행하고, 그 결과를 통해 제품을 개선합니다. 예를 들어, “앱의 새로운 알림 기능을 제공하면 앱을 더 자주 사용할 것이다”라는 가설을 세우고, 이를 테스트하기 위해 새로운 알림 기능을 출시한 후 사용자 반응을 분석합니다.</p>
+<p>주요 특징:</p>
+<ol type="1">
+<li>명확한 진술: 가설은 구체적이고 명확하게 진술되어야 합니다.</li>
+<li>검증 가능: 실험을 통해 가설의 진위 여부를 확인할 수 있어야 합니다.</li>
+<li>피드백 중심: 사용자 피드백을 통해 가설을 검증하고 개선.</li>
+</ol></li>
+<li><p>MVP(Minimum Viable Product)</p>
+<p><strong>MVP</strong>란 제품 개발 과정에서 최소한의 기능만을 갖춘 제품을 의미합니다. 이 제품은 사용자에게 실질적인 가치를 제공하면서도 개발에 소요되는 시간과 비용을 최소화하는 것이 목적입니다. MVP를 통해 빠르게 시장에 제품을 출시하고, 사용자로부터 피드백을 받아 제품을 개선해 나갈 수 있습니다.</p>
+<p>주요 특징:</p>
+<ol type="1">
+<li>최소한의 기능: 제품의 핵심 기능만 포함.</li>
+<li>빠른 출시: 개발 시간을 줄여 빠르게 시장에 출시.</li>
+<li>사용자 피드백: 실제 사용자로부터 피드백을 받아 제품을 개선.</li>
+</ol></li>
+<li><p>A/B 테스팅</p>
+<p>A/B 테스트는 디자인의 구현 과정에서 화면이나 기능을 여러 버전으로 만들어서 서로 다른 사용자 그룹에 각기 다른 것을 보여주고 어떤 버전이 최선의 지표를 이끌어 내는지 찾아내는 기법입니다. A/B 테스트의 목적은 통계적으로 의미있는 데이터를 활용해서 사업적 중요성(KPI)을 기준으로 제품에 관련된 더 나은 의사결정을 하려는 것입니다. 예를 들어, 웹사이트의 버튼 색상을 A는 파란색, B는 빨간색으로 설정하여 어떤 색상이 더 많은 클릭을 유도하는지 테스트합니다.</p>
+<p>주요 특징:</p>
+<ol type="1">
+<li>두 가지 버전: A 버전과 B 버전, 두 가지 버전으로 나눔.</li>
+<li>실험군과 통제군: 사용자 그룹을 나눠 각각 다른 버전을 사용하게 함.</li>
+<li>성과 측정: 각 버전의 성과를 비교하여 더 나은 쪽을 선택.</li>
+</ol></li>
+</ul>
+</section>
+<section id="lean-ux-process-diagram-learn-build-measure-learn-의-반복" class="level3">
+<h3 class="anchored" data-anchor-id="lean-ux-process-diagram-learn-build-measure-learn-의-반복">Lean UX Process Diagram (Learn&gt; Build &gt; Measure &gt; Learn &gt;의 반복)</h3>
+<p>데이터를 중심으로 의사결정을 하는 린 UX의 또 하나의 중요한 특징은 반복적인 수행 과정입니다.</p>
+<p>데이터를 통하여 알게된(Learn) 인사이트를 가지고 KPI를 개선하는 아이디어(가설)를 내고, 이것을 MVP로 개발하여(Build) 아이디어가 잘 작동하는지는 검증(Measure)하고, 검증 데이터를 바탕으로(Learn) 다시 개선안을 내고, 이것을 MVP로 개발하여(Build) 아이디어가 잘 작동하는지는 검증(Measure)하는 반복적인 과정을 원하는 수준의 KPI에 도달할 때까지 반복하여 진행합니다. 최종 디자인 목표가 달성될 때까지 Learn&gt; Build &gt; Measure &gt; Learn &gt;의 과정은 반복됩니다. 이 과정을 그림으로 표현하면 [그림 22]과 같습니다.</p>
+<p>애플은 앱 디자인 프로세스를 설명할 때 같은 개념을 Think&gt; Make&gt; Check&gt; Think의 반복적 프로세스로 설명했습니다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/fig21.png" class="img-fluid figure-img"></p>
+<figcaption>[그림 21] 순환적이고, 반복적인 Lean UX 디자인 프로세스</figcaption>
+</figure>
+</div>
+<ul>
+<li>다음은 참고도서의 저자인 Laura Klein이 Lean UX에 대하여 설명하는 영상입니다.(21)</li>
+</ul>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/7NkMm5WefBA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>우리는 Lean UX의 디자인 프로세스인 Leran &gt; Build &gt; Measure &gt; Learn의 단계를 따라서 실습 과제를 수행하게 됩니다. 그럼 다음 장에서는 Lean UX의 과정을 따라서 데이터 기반 디자인 방법을 실습해 볼까요?</p>
+<p>(문헌 20) 로라 클라인, (김수영, 박기석 역), 『린 스타트업 실전 UX』, 한빛미디어,(2014)</p>
+<p>(문헌 21) Google Developers, “UXD: What is Lean UX?”, https://www.youtube.com/watch?v=7NkMm5WefBA</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -736,13 +802,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html" class="pagination-link" aria-label="ch3. 데이터 기반 디자인 (Data Driven Design)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></span>
+      <a href="./ch4. EDA를 위한 데이터 분석 도구들.html" class="pagination-link" aria-label="ch4. EDA를 위한 데이터 분석 도구들">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch4. EDA를 위한 데이터 분석 도구들</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch1. 디자인 리서치와 탐구적 데이터 분석.html" class="pagination-link" aria-label="ch1. 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis)">
-        <span class="nav-page-text"><span class="chapter-title">ch1. 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안.html" class="pagination-link" aria-label="part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안">
+        <span class="nav-page-text"><span class="chapter-title">part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
