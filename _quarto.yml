@@ -2,7 +2,6 @@ project:
   type: book  
   output-dir: docs
   preview:
-    port: 7771
     browser: true
   resources:
     - "data/*.mp3"
@@ -56,9 +55,9 @@ book:
         - "ch3. 실습 과제의 AB 테스팅 기획.qmd"
         - "ch4. AB 테스팅 실행 및 결과의 해석.qmd"
         - "ch5. AB 테스팅 결과의 디자인 반영.qmd"
-
+    - "맺음말: 다음 테스트를 위하여.qmd"
     - references.qmd
-
+    
 format:
   html:
     theme:

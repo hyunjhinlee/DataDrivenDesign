@@ -270,6 +270,11 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./맺음말: 다음 테스트를 위하여.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -324,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="엑셀의-분석도구팩을-사용한-가설-검정-f-test-t-test">엑셀의 분석도구팩을 사용한 가설 검정 (F-test, T-test)</h3>
 <p>이번에는 엑셀에서 제공하는 분석도구팩을 사용하여 좀 더 풍부한 해설 값을 출력해보겠습니다. 우선 엑셀 분석도구팩을 설치해야합니다. 사용 컴퓨터가 윈도우 PC인 경우 엑셀 상단 리본메뉴의 파일 &gt;옵션 &gt;추가기능 &gt;이동 &gt; 분석도구팩을 선택하여 설치합니다. 사용 컴퓨터가 맥 PC인 경우 엑셀 리본메뉴의 데이터 &gt;분석도구 &gt;분석도구팩을 선택하여 설치합니다.</p>
 <p>분석 도구팩 설치 후, 상단 리본메뉴 데이터&gt;데이터 분석&gt; T검정/ F 검정 옵션선택 &gt; 범위 설정 &gt; 기타 출력 옵션 설정을 하면 아래 그림의 하단 표와 같이 정리된 표 형태로 검정 테스트 관련 값들이 출력됩니다.</p>
-<p>[그림 38]은 수업에서 사용한 연습 데이터로 3개 설문 문항에 대하여 각 문항의 A디자인(우), B디자인(좌)에 대한 사용자 응답 결과를 대응하여 입력하였고, 각 문항 별로 등분산 여부(FTEST)와 두 값의 차이 여부(TTEST)를 24, 25행에 출력한 사례입니다. 그리고 그림에서 상단 입력 내용 창에는 문항 2에 대하여 엑셀 함수 메뉴를 사용한 E25셀의 TTEST엑셀 함수 옵션을 보여줍니다. 그리고 28행 부터는 엑셀의 분석도구팩을 사용하여 TTEST 분석 내용을 표로 출력하였습니다.</p>
+<p>[그림 28]은 수업에서 사용한 연습 데이터로 3개 설문 문항에 대하여 각 문항의 A디자인(우), B디자인(좌)에 대한 사용자 응답 결과를 대응하여 입력하였고, 각 문항 별로 등분산 여부(FTEST)와 두 값의 차이 여부(TTEST)를 24, 25행에 출력한 사례입니다. 그리고 그림에서 상단 입력 내용 창에는 문항 2에 대하여 엑셀 함수 메뉴를 사용한 E25셀의 TTEST엑셀 함수 옵션을 보여줍니다. 그리고 28행 부터는 엑셀의 분석도구팩을 사용하여 TTEST 분석 내용을 표로 출력하였습니다.</p>
 <p>결과 내용을 보면 3개 문항 모두 FTEST에서 p-value가 0.05보다 크므로 두 그룹의 분산 차이가 없다는 등분산 만족 결과를 보여주고, 있고, TTEST에서 문항 1, 2는 p-value가 0.05보다 커서 두 그룹의 차이가 없다. 즉 결과가 개선되지 않았음을 알 수 있고, 문항 5는 p-value가 0.05보다 작아서 두 값의 차이가 있다. 즉, 디자인 B의 응답 값이 더 높다, 개선되었다는 판단을 할 수 있습니다. 1번 문항의 경우 31행의 평균값(Mean)을 보면 A디자인의 값이 더 높습니다. 하지만 T검정 값은 통계적으로 판단할 때 두 값이 차이가 없다고 판단합니다. 문항 2의 경우 B디자인의 평균값이 조금 더 높지만 이것은 T검정 값으로 볼 때 통계적 의미가 없는 차이여서 두 값의 차이가 없다고 판단했습니다. 이렇게 각 그룹의 평균값이 차이가 난다는 것만으로는 어떤 그룹의 값이 더 높거나 낮다고 판단할 수는 없다는 것을 알 수 있습니다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -336,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="통계-계산기-t-test-calculator를-사용한-가설-검정" class="level3">
 <h3 class="anchored" data-anchor-id="통계-계산기-t-test-calculator를-사용한-가설-검정">통계 계산기: T-Test Calculator를 사용한 가설 검정</h3>
-<p>아래 [그림 39]는 [그림 38]의 5번 문항 데이터를 T-Test Calculator 서비스에 넣어서 데이터 분석과 해석을 출력한 사례입니다. 이것은 웹기반의 통계 계산 서비스를 활용한 것으로, GUI메뉴로 데이터를 입력하면, 해당 통계 계산을 해서 출력과 자세한 데이터 분석을 제공합니다. 현재 테스트 화면에서는 두 데이터의 정규성에 문제가 있는 것으로 진단 되었습니다. 우리 테스트의 데이터 갯수가 적기 때문에 정규성 만족 문제가 발생했고, 이 문제를 해결하기 위해 다른 방법(Calculate Mann-Whitney)으로 분석해 볼 것을 권장하고 있습니다. 또한 데이터의 분석 내용을 그래프로 정리하여 이해하기 쉽게 해설해주고 있습니다.(31) 이렇게 통계 계산기 웹서비스를 사용하면 데이터 분석 인사이트에 대한 풍부한 해설과 추천 의견을 받아 문제 해결을 할 수 있습니다. 다만 해설에서 다루는 용어와 정의에 대한 이해 역량이 필요합니다. 어려운 해설 부분도 인공지능 서비스의 도움을 받으면 되니까 크게 걱정하지는 않아도 됩니다.</p>
+<p>아래 [그림 29]는 [그림 28]의 5번 문항 데이터를 T-Test Calculator 서비스에 넣어서 데이터 분석과 해석을 출력한 사례입니다. 이것은 웹기반의 통계 계산 서비스를 활용한 것으로, GUI메뉴로 데이터를 입력하면, 해당 통계 계산을 해서 출력과 자세한 데이터 분석을 제공합니다. 현재 테스트 화면에서는 두 데이터의 정규성에 문제가 있는 것으로 진단 되었습니다. 우리 테스트의 데이터 갯수가 적기 때문에 정규성 만족 문제가 발생했고, 이 문제를 해결하기 위해 다른 방법(Calculate Mann-Whitney)으로 분석해 볼 것을 권장하고 있습니다. 또한 데이터의 분석 내용을 그래프로 정리하여 이해하기 쉽게 해설해주고 있습니다.(31) 이렇게 통계 계산기 웹서비스를 사용하면 데이터 분석 인사이트에 대한 풍부한 해설과 추천 의견을 받아 문제 해결을 할 수 있습니다. 다만 해설에서 다루는 용어와 정의에 대한 이해 역량이 필요합니다. 어려운 해설 부분도 인공지능 서비스의 도움을 받으면 되니까 크게 걱정하지는 않아도 됩니다.</p>
 <p><a href="https://www.statskingdom.com/140MeanT2eq.html">Two Sample T-Test</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -346,13 +351,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>참고로, 정규성을 불만족한 경우 (관측값이 30개가 안되는 경우)는 T-test가 부적합하므로 아래의 정규성 검정 테스트를 해보고, 샘플이 정규분포가 아니거나 수가 적을 때, 모수에 대한 가정을 전제로 하지 않고 모집단의 형태에 관계없이 주어진 데이터에서 직접 확률을 계산하는 Mann-Whitney U test 를 사용합니다.</p>
 <ul>
-<li>정규성 검정 (Shapiro-Wilk test)(32)</li>
+<li><p>정규성 검정 (Shapiro-Wilk test)(32) <a href="https://www.statskingdom.com/shapiro-wilk-test-calculator.html">Shapiro-Wilk test calculator: normality calculator, Q-Q plot</a></p></li>
+<li><p>비모수 검정(Mann-Whitney U test)(33) <a href="https://www.statskingdom.com/170median_mann_whitney.html">Mann-Whitney U test</a></p></li>
 </ul>
-<p><a href="https://www.statskingdom.com/shapiro-wilk-test-calculator.html">Shapiro-Wilk test calculator: normality calculator, Q-Q plot</a></p>
-<ul>
-<li>비모수 검정(Mann-Whitney U test)(33)</li>
-</ul>
-<p><a href="https://www.statskingdom.com/170median_mann_whitney.html">Mann-Whitney U test</a></p>
 </section>
 <section id="사용자-로그-데이터로-t-test-하기-e-commerce-business-ab-test-case-study" class="level3">
 <h3 class="anchored" data-anchor-id="사용자-로그-데이터로-t-test-하기-e-commerce-business-ab-test-case-study">사용자 로그 데이터로 T-test 하기: e-commerce business A/B test case study</h3>
@@ -366,9 +367,12 @@ ul.task-list li input[type="checkbox"] {
 <li>처리군 1: 결제 페이지 아래에 유사 상품 섹션 추가 (B 디자인)</li>
 <li>처리군 2: 결제 페이지 중앙에 유사 상품 팝업 창 띄움 (B’ 디자인)</li>
 </ul></li>
-<li><p>표본: 결제 페이지 들어오는 모든 고객들을 각 그룹에 랜덤하게 배정해서 실험 결과 객관적으로 나오도록 함</p>
-<pre><code>    통계적으로 의미 있는 결과 얻으려면 각 그룹에 충분한 수의 사람들이 있어야 함. </code></pre>
-<p>사례는 그룹당(대조군, 처리군1, 처리군2) 1,600명씩 총 4,800명 조사, 일 단위로 조사 인원 비율을 점차 늘려 조사함.</p></li>
+<li><p>표본:</p>
+<ul>
+<li>결제 페이지 들어오는 모든 고객들을 각 그룹에 랜덤하게 배정해서 실험 결과 객관적으로 나오도록 함.</li>
+<li>통계적으로 의미 있는 결과 얻으려면 각 그룹에 충분한 수의 사람들이 있어야 함.</li>
+<li>사례는 그룹당(대조군, 처리군1, 처리군2) 1,600명씩 총 4,800명 조사, 일 단위로 조사 인원 비율을 점차 늘려 조사함.</li>
+</ul></li>
 <li><p>실험 기간: 요일별로 차이가 있을 수 있으니까 최소 일주일 이상 진행</p></li>
 <li><p>데이터 분석 및 결과 해석</p>
 <ul>
@@ -378,8 +382,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>결론 및 후속 조치</p>
 <p>이번 A/B 테스트 결과를 바탕으로 A기업은 다음의 후속 조치를 취하기로 함.</p>
 <ul>
-<li>처리군 1 (유사 상품 섹션):&nbsp;유사 상품 추천하는 알고리즘 개선하고 디자인을 바꿔서 사용자 경험 좋게 만들고 다시 A/B 테스트 해보기로 함</li>
-<li>처리군 2 (유사 상품 팝업 창):&nbsp;팝업 창 디자인을 개선해서 불편한 점을 줄이고 구매 단가를 높이는 방법 찾아보기로 함</li>
+<li>처리군 1 (유사 상품 섹션): 유사 상품 추천하는 알고리즘 개선하고 디자인을 바꿔서 사용자 경험 좋게 만들고 다시 A/B 테스트 해보기로 함</li>
+<li>처리군 2 (유사 상품 팝업 창): 팝업 창 디자인을 개선해서 불편한 점을 줄이고 구매 단가를 높이는 방법 찾아보기로 함</li>
 </ul></li>
 </ul>
 <p>이와같이 A/B 테스트는 한 번 하고 끝나는 게 아니라, 평가 결과를 바탕으로 반복적으로 개선하고 검증하면서 최적화된 결과 만들어나가는 데 활용할 수 있습니다.</p>
@@ -389,8 +393,7 @@ ul.task-list li input[type="checkbox"] {
 <p>(문헌 31) Statistics Kingdom, “Two Sample T-Test Calculator”, <a href="https://www.statskingdom.com/140MeanT2eq.html" class="uri">https://www.statskingdom.com/140MeanT2eq.html</a></p>
 <p>(문헌 32) Statistics Kingdom, “Shapiro-Wilk Test Calculator”, <a href="https://www.statskingdom.com/shapiro-wilk-test-calculator.html" class="uri">https://www.statskingdom.com/shapiro-wilk-test-calculator.html</a></p>
 <p>(문헌 33) Statistics Kingdom, “Mann Whitney U test calculator (Wilcoxon rank-sum)”, <a href="https://www.statskingdom.com/170median_mann_whitney.html" class="uri">https://www.statskingdom.com/170median_mann_whitney.html</a></p>
-<p>(문헌 34) Emma Ding, “A/B Testing Real-Life Example”,</p>
-<p><a href="https://www.youtube.com/watch?v=VuKIN9S8Ivs" class="uri">https://www.youtube.com/watch?v=VuKIN9S8Ivs</a></p>
+<p>(문헌 34) Emma Ding, “A/B Testing Real-Life Example”, <a href="https://www.youtube.com/watch?v=VuKIN9S8Ivs" class="uri">https://www.youtube.com/watch?v=VuKIN9S8Ivs</a></p>
 
 
 </section>
