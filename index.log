@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.22)  24 AUG 2024 05:48
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.22)  24 AUG 2024 06:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4331,7 +4331,7 @@ Package fontspec Info:
 
 [148]
 
-LaTeX Warning: Empty bibliography on input line 5334.
+LaTeX Warning: Empty bibliography on input line 5343.
 
 No file index.ind.
 
@@ -4351,7 +4351,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 5340.
+Package lastpage Warning: Rerun to get the references right on input line 5349.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -4365,7 +4365,7 @@ Package logreq Info: Writing requests to 'index.run.xml'.
 Here is how much of TeX's memory you used:
  56230 strings out of 476173
  1119364 string characters out of 5784305
- 2135367 words of memory out of 5000000
+ 2135398 words of memory out of 5000000
  77892 multiletter control sequences out of 15000+600000
  565976 words of font info for 156 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191

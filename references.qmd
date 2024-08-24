@@ -108,3 +108,11 @@
 (문헌 33) Statistics Kingdom, “Mann Whitney U test calculator (Wilcoxon rank-sum)”, <https://www.statskingdom.com/170median_mann_whitney.html>
 
 (문헌 34) Emma Ding, “A/B Testing Real-Life Example”, <https://www.youtube.com/watch?v=VuKIN9S8Ivs>
+
+---
+
+**본 교재는 홍익대학교 대학혁신지원사업단의 2024년 UROP(Undergraduate Research Opportunity Program) 과제의 연구 결과물입니다.**
+
+**(지도교수/저자: 디자인컨버전스 학부 이현진, 참여학생/디자인, 제작: 디자인 컨버전스 학부 이지은, 선여민)**
+
+

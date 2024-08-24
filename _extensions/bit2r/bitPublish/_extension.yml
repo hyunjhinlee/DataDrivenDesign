@@ -76,8 +76,8 @@ contributes:
             \makeatother
 
             \fancyhf{}
-            \fancyhead[EL]{\changesize \numberfont --- bitPublish를 이용하여}
-            \fancyhead[OR]{\changesize \numberfont 한글 책 조판하기 ---}
+            \fancyhead[EL]{\changesize \numberfont --- 데이터 기반 디자인과 A/B 테스팅의 핵심 개념과 사례}
+            \fancyhead[OR]{\changesize \numberfont 모바일 앱 디자인 대상의 단계별 실습 과제 수록 ---}
             \fancyfoot[EL]{{\pagefont\thepage}{\hskip4mm}{\changesize \leftmark}}
             \fancyfoot[OR]{{\changesize \rightmark}{\hskip4mm}{\pagefont\thepage}}
 
