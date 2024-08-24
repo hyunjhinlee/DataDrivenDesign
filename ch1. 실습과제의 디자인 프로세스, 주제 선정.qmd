@@ -36,7 +36,7 @@
 
 [MDIS 마이크로데이터 통합서비스](https://mdis.kostat.go.kr/index.do)
 
-[열린데이터광장 메인](https://data.seoul.go.kr)
+[서울열린데이터광장 메인](https://data.seoul.go.kr)
 
 ### 실습과제 2 : 실습 과제의 타겟 서비스(A 디자인) 제안
 

@@ -21,11 +21,11 @@
 
 **ch3. 데이터 기반 디자인 (Data Driven Design)**
 
-(문헌 3) Spotify(스포티파이), Apple app store
+(문헌 6) Rochelle King, Elizabeth Churchill, and Caitlin Tan, 『Designing with data』, O’reilly, (2017), pp.3-6
 
-(문헌 4) Kate Moran, Jakob Nielsen, “AI for UX: Getting Started”, [https://www.nngroup.com/articles/ai-ux-getting-started/](https://www.nngroup.com/articles/ai-ux-getting-started/), (2023)
+(문헌 7) 이현진, 『데이터 드리븐 디자인』, UX리뷰, (2024), pp.43-44
 
-(문헌 5) Figma Learn, “Config 2024에서 발표된 새로운 기능”, [https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능](https://help.figma.com/hc/ko/articles/24037640924823-Config-2024%EC%97%90%EC%84%9C-%EB%B0%9C%ED%91%9C%EB%90%9C-%EC%83%88%EB%A1%9C%EC%9A%B4-%EA%B8%B0%EB%8A%A5), (2024)
+(문헌 8) Qian Yang, Alex Scuito, John Zimmerman, Jodi Forlizzi, and Aaron Steinfeld, “Investigating How Experienced UX Designers Effectively Work with Machine Learning”, DIS(Design Information Systems)(2018), Hong Kong, pp.585–596
 
 ## Part 2. 디자인 리서치를 위한 탐구적 데이터 분석
 
@@ -100,3 +100,11 @@
 (문헌 29) 구글Docs 편집기 고객센터, “FTEST”, [https://support.google.com/docs/answer/7004183?hl=ko&ref_topic=3105600](https://support.google.com/docs/answer/7004183?hl=ko&ref_topic=3105600)
 
 (문헌 30) 구글Docs 편집기 고객센터, “TTEST”, <https://support.google.com/docs/answer/6055837?hl=ko>
+
+(문헌 31) Statistics Kingdom, “Two Sample T-Test Calculator”, <https://www.statskingdom.com/140MeanT2eq.html>
+
+(문헌 32) Statistics Kingdom, “Shapiro-Wilk Test Calculator”, <https://www.statskingdom.com/shapiro-wilk-test-calculator.html>
+
+(문헌 33) Statistics Kingdom, “Mann Whitney U test calculator (Wilcoxon rank-sum)”, <https://www.statskingdom.com/170median_mann_whitney.html>
+
+(문헌 34) Emma Ding, “A/B Testing Real-Life Example”, <https://www.youtube.com/watch?v=VuKIN9S8Ivs>
