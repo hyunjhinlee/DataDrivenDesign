@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="이현진">
 
-<title>19&nbsp; ch2. F-test와 T-test의 실습 방법들 – 데이터 기반 디자인과 A/B 테스팅</title>
+<title>ch2. UX 디자인과 데이터, AI – 데이터 기반 디자인과 A/B 테스팅</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ch3. 실습 과제의 AB 테스팅 기획.html" rel="next">
-<link href="./ch1. AB 테스팅을 위한 기초 통계와 가설 검증 기법.html" rel="prev">
+<link href="./ch3. 데이터 기반 디자인 (Data Driven Design).html" rel="next">
+<link href="./ch1. UX 디자인의 오늘과 변화의 방향.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 4. 개선 디자인의 검증 - A_B Testing.html"><strong>part 4. 개선 디자인의 검증: A/B Testing</strong></a></li><li class="breadcrumb-item"><a href="./ch2. F-test와 T-test의 실습 방법들.html"><span class="chapter-title">ch2. F-test와 T-test의 실습 방법들</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 1. UX 디자인과 데이터.html"><strong>part 1. UX 디자인과 데이터</strong></a></li><li class="breadcrumb-item"><a href="./ch2. UX 디자인과 데이터, AI.html"><span class="chapter-title">ch2. UX 디자인과 데이터, AI</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -140,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch2. UX 디자인과 데이터, AI.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch2. UX 디자인과 데이터, AI</span></a>
+  <a href="./ch2. UX 디자인과 데이터, AI.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ch2. UX 디자인과 데이터, AI</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -248,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch2. F-test와 T-test의 실습 방법들.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ch2. F-test와 T-test의 실습 방법들</span></a>
+  <a href="./ch2. F-test와 T-test의 실습 방법들.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch2. F-test와 T-test의 실습 방법들</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -289,19 +290,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#구글-스프레드-시트를-사용한-가설-검정-f-test-t-test" id="toc-구글-스프레드-시트를-사용한-가설-검정-f-test-t-test" class="nav-link active" data-scroll-target="#구글-스프레드-시트를-사용한-가설-검정-f-test-t-test"><span class="header-section-number">19.0.1</span> 구글 스프레드 시트를 사용한 가설 검정 (F-test, T-test)</a></li>
-  <li><a href="#엑셀의-분석도구팩을-사용한-가설-검정-f-test-t-test" id="toc-엑셀의-분석도구팩을-사용한-가설-검정-f-test-t-test" class="nav-link" data-scroll-target="#엑셀의-분석도구팩을-사용한-가설-검정-f-test-t-test"><span class="header-section-number">19.0.2</span> 엑셀의 분석도구팩을 사용한 가설 검정 (F-test, T-test)</a></li>
-  <li><a href="#통계-계산기-t-test-calculator를-사용한-가설-검정" id="toc-통계-계산기-t-test-calculator를-사용한-가설-검정" class="nav-link" data-scroll-target="#통계-계산기-t-test-calculator를-사용한-가설-검정"><span class="header-section-number">19.0.3</span> 통계 계산기: T-Test Calculator를 사용한 가설 검정</a></li>
-  <li><a href="#사용자-로그-데이터로-t-test-하기-e-commerce-business-ab-test-case-study" id="toc-사용자-로그-데이터로-t-test-하기-e-commerce-business-ab-test-case-study" class="nav-link" data-scroll-target="#사용자-로그-데이터로-t-test-하기-e-commerce-business-ab-test-case-study"><span class="header-section-number">19.0.4</span> 사용자 로그 데이터로 T-test 하기: e-commerce business A/B test case study</a></li>
+  <li><a href="#데이터의-시각으로-해석한-디자인" id="toc-데이터의-시각으로-해석한-디자인" class="nav-link active" data-scroll-target="#데이터의-시각으로-해석한-디자인">데이터의 시각으로 해석한 디자인</a></li>
+  <li><a href="#데이터와-ai의-관계" id="toc-데이터와-ai의-관계" class="nav-link" data-scroll-target="#데이터와-ai의-관계">데이터와 AI의 관계</a></li>
+  <li><a href="#ux-디자인-대상으로서의-ai와-ux-디자인-도구로서의-ai" id="toc-ux-디자인-대상으로서의-ai와-ux-디자인-도구로서의-ai" class="nav-link" data-scroll-target="#ux-디자인-대상으로서의-ai와-ux-디자인-도구로서의-ai">UX 디자인 대상으로서의 AI와 UX 디자인 도구로서의 AI</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 4. 개선 디자인의 검증 - A_B Testing.html"><strong>part 4. 개선 디자인의 검증: A/B Testing</strong></a></li><li class="breadcrumb-item"><a href="./ch2. F-test와 T-test의 실습 방법들.html"><span class="chapter-title">ch2. F-test와 T-test의 실습 방법들</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 1. UX 디자인과 데이터.html"><strong>part 1. UX 디자인과 데이터</strong></a></li><li class="breadcrumb-item"><a href="./ch2. UX 디자인과 데이터, AI.html"><span class="chapter-title">ch2. UX 디자인과 데이터, AI</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">ch2. F-test와 T-test의 실습 방법들</span></h1>
+<h1 class="title"><span class="chapter-title">ch2. UX 디자인과 데이터, AI</span></h1>
 </div>
 
 
@@ -318,82 +318,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>앞 장에서는 가설 검정의 개념과 R 코드를 사용한 예제들을 학습했지만, F-테스트나 T-테스트의 수행 방법은 다양합니다. 오피스 문서 도구인 구글 스프레드 시트나 엑셀 함수를 사용하여 매우 간단하게 결과를 얻을 수 있고, 통계계산기, 또는 AI 서비스를 통해서도 값을 얻고, 결과 해석에 대한 도움도 받을 수 있습니다. 앞으로 업무 환경에 맞게 다른 방법들을 사용할 수 있으니 여러가지 검정 방법들을 살펴보겠습니다.</p>
-<section id="구글-스프레드-시트를-사용한-가설-검정-f-test-t-test" class="level3" data-number="19.0.1">
-<h3 data-number="19.0.1" class="anchored" data-anchor-id="구글-스프레드-시트를-사용한-가설-검정-f-test-t-test"><span class="header-section-number">19.0.1</span> 구글 스프레드 시트를 사용한 가설 검정 (F-test, T-test)</h3>
-<p>아래의 링크를 보면 구글 스프레드 시트와 엑셀에서 사용할 수 있는 FTEST, TTEST 함수에 관한 설명이 나와있습니다. 앞 장에서 함수 이해에 필요한 개념들을 학습했으므로 설명이 잘 이해될 것입니다. 함수의 사용 방법은 설명에 나와 있듯이 아주 쉽습니다. 답을 넣고 싶은 셀에서 상단 리본 메뉴의 함수&gt;통계&gt;FTEST/ TTEST를 선택하고, 적용할 데이터 범위와 옵션을 지정해 주면 검정에 필요한 p-value 값을 바로 출력해줍니다. 데이터량이 많고, 데이터 편집이 필요할 때는 R과 같이 프로그래밍적인 방법이 좋지만, 데이터량이 적은 경우에는 오피스 도구로 충분히 원하는 검정 결과를 얻을 수 있습니다. (29)(30)</p>
-<p><a href="https://support.google.com/docs/answer/7004183?hl=ko&amp;ref_topic=3105600">FTEST</a></p>
-<p><a href="https://support.google.com/docs/answer/6055837?hl=ko">TTEST</a></p>
+<section id="데이터의-시각으로-해석한-디자인" class="level3">
+<h3 class="anchored" data-anchor-id="데이터의-시각으로-해석한-디자인">데이터의 시각으로 해석한 디자인</h3>
+<p>UX 디자인에서 데이터를 사용하는 것은 새로운 현상이 아닙니다. 디자인 과정에서 데이터는 언제나 사용되어 왔습니다. 우리가 수행하는 디자인 리서치는 대부분 디자인 주제와 관련한 데이터를 수집하는 것으로 시작됩니다. 그리고 디자이너는 수집한 데이터를 검토하여 필요한 데이터를 선정하고, 선정된 데이터를 사용하여 디자인에 적용할 수 있는 형태의 의미있는 데이터로 변환합니다. 디자인에 적용할 수 있는 형태의 데이터에는 설문이나 관찰 조사된 데이터의 분석 보고서도 있고, 데이터의 내용을 시각적으로 표현한 그래프나 다이어그램, 디자이너가 추출한 인사이트, 그리고 디자이너가 제작한 문제의 구조 다이어그램도 있을 것입니다. 또한 디자인 콘셉트를 표현한 스케치나 도면도 데이터가 됩니다. 그리고 이러한 의미있는 디자인 데이터들은 디자이너의 의도에 의하여 목표하는 디바이스나 플랫폼에서 작동하는 화면 레이아웃이나 버튼, 인터렉션을 발생하는 이벤트 등의 디자인 구현 데이터들로 변환되어 디지털 서비스의 개발 코드에 사용됩니다. 결국 데이터의 시각에서 디자인 과정을 해석하면, 디자인이란 디자인 주제와 관련한 다양한 데이터 재료들을 적절한 방법으로 변환하는 과정을 통하여 디자인 해결안을 구축하는 구현 데이터를 생성하는 과정이라고 말할 수 있습니다.</p>
+<p>다만 이 과정에서 사용하는 데이터는 내용과 형식면에서 매우 다양하고, 넓은 범위에 있어서, 데이터들을 선정하고, 해석하고, 필요한 형태로 전환하는 작업들이 디자이너의 주관적이고 창의적인 활동 역량에 의존적이라는 특징이 있습니다. 이와같이 기존의 디자인 방법론도 데이터를 사용하여 디자인을 해왔지만, 최근 주목받는 데이터 기반 디자인(Data Driven Design)의 다른 점은 디자인에 사용하는 데이터들을 디지털화 함으로써 대규모의 데이터를 소프트웨어적인 방법으로 통합, 변형하거나 관리하는 것이 가능한 점, 다양하고 생산성 높은 과학적 분석 기법들을 적용할 수 있는 점, 디자인 내부에서 뿐 아니라 여러 관련 분야의 조직들이 협업하여 이 데이터들을 공유하고 재구성할 수 있다는 점이 다릅니다. 데이터 기반 디자인은 디자인 활동의 내용 측면에서는 기존의 디자인 방법과 동일하지만, 프로젝트에 사용하는 데이터를 수집하고, 가공하고, 활용하는 방법에 변화가 따르게 됩니다.</p>
 </section>
-<section id="엑셀의-분석도구팩을-사용한-가설-검정-f-test-t-test" class="level3" data-number="19.0.2">
-<h3 data-number="19.0.2" class="anchored" data-anchor-id="엑셀의-분석도구팩을-사용한-가설-검정-f-test-t-test"><span class="header-section-number">19.0.2</span> 엑셀의 분석도구팩을 사용한 가설 검정 (F-test, T-test)</h3>
-<p>이번에는 엑셀에서 제공하는 분석도구팩을 사용하여 좀 더 풍부한 해설 값을 출력해보겠습니다. 우선 엑셀 분석도구팩을 설치해야합니다. 사용 컴퓨터가 윈도우 PC인 경우 엑셀 상단 리본메뉴의 파일 &gt;옵션 &gt;추가기능 &gt;이동 &gt; 분석도구팩을 선택하여 설치합니다. 사용 컴퓨터가 맥 PC인 경우 엑셀 리본메뉴의 데이터 &gt;분석도구 &gt;분석도구팩을 선택하여 설치합니다.</p>
-<p>분석 도구팩 설치 후, 상단 리본메뉴 데이터&gt;데이터 분석&gt; T검정/ F 검정 옵션선택 &gt; 범위 설정 &gt; 기타 출력 옵션 설정을 하면 아래 그림의 하단 표와 같이 정리된 표 형태로 검정 테스트 관련 값들이 출력됩니다.</p>
-<p>[그림 28]은 수업에서 사용한 연습 데이터로 3개 설문 문항에 대하여 각 문항의 A디자인(우), B디자인(좌)에 대한 사용자 응답 결과를 대응하여 입력하였고, 각 문항 별로 등분산 여부(FTEST)와 두 값의 차이 여부(TTEST)를 24, 25행에 출력한 사례입니다. 그리고 그림에서 상단 입력 내용 창에는 문항 2에 대하여 엑셀 함수 메뉴를 사용한 E25셀의 TTEST엑셀 함수 옵션을 보여줍니다. 그리고 28행 부터는 엑셀의 분석도구팩을 사용하여 TTEST 분석 내용을 표로 출력하였습니다.</p>
-<p>결과 내용을 보면 3개 문항 모두 FTEST에서 p-value가 0.05보다 크므로 두 그룹의 분산 차이가 없다는 등분산 만족 결과를 보여주고, 있고, TTEST에서 문항 1, 2는 p-value가 0.05보다 커서 두 그룹의 차이가 없다. 즉 결과가 개선되지 않았음을 알 수 있고, 문항 5는 p-value가 0.05보다 작아서 두 값의 차이가 있다. 즉, 디자인 B의 응답 값이 더 높다, 개선되었다는 판단을 할 수 있습니다. 1번 문항의 경우 31행의 평균값(Mean)을 보면 A디자인의 값이 더 높습니다. 하지만 T검정 값은 통계적으로 판단할 때 두 값이 차이가 없다고 판단합니다. 문항 2의 경우 B디자인의 평균값이 조금 더 높지만 이것은 T검정 값으로 볼 때 통계적 의미가 없는 차이여서 두 값의 차이가 없다고 판단했습니다. 이렇게 각 그룹의 평균값이 차이가 난다는 것만으로는 어떤 그룹의 값이 더 높거나 낮다고 판단할 수는 없다는 것을 알 수 있습니다.</p>
+<section id="데이터와-ai의-관계" class="level3">
+<h3 class="anchored" data-anchor-id="데이터와-ai의-관계">데이터와 AI의 관계</h3>
+<p>최근 디자인을 위한 데이터들이 관심을 받게 된 배경에는 인공지능의 출현이 있습니다. 인공지능 서비스의 본질은 서비스의 제공에 필요한 데이터를 수집하고 이를 인간의 사고 과정과 유사한 데이터 모델로 처리하여 결과를 목표하는 데이터 형식으로 출력하는 과정, 즉 인간이 원하는 가치를 얻어내기 위하여 데이터의 입력, 처리, 출력의 라이프사이클을 인공지능을 사용하여 관리하는 기술이라고 할 수 있는데, 서술하는 바와 같이 인공지능 서비스를 가능하게 하는 기본 재료는 ’데이터’입니다. 인간의 사고 과정과 유사한 데이터 모델(인공지능)을 구축하기 위하여는 인간이 데이터를 처리하는 방법을 다량의 데이터로 학습하는 과정이 필요합니다. 이러한 학습 과정을 통하여 인공지능은 인간처럼 대화하고, 판단하고, 예측할 수 있게 됩니다. 그리고 학습 데이터의 질과 양에 따라서 인공지능의 능력이 달라지므로, 인공지능의 역량을 높이기 위해서 양질의 데이터를 다량으로 학습시키고, 테스트하는 과정이 동반됩니다. 그러므로 어떤 인공지능 서비스를 개발할 때는 어떤 데이터를 어떻게 학습시켜서 우리가 원하는 능력을 갖는 인공지능 모델을 구축할 지에 대한 기술적인 이해가 필요하고, 인공지능 서비스를 개발하는 디자이너라면 사용자, 인공지능 데이터 모델, 구현 서비스 간의 통합적인 접점을 제공하는 UX디자인을 제시할 수 있어야 합니다. 기존에 사용자와 구현 서비스간의 UX를 디자인하는 일에 인공지능 데이터 모델이라는 요소가 추가되어 더욱 다면적인 UX 디자인이 요구되는 것입니다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/fig28.png" class="img-fluid figure-img"></p>
-<figcaption>[그림 28] 샘플 데이터에 대한 엑셀의 FTEST, TTEST 결과 출력 화면</figcaption>
+<p><img src="img/fig1.png" class="img-fluid figure-img"></p>
+<figcaption>[그림1] 사용자, AI Service, AI model과 UX Design의 관계 다이어그램</figcaption>
 </figure>
 </div>
-<p>여기까지 수업을 하고나면, 어려워 보이던 F검정, T검정의 방법이 너무 간단해서 놀라고, 당연히 KPI가 개선 될 것으로 확신했던 개선 디자인 B의 값이 A디자인과 차이가 없다는 결과가 많이 나와서 다시 한 번 놀랍니다. 통계적 검정의 결과는 매우 보수적인 편입니다. 정말 확실한 차이가 있어야 두 그룹이 차이가 있다고 판정합니다. 이에 대한 자세한 대응 방법은 다음 단원의 실습 과제에서 더 공부하도록 하겠습니다.</p>
 </section>
-<section id="통계-계산기-t-test-calculator를-사용한-가설-검정" class="level3" data-number="19.0.3">
-<h3 data-number="19.0.3" class="anchored" data-anchor-id="통계-계산기-t-test-calculator를-사용한-가설-검정"><span class="header-section-number">19.0.3</span> 통계 계산기: T-Test Calculator를 사용한 가설 검정</h3>
-<p>아래 [그림 29]는 [그림 28]의 5번 문항 데이터를 T-Test Calculator 서비스에 넣어서 데이터 분석과 해석을 출력한 사례입니다. 이것은 웹기반의 통계 계산 서비스를 활용한 것으로, GUI메뉴로 데이터를 입력하면, 해당 통계 계산을 해서 출력과 자세한 데이터 분석을 제공합니다. 현재 테스트 화면에서는 두 데이터의 정규성에 문제가 있는 것으로 진단 되었습니다. 우리 테스트의 데이터 갯수가 적기 때문에 정규성 만족 문제가 발생했고, 이 문제를 해결하기 위해 다른 방법(Calculate Mann-Whitney)으로 분석해 볼 것을 권장하고 있습니다. 또한 데이터의 분석 내용을 그래프로 정리하여 이해하기 쉽게 해설해주고 있습니다.(31) 이렇게 통계 계산기 웹서비스를 사용하면 데이터 분석 인사이트에 대한 풍부한 해설과 추천 의견을 받아 문제 해결을 할 수 있습니다. 다만 해설에서 다루는 용어와 정의에 대한 이해 역량이 필요합니다. 어려운 해설 부분도 인공지능 서비스의 도움을 받으면 되니까 크게 걱정하지는 않아도 됩니다.</p>
-<p><a href="https://www.statskingdom.com/140MeanT2eq.html">Two Sample T-Test</a></p>
+<section id="ux-디자인-대상으로서의-ai와-ux-디자인-도구로서의-ai" class="level3">
+<h3 class="anchored" data-anchor-id="ux-디자인-대상으로서의-ai와-ux-디자인-도구로서의-ai">UX 디자인 대상으로서의 AI와 UX 디자인 도구로서의 AI</h3>
+<p>본 교재의 학습 주제는 데이터 기반 디자인이므로 UX 디자인과 AI의 두가지 연결 지점에서 사용하는 데이터의 특징을 살펴보겠습니다. 첫번째 연결 지점은 인공지능 서비스가 UX 디자인의 대상이 되는 경우, 즉 인공지능 서비스 개발을 위한 UX 디자인을 하는 지점입니다. 이 경우에 디자이너가 다루는 데이터는 인공지능 서비스가 학습하고, 테스트하고, 수집하는 사용자 및 서비스 관련 데이터가 디자인의 대상이 됩니다. 보통 디자이너는 인공지능 서비스 개발에서 사용자가 접하는 화면 그래픽(GUI)이나 인터렉션을 디자인하는 업무에 한정된다고 생각하기 쉽지만, 인공지능 서비스가 어떤 사용자 경험을 수집하고 이해해야 효과적인 서비스가 가능한지를 판단하려면 인공지능 모델 개발의 초기 단계부터 UX 디자이너가 참여해야합니다.</p>
+<p>디자이너는 인공지능 모델을 구축할 때 인공지능이 학습할 데이터의 내용과 형식에 대하여 이해하고, 서비스의 환경과 사용자 상황에 맞는 학습 데이터를 선정하는 일에 참여합니다. 또한 인공지능 모델이 구축된 후에 성능을 테스트하고, 서비스의 완성도를 검증하는 일에도 참여해야합니다. 그리고 인공지능 서비스가 제공될 때, 사용자가 서비스와 잘 소통하고, 서비스 내용을 이해할 수 있는 사용자 접점을 디자인해야 합니다. 마지막으로 사용자의 피드백데이터를 기반으로 인공지능 모델과 서비스를 개선할 수 있는 디자인을 제시하여 서비스의 성장을 이끌게 됩니다. 이렇게 UX 디자이너는 인공지능 서비스 개발과 운영, 평가의 전반에 사용자 경험을 반영하여 서비스의 질을 확보하는 중요한 역할을 하고, 이를 위하여 서비스 전체 과정에서 사용되고, 생성되는 데이터에 대한 문해력이 필요하고, 인공지능 모델 개발자, 서비스 개발자 등 기술 전문가와의 협업 능력도 요구됩니다. 마찬가지로, 디자이너와의 효과적인 협업을 위하여 기술 전문가들도 사용자 경험과 디자인을 이해하는 역량이 요구되고 있습니다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/fig29.png" class="img-fluid figure-img"></p>
-<figcaption>[그림 29] TTest Calculator의 실행 화면</figcaption>
+<p><img src="img/fig2.png" class="img-fluid figure-img"></p>
+<figcaption>[그림2] 사용자의 청취 기록을 분석하여 ’Discover Weekly’와 같은 맞춤형 콘텐츠를 제공하는 글로벌 음악 스트리밍 서비스, Spotify(3)</figcaption>
 </figure>
 </div>
-<p>참고로, 정규성을 불만족한 경우 (관측값이 30개가 안되는 경우)는 T-test가 부적합하므로 아래의 정규성 검정 테스트를 해보고, 샘플이 정규분포가 아니거나 수가 적을 때, 모수에 대한 가정을 전제로 하지 않고 모집단의 형태에 관계없이 주어진 데이터에서 직접 확률을 계산하는 Mann-Whitney U test 를 사용합니다.</p>
-<ul>
-<li><p>정규성 검정 (Shapiro-Wilk test)(32) <a href="https://www.statskingdom.com/shapiro-wilk-test-calculator.html">Shapiro-Wilk test calculator: normality calculator, Q-Q plot</a></p></li>
-<li><p>비모수 검정(Mann-Whitney U test)(33) <a href="https://www.statskingdom.com/170median_mann_whitney.html">Mann-Whitney U test</a></p></li>
-</ul>
-</section>
-<section id="사용자-로그-데이터로-t-test-하기-e-commerce-business-ab-test-case-study" class="level3" data-number="19.0.4">
-<h3 data-number="19.0.4" class="anchored" data-anchor-id="사용자-로그-데이터로-t-test-하기-e-commerce-business-ab-test-case-study"><span class="header-section-number">19.0.4</span> 사용자 로그 데이터로 T-test 하기: e-commerce business A/B test case study</h3>
-<p>데이터 과학 관련 유투버인 Emma Ding은 온라인 서비스의 A/B 테스팅 사례를 아래 제시한 영상으로 설명하였습니다. (34) 영상 내용은 온라인 쇼핑몰 운영하는 A기업이 고객 경험을 향상시키고 매출도 올리고 싶어서 여러 전략을 고민하던 중, ‘결제 페이지에 유사 상품 보여주는 기능’ 도입하면 구매 품목 늘릴 수 있을 것 같다는 아이디어를 냈으나, 이 아이디어가 오히려 결제에 집중 못 하게 해서 구매 포기하게 만들 수도 있지 않을까 하는 걱정도 있어서 ’결제 페이지에 유사 상품 보여주는 기능’의 도입 여부를 결정하고자 A/B 테스트를 진행하는 과정을 설명합니다.</p>
-<ul>
-<li><p>실험 목표: 유사 상품 기능이 고객 구매에 얼마나 영향 주는지, 수익 증대 효과 있는지를 분석합니다.</p></li>
-<li><p>KPI: 사용자당 평균 구매 금액 (ARPU:Average Revenue Per User)가 2$ 이상 증가한다.</p></li>
-<li><p>실험군:</p>
-<ul>
-<li>대조군: 기존 결제 페이지 그대로 유지 (A 디자인)</li>
-<li>처리군 1: 결제 페이지 아래에 유사 상품 섹션 추가 (B 디자인)</li>
-<li>처리군 2: 결제 페이지 중앙에 유사 상품 팝업 창 띄움 (B’ 디자인)</li>
-</ul></li>
-<li><p>표본:</p>
-<ul>
-<li>결제 페이지 들어오는 모든 고객들을 각 그룹에 랜덤하게 배정해서 실험 결과 객관적으로 나오도록 함.</li>
-<li>통계적으로 의미 있는 결과 얻으려면 각 그룹에 충분한 수의 사람들이 있어야 함.</li>
-<li>사례는 그룹당(대조군, 처리군1, 처리군2) 1,600명씩 총 4,800명 조사, 일 단위로 조사 인원 비율을 점차 늘려 조사함.</li>
-</ul></li>
-<li><p>실험 기간: 요일별로 차이가 있을 수 있으니까 최소 일주일 이상 진행</p></li>
-<li><p>데이터 분석 및 결과 해석</p>
-<ul>
-<li>처리군 1 (유사 상품 섹션, B디자인): 기존이랑 비교하여 ARPU는 실질적인 증가가 있었지만, 통계적으로 유의미한 차이는 없었음.</li>
-<li>처리군 2 (유사 상품 팝업 창, B’디자인): ARPU는 실질적 증가가 있었고, 통계적으로도 유의미하게 증가했지만, 팝업 창에 대한 고객 선호도는 고려해야함.</li>
-</ul></li>
-<li><p>결론 및 후속 조치</p>
-<p>이번 A/B 테스트 결과를 바탕으로 A기업은 다음의 후속 조치를 취하기로 함.</p>
-<ul>
-<li>처리군 1 (유사 상품 섹션): 유사 상품 추천하는 알고리즘 개선하고 디자인을 바꿔서 사용자 경험 좋게 만들고 다시 A/B 테스트 해보기로 함</li>
-<li>처리군 2 (유사 상품 팝업 창): 팝업 창 디자인을 개선해서 불편한 점을 줄이고 구매 단가를 높이는 방법 찾아보기로 함</li>
-</ul></li>
-</ul>
-<p>이와같이 A/B 테스트는 한 번 하고 끝나는 게 아니라, 평가 결과를 바탕으로 반복적으로 개선하고 검증하면서 최적화된 결과 만들어나가는 데 활용할 수 있습니다.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/VuKIN9S8Ivs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>(문헌 29) 구글Docs 편집기 고객센터, “FTEST”, <a href="https://support.google.com/docs/answer/7004183?hl=ko&amp;ref_topic=3105600" class="uri">https://support.google.com/docs/answer/7004183?hl=ko&amp;ref_topic=3105600</a></p>
-<p>(문헌 30) 구글Docs 편집기 고객센터, “TTEST”, <a href="https://support.google.com/docs/answer/6055837?hl=ko" class="uri">https://support.google.com/docs/answer/6055837?hl=ko</a></p>
-<p>(문헌 31) Statistics Kingdom, “Two Sample T-Test Calculator”, <a href="https://www.statskingdom.com/140MeanT2eq.html" class="uri">https://www.statskingdom.com/140MeanT2eq.html</a></p>
-<p>(문헌 32) Statistics Kingdom, “Shapiro-Wilk Test Calculator”, <a href="https://www.statskingdom.com/shapiro-wilk-test-calculator.html" class="uri">https://www.statskingdom.com/shapiro-wilk-test-calculator.html</a></p>
-<p>(문헌 33) Statistics Kingdom, “Mann Whitney U test calculator (Wilcoxon rank-sum)”, <a href="https://www.statskingdom.com/170median_mann_whitney.html" class="uri">https://www.statskingdom.com/170median_mann_whitney.html</a></p>
-<p>(문헌 34) Emma Ding, “A/B Testing Real-Life Example”, <a href="https://www.youtube.com/watch?v=VuKIN9S8Ivs" class="uri">https://www.youtube.com/watch?v=VuKIN9S8Ivs</a></p>
+<p>두번째, 인공지능은 UX 디자인을 위한 도구 역할을 할 수 있습니다. 데이터 분석과 시각화, 아이디어 도출, 디자인 레이아웃 제안, 그래픽 시안 제작 등 디자인 프로세스의 여러 활동들이 인공지능 기술을 활용한 디자인 서비스로 제공되고 있고, 디자인하는 인공지능 서비스는 앞으로도 영역을 확장하여 발전해 나갈 것입니다. 인공지능 기술을 활용한 디자인 방법은 디자인의 생산성을 높이는 데 크게 기여하고 있습니다. 인공지능 기술은 디자이너의 사고와 작업 방식을 학습하여 디자이너처럼 데이터를 처리하고 그 결과물을 제안합니다. 이러한 상황에서 디자이너들이 기술을 더 잘 활용하고, 디자인의 역량을 확대하기 위해서는 디자인하는 인공지능 기술들이 데이터를 처리하는 방법을 이해하고 활용할 수 있어야하며, 나아가 인공지능이 더 높은 수준의 디자인 작업을 지원할 수 있도록 디자인 데이터와 디자인 행위를 데이터 기술과 연계하는 방법을 개발할 필요가 있습니다.</p>
+<p>아래의 기사는 UX 디자인 업무에 AI 서비스를 사용하는 구체적인 업무 내용과 방법들을 설명하고 있습니다. (4)</p>
+<p><a href="https://www.nngroup.com/articles/ai-ux-getting-started/">AI for UX: Getting Started</a></p>
+<p>2024년 7월에는 대표적인 UX/UI 표현 도구인 피그마에서 AI 기술을 적극적으로 활용한 디자인과 개발, 프레젠테이션 기능들을 선보였습니다. (5)</p>
+<p><a href="https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능">Config 2024에서 발표된 새로운 기능</a></p>
+<p>이렇게 UX 디자인에 인공지능 기술이 들어와 디자이너의 업무를 수행하게 된다면 어떤 일들이 벌어질까요? 인공지능이 디자인을 할 수 있으므로 디자이너의 일자리가 없어질까요? 인공지능이 담당할 수 없는 창의적이고, 모험적인 업무에는 소수의 디자이너가 주도하고, 인공지능이 디자이너의 업무를 대신하는 것이 가능한 단순 반복적 디자인 작업이나 패턴화된 디자인 작업은 사람대신 인공지능이 대체하게 될 것입니다. 또 많은 디자이너들은 인공지능에게 할 일을 지시하거나 인공지능의 결과물을 검수하는 일, 그리고 인공지능이 디자인 업무를 할 수 있도록 디자인 업무를 디지털 데이터 중심으로 변환하고, 패턴화하는 일을 하거나, 인공지능에게 학습 데이터를 제공하는 일들을 하게 될 것입니다. 이렇게 인공지능 기반 디자인 도구들은 디자이너의 업무 내용이나 업무 역량의 변화를 이끌고, 디자인 전문가가 아닌 사람들과 디자인 업무의 협업자들이 인공지능 서비스를 활용하여 쉽게 UX 디자인 문제들을 해결하게 할 것으로 예상합니다. 기술은 본래 의식이 없습니다. 기술이 우리에게 긍정적인 역할을 할지, 부정적인 역할을 할지는 인간의 사용 의도에 따라 달라질 수 있습니다. 디자이너는 중립적인 인공지능 기술이 우리에게 유리한 방향으로 기여하도록 잘 이끌어 가야 하겠습니다.</p>
+<p>(문헌 3) Spotify(스포티파이), Apple app store</p>
+<p>(문헌 4) Kate Moran, Jakob Nielsen, “AI for UX: Getting Started”, <a href="https://www.nngroup.com/articles/ai-ux-getting-started/" class="uri">https://www.nngroup.com/articles/ai-ux-getting-started/</a>, (2023)</p>
+<p>(문헌 5) Figma Learn, “Config 2024에서 발표된 새로운 기능”, <a href="https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능" class="uri">https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능</a>, (2024)</p>
 
 
 </section>
@@ -821,13 +779,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch1. AB 테스팅을 위한 기초 통계와 가설 검증 기법.html" class="pagination-link" aria-label="ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법</span></span>
+      <a href="./ch1. UX 디자인의 오늘과 변화의 방향.html" class="pagination-link" aria-label="ch1. UX 디자인의 오늘과 변화의 방향">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch1. UX 디자인의 오늘과 변화의 방향</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch3. 실습 과제의 AB 테스팅 기획.html" class="pagination-link" aria-label="ch3. 실습 과제의 A/B 테스팅 기획">
-        <span class="nav-page-text"><span class="chapter-title">ch3. 실습 과제의 A/B 테스팅 기획</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html" class="pagination-link" aria-label="ch3. 데이터 기반 디자인 (Data Driven Design)">
+        <span class="nav-page-text"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

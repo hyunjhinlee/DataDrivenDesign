@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="이현진">
 
-<title>23&nbsp; 맺음말: 다음 테스트를 위하여 – 데이터 기반 디자인과 A/B 테스팅</title>
+<title>ch3. 데이터 기반 디자인 (Data Driven Design) – 데이터 기반 디자인과 A/B 테스팅</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./ch5. AB 테스팅 결과의 디자인 반영.html" rel="prev">
+<link href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html" rel="next">
+<link href="./ch2. UX 디자인과 데이터, AI.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./맺음말: 다음 테스트를 위하여.html"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 1. UX 디자인과 데이터.html"><strong>part 1. UX 디자인과 데이터</strong></a></li><li class="breadcrumb-item"><a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -145,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></a>
+  <a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></a>
   </div>
 </li>
       </ul>
@@ -270,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./맺음말: 다음 테스트를 위하여.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></a>
+  <a href="./맺음말: 다음 테스트를 위하여.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -290,9 +291,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 1. UX 디자인과 데이터.html"><strong>part 1. UX 디자인과 데이터</strong></a></li><li class="breadcrumb-item"><a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></h1>
+<h1 class="title"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></h1>
 </div>
 
 
@@ -309,12 +310,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>지금까지 데이터 기반 디자인과 Lean UX 디자인 프로세스, 디자인 검증을 위한 A/B 테스팅에 관한 이론들을 학습하고, 실습 과제들을 경험했는데요. 이제 데이터 기반 디자인에 대하여 이해가 되었다는 생각이 드시나요?</p>
-<p>이상의 과정을 수업으로 진행하다 보면 여러가지 학생 피드백을 받게 됩니다. 가장 자주 듣는 말은 디자인하는 방법에 대한 새로운 경험을 갖게 되었다는 말입니다. 데이터 분석과 논리적 전개에 따라 시행되는 디자인은 기존에 해왔던 비교적 자유롭고, 감각적인 디자인 방법과는 차이가 있습니다. 하지만 실습 과제를 진행하면서 여전히 디자이너의 창의적 의사 결정 경로는 열려있다는 생각이 들지 않는지요? 잘 알다시피 과학이나 공학 분야도 매우 창의적인 사고가 필요합니다. 여러분이 얻은 새로운 경험을 통하여 데이터를 디자인 도구로 더 잘 사용할 수 있으면 좋겠습니다.</p>
-<p>두번째 많이 듣는 피드백은 A/B 테스팅을 하기 위해 컨트롤 해야하는 조건들의 제약이 크다보니, 디자인 자유도가 너무 적다, 이렇게 조금씩 개선하는 것이 답답하다는 것입니다. 이것도 맞는 말이고, 이렇게 진행하면 혁신적인 디자인을 반영하기는 어려운 점이 있습니다. 그래서 이 방법은 지속적인 개선을 전제로 하는 것입니다. 린 UX 디자인 방법은 적절한 조건의 프로젝트를 만날 때 효과가 큽니다. 모든 디자인을 해결하는 방법론이 아닙니다. 그래서 A/B 테스팅 이후의 개선 디자인 수정(B’ 디자인)을 실습할 때는 좀 더 자유롭고, 적극적인 디자인도 제안하도록 하여 디자이너가 느끼는 답답함을 해소하기도 합니다. 물론 린 UX의 점진적 개선 패러다임을 좀 벗어나게 되지요. 우리는 짧은 시간과 제한된 여건에서 디자인 방법을 이해하기 위한 연습을 해야하는 한계가 있음을 이해하기 바랍니다.</p>
-<p>서술한 바와 같이 데이터 기반 디자인은 나름대로의 장점과 한계를 갖고 있습니다. 마치 디자인을 할 때 각 표현 요소마다 사용하는 툴이 달라 질 수 있듯이, 내가 디자인하는 도구에 대한 또 하나의 선택지로서 데이터 기반 디자인을 이해하면 좋겠고, 이 도구는 기존의 디자인 방법에서 아쉬웠던 특별한 지점들을 채우기 위해 개발되었다고 생각하면 좋을 듯합니다. 또 데이터 기반 디자인은 오늘날의 산업 전반에서 정말 뜨거운 주제가 되어있는 인공지능 기술과 아주 잘 융합되는 특징을 지니고 있습니다. 데이터를 이해하고, 데이터로 소통하는 능력은 디자이너가 인공지능 관련 분야에 진입할 수 있는 기본 소양이라고 할 수 있습니다. 데이터 기반 디자인 역량이 매우 필요하다는 인식은 오래전 부터 있어왔지만, 데이터 기술을 이해하고 분석하는 능력의 장애물을 넘지 못해 디자인 영역으로 편입되기 어려웠습니다. 그러나 이제는 데이터 문해력의 대중화, 데이터 분석 도구들의 발전, 인공지능 기술과의 연계 등으로 기술적인 장애물의 높이는 많이 낮아졌고, 앞으로도 점점 더 낮아지는 추세입니다. 시대적 요구와 기술 환경이 준비 되었으니, 이제는 과감하게 데이터의 장애물을 건너 디자이너의 역량을 넓혀 봅시다. 가보지 않았던 길을 가 봄으로써 우리는 새로운 세계를 발견하게 될 것입니다.</p>
-<p>마지막으로 이 책에 담긴 다양한 디자인 사례와 실습 노하우를 축적할 수 있도록 기여해 준 우리 학부의 UX Design(2) 수업 수강생 여러분의 열린 마음과 디자인을 향한 노력에 감사를 전합니다. 그리고 뜻 깊게도 이 원고는 콘텐츠 원고를 데이터로 활용하여 web, e-bub, PDF 형태의 책으로 출판하는 R의 Quarto 서비스와 Bit Publish 소프트웨어를 사용하여 제작되었습니다. 책의 제작 과정을 통하여 데이터 기술의 또 다른 매력을 함께 경험할 수 있게되어 더욱 기쁩니다.</p>
-<p>본 교재의 학습 경험을 바탕으로 여러분의 다음 데이터 기반 디자인 프로젝트가 성공적인 결과를 내기를 기대해보며, 원고를 마치겠습니다.</p>
+<p>데이터 기반 디자인(Data Driven Design)이란 디자인 대상과 관련된 방대한 정량화 데이터를 디자인 설계와 의사 결정의 근거로 활용하는 기법과 정량화 테스트를 통하여 디자인 결과물을 평가, 검증하는 기법을 말합니다.(6) 쉽게 말하면, 데이터에 근거하여 디자인 의사 결정을 수행하는 기법이라고 할 수 있습니다. 데이터 기반 디자인 방법론은 디지털 데이터들을 지속적으로 생산하고 축적하는 웹이나 앱 기반 서비스에 쉽게 적용되기 때문에 구글 등 IT 서비스 기업들이 디지털 서비스의 개발과 운영에 활용하고 있습니다. 현재의 데이터 기반 디자인 연구들은 대부분 인터넷을 통하여 수집된 사용자 로그 데이터를 대상으로 이루어지고 있으나, 점차 사물인터넷(IoT: Internet of Things) 센서 데이터를 사용하는 등 더 다양한 데이터 자원을 활용하는 방향으로 발전하고 있습니다.</p>
+<p>데이터 기반 디자인 서비스 및 컨설팅을 제공하는 산업은 증가 추세에 있으며, 디지털 콘텐츠(웹/앱 서비스)의 사용자 로그 데이터를 시각화하여 사용자 유입 분석, 사용 행태 분석, A/B 테스팅 분석 결과를 제공하는 서비스가 주를 이룹니다. 데이터 기반 디자인을 수행하기 위하여 정량적 통계 분석 및 데이터 시각화 서비스를 지원하는 도구 및 컨설팅 비즈니스 사례에는 구글 애널리틱스(Google Analytics), 태블로(Tableau), 어도비 타깃(Adobe Target) 서비스 등이 있으며, 각 서비스에 대하여는 다음 단원에서 자세히 다루도록 하겠습니다. (7)</p>
+<p>앞서 인공지능 서비스를 디자인하기 위해서는 디자이너가 데이터에 대한 이해가 풍부해야한다고 설명했는데, 선행 연구에 의하면, 인공지능 서비스 개발을 위하여 디자이너는 서비스 및 사용자 관련 데이터를 원격으로 수집할 수 있는 능력과 수집된 데이터에 대한 정량적이고 정성적인 분석과 시각화를 통하여 사용자 행동을 해석하여 디자인에 반영할 수 있는 능력이 요구됩니다. 그리고 실제로 인공지능 서비스를 개발하는 디자이너들은 데이터 중심의 업무 환경에서 데이터의 기초적 통계 분석, 데이터 시각화, A/B 테스팅 기법을 매우 자주 사용하고 있다고 합니다. 그러므로 연구 팀은 디자이너가 데이터로 생각하고, 데이터로 작업하며, 데이터 전문가들과 소통할 수 있도록 하는 교육 과정을 UX 디자인 교육에 반영해야 한다고 주장하고, 또한 UX, HCI 교육에서 디자이너, 데이터 전문가, 엔지니어, 사용자 연구자 등이 함께 협업하는 학제적 수업을 제공하여 학생들이 협업 능력과 창의성을 기를 수 있도록 해야 한다고 제안하였습니다.(8) 선행 연구에서 제시한 바와 같이, 인공지능 서비스를 디자인하기 위한 데이터 문해력은 데이터 기반 디자인을 수행하기 위해 필요한 역량과 일치하고 있습니다. 데이터 기반 디자인을 공부하면서 인공지능 서비스의 디자인 역량을 함께 준비할 수 있다니, 더욱 기대되지 않나요? 그럼 다음 단원 부터는 구체적으로 데이터 기반 디자인의 방법들을 경험해 볼까요?</p>
+<p>(문헌 6) Rochelle King, Elizabeth Churchill, and Caitlin Tan, 『Designing with data』, O’reilly, (2017), pp.3-6</p>
+<p>(문헌 7) 이현진, 『데이터 드리븐 디자인』, UX리뷰, (2024), pp.43-44</p>
+<p>(문헌 8) Qian Yang, Alex Scuito, John Zimmerman, Jodi Forlizzi, and Aaron Steinfeld, “Investigating How Experienced UX Designers Effectively Work with Machine Learning”, DIS(Design Information Systems)(2018), Hong Kong, pp.585–596</p>
 
 
 
@@ -741,13 +742,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch5. AB 테스팅 결과의 디자인 반영.html" class="pagination-link" aria-label="ch5. A/B 테스팅 결과의 디자인 반영">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch5. A/B 테스팅 결과의 디자인 반영</span></span>
+      <a href="./ch2. UX 디자인과 데이터, AI.html" class="pagination-link" aria-label="ch2. UX 디자인과 데이터, AI">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch2. UX 디자인과 데이터, AI</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html" class="pagination-link" aria-label="part 2. 디자인 리서치를 위한 탐구적 데이터 분석">
+        <span class="nav-page-text"><span class="chapter-title">part 2. 디자인 리서치를 위한 탐구적 데이터 분석</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

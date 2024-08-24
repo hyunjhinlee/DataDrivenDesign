@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="이현진">
 
-<title>10&nbsp; ch4. EDA를 위한 데이터 분석 도구들 – 데이터 기반 디자인과 A/B 테스팅</title>
+<title>맺음말: 다음 테스트를 위하여 – 데이터 기반 디자인과 A/B 테스팅</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ch5. Lean UX 프로세스와 데이터 기반 디자인.html" rel="next">
-<link href="./ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2).html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./ch5. AB 테스팅 결과의 디자인 반영.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></a></li><li class="breadcrumb-item"><a href="./ch4. EDA를 위한 데이터 분석 도구들.html"><span class="chapter-title">ch4. EDA를 위한 데이터 분석 도구들</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./맺음말: 다음 테스트를 위하여.html"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -181,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch4. EDA를 위한 데이터 분석 도구들.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ch4. EDA를 위한 데이터 분석 도구들</span></a>
+  <a href="./ch4. EDA를 위한 데이터 분석 도구들.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch4. EDA를 위한 데이터 분석 도구들</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -270,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./맺음말: 다음 테스트를 위하여.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></a>
+  <a href="./맺음말: 다음 테스트를 위하여.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -284,28 +285,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">목차</h2>
-   
-  <ul>
-  <li><a href="#google-analytics-ga" id="toc-google-analytics-ga" class="nav-link active" data-scroll-target="#google-analytics-ga"><span class="header-section-number">10.0.1</span> Google Analytics (GA)</a></li>
-  <li><a href="#주요-서비스" id="toc-주요-서비스" class="nav-link" data-scroll-target="#주요-서비스"><span class="header-section-number">10.0.2</span> 주요 서비스</a></li>
-  <li><a href="#power-bi" id="toc-power-bi" class="nav-link" data-scroll-target="#power-bi"><span class="header-section-number">10.0.3</span> Power BI</a></li>
-  <li><a href="#주요-서비스-1" id="toc-주요-서비스-1" class="nav-link" data-scroll-target="#주요-서비스-1"><span class="header-section-number">10.0.4</span> 주요 서비스</a></li>
-  <li><a href="#tableau" id="toc-tableau" class="nav-link" data-scroll-target="#tableau"><span class="header-section-number">10.0.5</span> Tableau</a></li>
-  <li><a href="#주요-서비스-2" id="toc-주요-서비스-2" class="nav-link" data-scroll-target="#주요-서비스-2"><span class="header-section-number">10.0.6</span> 주요 서비스</a></li>
-  <li><a href="#beusable" id="toc-beusable" class="nav-link" data-scroll-target="#beusable"><span class="header-section-number">10.0.7</span> Beusable</a></li>
-  <li><a href="#주요-서비스-3" id="toc-주요-서비스-3" class="nav-link" data-scroll-target="#주요-서비스-3"><span class="header-section-number">10.0.8</span> 주요 서비스</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></a></li><li class="breadcrumb-item"><a href="./ch4. EDA를 위한 데이터 분석 도구들.html"><span class="chapter-title">ch4. EDA를 위한 데이터 분석 도구들</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">ch4. EDA를 위한 데이터 분석 도구들</span></h1>
+<h1 class="title"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></h1>
 </div>
 
 
@@ -322,110 +310,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="google-analytics-ga" class="level3" data-number="10.0.1">
-<h3 data-number="10.0.1" class="anchored" data-anchor-id="google-analytics-ga"><span class="header-section-number">10.0.1</span> Google Analytics (GA)</h3>
-<p>Google Analytics는 웹사이트와 앱의 사용자 행동을 추적하고 분석하여, 마케팅 전략을 개선하고 사용자 경험을 최적화하는 데 도움을 주는 도구입니다. 이를 통해 사용자들이 어떤 경로로 사이트에 도착했는지, 어떤 페이지에서 얼마나 머무르는지, 어떤 행동을 하는지 등을 상세히 분석할 수 있습니다. 서비스에 가입하면 데이터 분석이 필요한 웹 서비스에 GA와 연계하는 코드를 삽입하여 데이터를 추출하고, 다양한 GUI 메뉴로 데이터 현황을 탐색할 수 있습니다. (16)</p>
-<p><a href="https://marketingplatform.google.com/intl/ko/about/analytics/features/">애널리틱스 기능</a></p>
-</section>
-<section id="주요-서비스" class="level3" data-number="10.0.2">
-<h3 data-number="10.0.2" class="anchored" data-anchor-id="주요-서비스"><span class="header-section-number">10.0.2</span> 주요 서비스</h3>
-<ul>
-<li><p>데이터 수집 및 관리</p>
-<p>웹사이트와 앱의 데이터를 통합하여 분석할 수 있고, 다양한 플랫폼과 기기에서 발생하는 데이터를 정확하게 추적합니다.</p></li>
-<li><p>분석 및 통계</p>
-<ul>
-<li>사용자 세그먼트: 특정 기준에 따라 사용자 그룹을 세분화하고 각 그룹의 행동을 분석할 수 있습니다.</li>
-<li>행동 분석: 사용자의 페이지 방문, 클릭, 이벤트 등 다양한 행동 데이터를 분석합니다.</li>
-<li>실시간 데이터: 실시간으로 웹사이트 방문자 수, 현재 활동 중인 페이지 등을 모니터링할 수 있습니다.</li>
-</ul></li>
-<li><p>보고 및 시각화</p>
-<p>맞춤형 대시보드로 중요한 데이터를 한눈에 볼 수 있습니다. 데이터를 그래프와 차트로 시각화하여 쉽게 이해하고 분석할 수 있고, PDF, Excel 등 다양한 형식으로 보고서를 내보낼 수 있습니다.</p></li>
-<li><p>통합 및 확장</p>
-<ul>
-<li>Google Ads, Google Tag Manager, Firebase 등 다른 Google 도구와 원활하게 연동됩니다.</li>
-<li>API 지원: 다양한 API를 통해 데이터를 추출하고 맞춤형 솔루션을 구축할 수 있습니다.</li>
-</ul></li>
-<li><p>머신러닝 및 인사이트</p>
-<p>머신러닝을 활용하여 자동으로 목표를 설정하고 중요한 인사이트를 제공합니다. 사용자의 미래 행동을 예측하고 이에 맞춘 전략을 수립할 수 있습니다.</p></li>
-<li><p>단점: 고급 기능을 활용하려면 일정 수준 이상의 기술 지식이 필요할 수 있습니다. 그리고 대규모 트래픽이 발생하는 웹사이트에서는 샘플링 데이터를 제공하여 전체 데이터를 반영하지 않을 수 있습니다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/fig17.png" class="img-fluid figure-img"></p>
-<figcaption>[그림 17] Google Analytics의 데이터 시각화 화면</figcaption>
-</figure>
-</div></li>
-</ul>
-</section>
-<section id="power-bi" class="level3" data-number="10.0.3">
-<h3 data-number="10.0.3" class="anchored" data-anchor-id="power-bi"><span class="header-section-number">10.0.3</span> Power BI</h3>
-<p>Power BI는 Microsoft에서 제공하는 비즈니스 분석 서비스로, 데이터를 시각화하고 공유 가능한 보고서를 생성하며, 인사이트를 도출하는 클라우드 기반 솔루션입니다. 사용 방법은 Power BI Desktop 설치 후, 다양한 데이터 소스를(Excel, SQL Server 등) 연결하고, 실시간 데이터 가져오기 하여 분석을 시행합니다. Power BI Desktop에서 보고서 작성 후에는 Power BI 서비스(웹)에서 공유 및 대시보드를 관리합니다. 이를 통해 사용자들은 데이터 기반의 의사 결정을 내릴 수 있습니다. (17)</p>
-<p><a href="https://powerbi.microsoft.com/ko-kr/guidedtour/power-platform/power-bi/2/1">Power BI 둘러보기</a></p>
-</section>
-<section id="주요-서비스-1" class="level3" data-number="10.0.4">
-<h3 data-number="10.0.4" class="anchored" data-anchor-id="주요-서비스-1"><span class="header-section-number">10.0.4</span> 주요 서비스</h3>
-<ul>
-<li>데이터 통합: 다양한 데이터 소스(엑셀, SQL 데이터베이스, 클라우드 서비스 등)와 연결하여 데이터를 통합합니다. 특히 Microsoft 제품과의 통합에 강점을 가집니다.</li>
-<li>대시보드 생성: 실시간 데이터 시각화와 대시보드를 생성하여 데이터를 한눈에 파악할 수 있습니다.</li>
-<li>보고서 작성: 다양한 시각화 도구를 사용하여 상세한 보고서를 작성하고 분석할 수 있습니다.</li>
-<li>모바일 접근성: 모바일 앱을 통해 언제 어디서나 데이터를 조회하고 분석할 수 있습니다.</li>
-<li>AI 통합: 인공지능 기능을 통해 예측 분석과 자동화된 인사이트를 제공합니다</li>
-<li>사용자 친화적 인터페이스와 협업 지원: 직관적이고 사용하기 쉬운 인터페이스를 제공하고, 팀 내에서 보고서를 공유하고 협업할 수 있습니다.</li>
-<li>단점: 초보자에게는 초기 설정이 복잡할 수 있습니다. 무료 버전의 기능이 제한적이며, 대용량 데이터를 처리하는 데 제한이 있을 수 있습니다.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/fig18.png" class="img-fluid figure-img"></p>
-<figcaption>[그림 18] Power BI의 데시보드 구성 화면</figcaption>
-</figure>
-</div>
-</section>
-<section id="tableau" class="level3" data-number="10.0.5">
-<h3 data-number="10.0.5" class="anchored" data-anchor-id="tableau"><span class="header-section-number">10.0.5</span> Tableau</h3>
-<p>Tableau는 데이터를 시각적으로 분석하고 이해할 수 있게 돕는 비즈니스 인텔리전스(BI) 도구입니다.</p>
-<p>Tableau는 고급 데이터 시각화 기능에 강점을 갖고 있어, 히트맵, 트리맵, 버블 차트 등 다양한 고급 시각화 기능을 제공하고, 사용자가 대시보드를 인터렉티브하게 데이터 탐색을 할 수 있으며, 데이터 시각화를 스토리 형태로 구성해 프레젠테이션하고, 지리적 데이터를 시각화하고 분석하는 강력한 기능을 제공합니다. (18)</p>
-<p><a href="https://www.tableau.com/ko-kr/products/tableau">Tableau product</a></p>
-</section>
-<section id="주요-서비스-2" class="level3" data-number="10.0.6">
-<h3 data-number="10.0.6" class="anchored" data-anchor-id="주요-서비스-2"><span class="header-section-number">10.0.6</span> 주요 서비스</h3>
-<ul>
-<li><p>데이터 통합: 다양한 소스의 데이터를 통합하여 일관된 분석 가능합니다.</p></li>
-<li><p>시각화 도구: 드래그 앤 드롭 방식으로 손쉽게 고급 시각화 차트와 대시보드를 생성합니다.</p></li>
-<li><p>AI 및 ML 통합: 인공지능과 머신러닝을 통해 예측 분석 및 인사이트를 제공합니다.</p></li>
-<li><p>단점: 고급 기능을 완전히 익히는 데 시간이 필요합니다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/fig19.png" class="img-fluid figure-img"></p>
-<figcaption>[그림 19] Tableau를 사용한 인터렉티브 대시보드</figcaption>
-</figure>
-</div></li>
-</ul>
-<p>이 세가지 서비스는 세계적으로 가장 많이 사용되는 데이터 분석 서비스이고, 최근에는 AI 기술을 사용한 시각화 및 예측 서비스가 강화되는 추세입니다. Google Analytics는 주로 웹사이트 분석에, Power BI는 비즈니스 인텔리전스 및 데이터 분석에, Tableau는 고급 데이터 시각화에 좀 더 특화되어 있다고 할 수 있습니다.</p>
-</section>
-<section id="beusable" class="level3" data-number="10.0.7">
-<h3 data-number="10.0.7" class="anchored" data-anchor-id="beusable"><span class="header-section-number">10.0.7</span> Beusable</h3>
-<p>Beusable은 UX를 위한 데이터 분석에 특화된 국내 서비스로, 사용자 경험을 개선하기 위해 시각화된 데이터 분석 기능을 제공합니다. 주요 기능으로는 Journey Map과 UX Heatmap이 있으며, 이를 통해 고객 여정을 시각적으로 파악하고, 문제 구간을 분석하여 개선안을 도출할 수 있습니다. 설치가 간편하고, 직관적인 UI를 제공합니다. (19)</p>
-<p><a href="https://www.beusable.net/ko/">Why Beausable</a></p>
-</section>
-<section id="주요-서비스-3" class="level3" data-number="10.0.8">
-<h3 data-number="10.0.8" class="anchored" data-anchor-id="주요-서비스-3"><span class="header-section-number">10.0.8</span> 주요 서비스</h3>
-<ul>
-<li>Journey Map: 고객의 전환 과정을 시각화하여 분석합니다.</li>
-<li>UX Heatmap: 페이지 내 사용자 행동을 시각화하여 문제점을 파악합니다.</li>
-<li>간편한 설치: 한 줄의 코드 설치로 데이터 수집 및 분석이 가능합니다.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/fig20.png" class="img-fluid figure-img"></p>
-<figcaption>[그림 20] Beausable의 고객 여정 분석 화면</figcaption>
-</figure>
-</div>
-<p>(문헌 16)Google marketing platform, “애널리틱스 기능” <a href="https://marketingplatform.google.com/intl/ko/about/analytics/features/" class="uri">https://marketingplatform.google.com/intl/ko/about/analytics/features/</a></p>
-<p>(문헌 17) Microsoft, “Power BI 둘러보기” <a href="https://powerbi.microsoft.com/ko-kr/guidedtour/power-platform/power-bi/2/1" class="uri">https://powerbi.microsoft.com/ko-kr/guidedtour/power-platform/power-bi/2/1</a></p>
-<p>(문헌 18) Tableau, “Tableau product” <a href="https://www.tableau.com/ko-kr/products/tableau" class="uri">https://www.tableau.com/ko-kr/products/tableau</a></p>
-<p>(문헌 19)Beausable, “Why Beausable”, <a href="https://www.beusable.net/ko/" class="uri">https://www.beusable.net/ko/</a></p>
+<p>지금까지 데이터 기반 디자인과 Lean UX 디자인 프로세스, 디자인 검증을 위한 A/B 테스팅에 관한 이론들을 학습하고, 실습 과제들을 경험했는데요. 이제 데이터 기반 디자인에 대하여 이해가 되었다는 생각이 드시나요?</p>
+<p>이상의 과정을 수업으로 진행하다 보면 여러가지 학생 피드백을 받게 됩니다. 가장 자주 듣는 말은 디자인하는 방법에 대한 새로운 경험을 갖게 되었다는 말입니다. 데이터 분석과 논리적 전개에 따라 시행되는 디자인은 기존에 해왔던 비교적 자유롭고, 감각적인 디자인 방법과는 차이가 있습니다. 하지만 실습 과제를 진행하면서 여전히 디자이너의 창의적 의사 결정 경로는 열려있다는 생각이 들지 않는지요? 잘 알다시피 과학이나 공학 분야도 매우 창의적인 사고가 필요합니다. 여러분이 얻은 새로운 경험을 통하여 데이터를 디자인 도구로 더 잘 사용할 수 있으면 좋겠습니다.</p>
+<p>두번째 많이 듣는 피드백은 A/B 테스팅을 하기 위해 컨트롤 해야하는 조건들의 제약이 크다보니, 디자인 자유도가 너무 적다, 이렇게 조금씩 개선하는 것이 답답하다는 것입니다. 이것도 맞는 말이고, 이렇게 진행하면 혁신적인 디자인을 반영하기는 어려운 점이 있습니다. 그래서 이 방법은 지속적인 개선을 전제로 하는 것입니다. 린 UX 디자인 방법은 적절한 조건의 프로젝트를 만날 때 효과가 큽니다. 모든 디자인을 해결하는 방법론이 아닙니다. 그래서 A/B 테스팅 이후의 개선 디자인 수정(B’ 디자인)을 실습할 때는 좀 더 자유롭고, 적극적인 디자인도 제안하도록 하여 디자이너가 느끼는 답답함을 해소하기도 합니다. 물론 린 UX의 점진적 개선 패러다임을 좀 벗어나게 되지요. 우리는 짧은 시간과 제한된 여건에서 디자인 방법을 이해하기 위한 연습을 해야하는 한계가 있음을 이해하기 바랍니다.</p>
+<p>서술한 바와 같이 데이터 기반 디자인은 나름대로의 장점과 한계를 갖고 있습니다. 마치 디자인을 할 때 각 표현 요소마다 사용하는 툴이 달라 질 수 있듯이, 내가 디자인하는 도구에 대한 또 하나의 선택지로서 데이터 기반 디자인을 이해하면 좋겠고, 이 도구는 기존의 디자인 방법에서 아쉬웠던 특별한 지점들을 채우기 위해 개발되었다고 생각하면 좋을 듯합니다. 또 데이터 기반 디자인은 오늘날의 산업 전반에서 정말 뜨거운 주제가 되어있는 인공지능 기술과 아주 잘 융합되는 특징을 지니고 있습니다. 데이터를 이해하고, 데이터로 소통하는 능력은 디자이너가 인공지능 관련 분야에 진입할 수 있는 기본 소양이라고 할 수 있습니다. 데이터 기반 디자인 역량이 매우 필요하다는 인식은 오래전 부터 있어왔지만, 데이터 기술을 이해하고 분석하는 능력의 장애물을 넘지 못해 디자인 영역으로 편입되기 어려웠습니다. 그러나 이제는 데이터 문해력의 대중화, 데이터 분석 도구들의 발전, 인공지능 기술과의 연계 등으로 기술적인 장애물의 높이는 많이 낮아졌고, 앞으로도 점점 더 낮아지는 추세입니다. 시대적 요구와 기술 환경이 준비 되었으니, 이제는 과감하게 데이터의 장애물을 건너 디자이너의 역량을 넓혀 봅시다. 가보지 않았던 길을 가 봄으로써 우리는 새로운 세계를 발견하게 될 것입니다.</p>
+<p>마지막으로 이 책에 담긴 다양한 디자인 사례와 실습 노하우를 축적할 수 있도록 기여해 준 우리 학부의 UX Design(2) 수업 수강생 여러분의 열린 마음과 디자인을 향한 노력에 감사를 전합니다. 그리고 뜻 깊게도 이 원고는 콘텐츠 원고를 데이터로 활용하여 web, e-bub, PDF 형태의 책으로 출판하는 R의 Quarto 서비스와 Bit Publish 소프트웨어를 사용하여 제작되었습니다. 책의 제작 과정을 통하여 데이터 기술의 또 다른 매력을 함께 경험할 수 있게되어 더욱 기쁩니다.</p>
+<p>본 교재의 학습 경험을 바탕으로 여러분의 다음 데이터 기반 디자인 프로젝트가 성공적인 결과를 내기를 기대해보며, 원고를 마치겠습니다.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -850,13 +742,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2).html" class="pagination-link" aria-label="ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례</span></span>
+      <a href="./ch5. AB 테스팅 결과의 디자인 반영.html" class="pagination-link" aria-label="ch5. A/B 테스팅 결과의 디자인 반영">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch5. A/B 테스팅 결과의 디자인 반영</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch5. Lean UX 프로세스와 데이터 기반 디자인.html" class="pagination-link" aria-label="ch5. Lean UX 프로세스와 데이터 기반 디자인">
-        <span class="nav-page-text"><span class="chapter-title">ch5. Lean UX 프로세스와 데이터 기반 디자인</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

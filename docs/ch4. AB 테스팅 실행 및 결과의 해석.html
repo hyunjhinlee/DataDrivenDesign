@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="이현진">
 
-<title>5&nbsp; ch3. 데이터 기반 디자인 (Data Driven Design) – 데이터 기반 디자인과 A/B 테스팅</title>
+<title>ch4. A/B 테스팅 실행 및 결과의 해석 – 데이터 기반 디자인과 A/B 테스팅</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html" rel="next">
-<link href="./ch2. UX 디자인과 데이터, AI.html" rel="prev">
+<link href="./ch5. AB 테스팅 결과의 디자인 반영.html" rel="next">
+<link href="./ch3. 실습 과제의 AB 테스팅 기획.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 1. UX 디자인과 데이터.html"><strong>part 1. UX 디자인과 데이터</strong></a></li><li class="breadcrumb-item"><a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 4. 개선 디자인의 검증 - A_B Testing.html"><strong>part 4. 개선 디자인의 검증: A/B Testing</strong></a></li><li class="breadcrumb-item"><a href="./ch4. AB 테스팅 실행 및 결과의 해석.html"><span class="chapter-title">ch4. A/B 테스팅 실행 및 결과의 해석</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -145,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></a>
+  <a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></a>
   </div>
 </li>
       </ul>
@@ -258,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch4. AB 테스팅 실행 및 결과의 해석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch4. A/B 테스팅 실행 및 결과의 해석</span></a>
+  <a href="./ch4. AB 테스팅 실행 및 결과의 해석.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ch4. A/B 테스팅 실행 및 결과의 해석</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -284,15 +285,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#설문-실행" id="toc-설문-실행" class="nav-link active" data-scroll-target="#설문-실행">설문 실행</a></li>
+  <li><a href="#설문-데이터-검수와-데이터-편집" id="toc-설문-데이터-검수와-데이터-편집" class="nav-link" data-scroll-target="#설문-데이터-검수와-데이터-편집">설문 데이터 검수와 데이터 편집</a></li>
+  <li><a href="#f-test-t-test-실행과-결과-해석" id="toc-f-test-t-test-실행과-결과-해석" class="nav-link" data-scroll-target="#f-test-t-test-실행과-결과-해석">F-Test, T-Test 실행과 결과 해석</a></li>
+  <li><a href="#실습과제-10-ab-테스트-보고서-작성" id="toc-실습과제-10-ab-테스트-보고서-작성" class="nav-link" data-scroll-target="#실습과제-10-ab-테스트-보고서-작성">실습과제 10: A/B 테스트 보고서 작성</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 1. UX 디자인과 데이터.html"><strong>part 1. UX 디자인과 데이터</strong></a></li><li class="breadcrumb-item"><a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 4. 개선 디자인의 검증 - A_B Testing.html"><strong>part 4. 개선 디자인의 검증: A/B Testing</strong></a></li><li class="breadcrumb-item"><a href="./ch4. AB 테스팅 실행 및 결과의 해석.html"><span class="chapter-title">ch4. A/B 테스팅 실행 및 결과의 해석</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></h1>
+<h1 class="title"><span class="chapter-title">ch4. A/B 테스팅 실행 및 결과의 해석</span></h1>
 </div>
 
 
@@ -309,14 +319,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>데이터 기반 디자인(Data Driven Design)이란 디자인 대상과 관련된 방대한 정량화 데이터를 디자인 설계와 의사 결정의 근거로 활용하는 기법과 정량화 테스트를 통하여 디자인 결과물을 평가, 검증하는 기법을 말합니다.(6) 쉽게 말하면, 데이터에 근거하여 디자인 의사 결정을 수행하는 기법이라고 할 수 있습니다. 데이터 기반 디자인 방법론은 디지털 데이터들을 지속적으로 생산하고 축적하는 웹이나 앱 기반 서비스에 쉽게 적용되기 때문에 구글 등 IT 서비스 기업들이 디지털 서비스의 개발과 운영에 활용하고 있습니다. 현재의 데이터 기반 디자인 연구들은 대부분 인터넷을 통하여 수집된 사용자 로그 데이터를 대상으로 이루어지고 있으나, 점차 사물인터넷(IoT: Internet of Things) 센서 데이터를 사용하는 등 더 다양한 데이터 자원을 활용하는 방향으로 발전하고 있습니다.</p>
-<p>데이터 기반 디자인 서비스 및 컨설팅을 제공하는 산업은 증가 추세에 있으며, 디지털 콘텐츠(웹/앱 서비스)의 사용자 로그 데이터를 시각화하여 사용자 유입 분석, 사용 행태 분석, A/B 테스팅 분석 결과를 제공하는 서비스가 주를 이룹니다. 데이터 기반 디자인을 수행하기 위하여 정량적 통계 분석 및 데이터 시각화 서비스를 지원하는 도구 및 컨설팅 비즈니스 사례에는 구글 애널리틱스(Google Analytics), 태블로(Tableau), 어도비 타깃(Adobe Target) 서비스 등이 있으며, 각 서비스에 대하여는 다음 단원에서 자세히 다루도록 하겠습니다. (7)</p>
-<p>앞서 인공지능 서비스를 디자인하기 위해서는 디자이너가 데이터에 대한 이해가 풍부해야한다고 설명했는데, 선행 연구에 의하면, 인공지능 서비스 개발을 위하여 디자이너는 서비스 및 사용자 관련 데이터를 원격으로 수집할 수 있는 능력과 수집된 데이터에 대한 정량적이고 정성적인 분석과 시각화를 통하여 사용자 행동을 해석하여 디자인에 반영할 수 있는 능력이 요구됩니다. 그리고 실제로 인공지능 서비스를 개발하는 디자이너들은 데이터 중심의 업무 환경에서 데이터의 기초적 통계 분석, 데이터 시각화, A/B 테스팅 기법을 매우 자주 사용하고 있다고 합니다. 그러므로 연구 팀은 디자이너가 데이터로 생각하고, 데이터로 작업하며, 데이터 전문가들과 소통할 수 있도록 하는 교육 과정을 UX 디자인 교육에 반영해야 한다고 주장하고, 또한 UX, HCI 교육에서 디자이너, 데이터 전문가, 엔지니어, 사용자 연구자 등이 함께 협업하는 학제적 수업을 제공하여 학생들이 협업 능력과 창의성을 기를 수 있도록 해야 한다고 제안하였습니다.(8) 선행 연구에서 제시한 바와 같이, 인공지능 서비스를 디자인하기 위한 데이터 문해력은 데이터 기반 디자인을 수행하기 위해 필요한 역량과 일치하고 있습니다. 데이터 기반 디자인을 공부하면서 인공지능 서비스의 디자인 역량을 함께 준비할 수 있다니, 더욱 기대되지 않나요? 그럼 다음 단원 부터는 구체적으로 데이터 기반 디자인의 방법들을 경험해 볼까요?</p>
-<p>(문헌 6) Rochelle King, Elizabeth Churchill, and Caitlin Tan, 『Designing with data』, O’reilly, (2017), pp.3-6</p>
-<p>(문헌 7) 이현진, 『데이터 드리븐 디자인』, UX리뷰, (2024), pp.43-44</p>
-<p>(문헌 8) Qian Yang, Alex Scuito, John Zimmerman, Jodi Forlizzi, and Aaron Steinfeld, “Investigating How Experienced UX Designers Effectively Work with Machine Learning”, DIS(Design Information Systems)(2018), Hong Kong, pp.585–596</p>
+<section id="설문-실행" class="level3">
+<h3 class="anchored" data-anchor-id="설문-실행">설문 실행</h3>
+<p>설문지가 준비 되었으니 이제 설문을 배포하고 응답을 받습니다. 우선 설문 대상자를 정의합니다. 앞에서 설명한 것처럼 A 디자인에 대한 설문 30명 이상, B 디자인에 대한 설문 30명 이상이 참여해야하고, 두 그룹의 참여자들은 참여자로서의 조건은 동일하지만, 서로 다른 참여자입니다. 즉, A 디자인에 응답한 참여자는 B 디자인에 응답하면 안됩니다. 각 참여자가 겹치는 걸 방지하기 위해서 설문 배포 할 때도 주의 공지를 하고, 설문에 참여자의 e-mail을 받아서 동일인이 아님을 확인합니다. 참여자 e-mail 주소를 수집하면 동일인 구분에도 도움이 되지만 참여자 공지가 필요할 때나 경품 추첨 등으로 참여율을 높이고자 할 때도 유용합니다.</p>
+<ul>
+<li><p>본 설문을 배포하기 전에 소수 인원(2-4명)을 대상으로 파일럿 테스트(Pilot Test)를 반드시 실시합니다.</p>
+<p>설문 대상자와 같은 조건의 소수 인원을 대상으로 A, B 그룹 설문 원고에 대하여 실험을 합니다. 파일럿 테스트에서는 사용자들이 질문을 잘 이해하는지, 의문을 가지거나 잘못 이해하는 부분은 어디인지, 응답을 방해하거나 불편하게 하는 요인이 있는지, 응답 내용이 질문자의 의도 대로 반영 되고 있는지를 검토합니다. 파일럿 테스트는 형식은 온라인 설문이지만 응답자의 질문이나 상황에 바로 대응하기 위하여 대면으로 진행하기를 권합니다. 응답자가 의문이 있을 때 바로 어떤 부분이 문제인지 의견을 듣고, 수정안을 확인해보는 것이 좋습니다.</p></li>
+<li><p>정확하고, 객관적인 사용자 의견을 받기 위해서 유료 설문 응답 서비스 사용을 지양합니다.</p>
+<p>최근에는 설문 응답을 대행해주는 서비스들이 있어서 원하는 참여자 조건에 맞추어 참여자들을 리크루팅하고, 설문지를 배포하고, 결과까지 분석해주는 서비스를 사용할 수도 있습니다. 이러한 유료 대행 서비스를 사용한 사례를 보면 사용자 응답이 긍정적 방향으로 왜곡된 현상을 발견할 수 있었습니다. 설문 참여자들도 비용을 받고 설문에 임하는 것이기 때문에 응답률은 높지만 전반적으로 좋은 쪽으로 응답이 기울게 되어 객관성 문제가 발생합니다.</p></li>
+<li><p>온라인 설문의 한계를 숙지하고 대비합니다.</p>
+<p>온라인 설문을 받는 것은 여러 장점이 있지만, 응답자들이 언제 응답을 제출할지는 알 수 없습니다. 온라인 설문은 설문 요청자를 직접 만나지 않고, 시간, 공간의 제약이 없는 것이므로, 기본적으로는 응답률이 낮은 편입니다. 또한 설문 내용을 주의 깊게 보지 않고, 대충 답하는 응답자도 상당수 있게 됩니다. 그래서 제공한 설문에 성의있게 답할 수 있도록 원고의 내용이나 어투에서 정성과 신뢰감을 느끼게 하는 것이 중요합니다. 또 응답 기한은 여유있게 잡아놓고, 초기 응답률이 낮으면, 응답률을 높일 수 있도록 응답 대상을 넓히거나 반복해서 참여를 요청하는 등 응답 관리를 해야합니다.</p></li>
+</ul>
+</section>
+<section id="설문-데이터-검수와-데이터-편집" class="level3">
+<h3 class="anchored" data-anchor-id="설문-데이터-검수와-데이터-편집">설문 데이터 검수와 데이터 편집</h3>
+<p>우리가 진행하는 설문은 소규모이기 때문에 응답 데이터가 유효하도록 검수하는 일이 매우 중요합니다. 즉 설문 결과에 왜곡이 발생할 수 있는 성의없는 설문, 결측값이 많은 설문, 사용자 조건이 맞지 않는 설문들을 찾아서 제외할 필요가 있습니다. 그래서 설문 수가 좀 많아야 이런 문제 설문 값들을 빼고도 통계적 검증이 가능한 데이터 수를 확보할 수 있습니다.</p>
+<ul>
+<li>일단 리커트 척도 질문의 모든 응답이 한쪽으로 치우친 입력, 즉 모두 1번이나 4번(중간값), 7번으로 응답한 설문이 있다면 제외합니다 . 응답자가 성의없이 일련 번호를 입력한 경우입니다.</li>
+<li>응답에 전반적으로 결측값이 많다면 해당 설문을 제외하는 것이 좋습니다. 하지만 일부만 결측이 있다면, 결측 없는 응답들은 사용해도 됩니다. 이 경우는 우리가 데이터를 분석하는 과정에서 변수 간 관계 분석이 있을 경우에는 영향을 고려하여 신중하게 결정합니다.</li>
+<li>응답자의 조건에 따라 응답의 내용이 큰 영향을 받는 경우는 조건을 균일하게 맞춰야 합니다. 이전 사례를 예로 들면 결혼 준비 서비스에 대한 설문을 하는데, 실제 결혼 준비 중인 응답자와 가상으로 결혼 준비를 상상하고 응답하는 응답자는 응답이 매우 다를 수 있습니다. 마찬가지로 온라인 쇼핑에서 반품 경험이 있는 사용자와 반품 경험이 없는 사용자는 구매 태도가 다를 수 있습니다. 이렇게 설문 전에 미리 사용자 스크리닝을 진행하지 않았는데, 응답 차이가 크게 나는 질문이 발견된 경우에는 설문 수집 이후에라도 할 수 있으면 같은 조건의 응답으로 선별하고, 따로 결과를 내는 것이 좋습니다. 이상과 같은 여러 상황을 대비하기 위해서는 충분히 많을 양의 설문을 확보하는 것이 좋습니다.</li>
+<li>설문이 완료된 데이터는 엑셀 시트로 다운로드 받아서 각 A 디자인 응답 그룹, B 디자인 응답 그룹의 응답을 같은 질문 끼리 모아 엑셀 비교표를 편집합니다. 2장의 [그림 38]과 같이 문항 별로 A,B 그룹의 데이터를 배치하고, 2장의 안내와 같이 엑셀 함수를 사용하여 F-test, T-test를 실시합니다. 주관식 문항과 A/B 테스트와 관련 없는 문항은 대응표를 만들지 않습니다. R로 테스트 하는 경우는 A 그룹, B 그룹의 데이터를 하나의 엑셀 표로 합친 뒤, R에서 데이터프레임으로 불러오고, 변수로 각 그룹을 구분하여 비교하면 됩니다.</li>
+</ul>
+</section>
+<section id="f-test-t-test-실행과-결과-해석" class="level3">
+<h3 class="anchored" data-anchor-id="f-test-t-test-실행과-결과-해석">F-Test, T-Test 실행과 결과 해석</h3>
+<p>작성된 엑셀 비교 표에서 2장에서 학습한대로 각 문항 별로 F-test, T-test를 실시하고 결과 값의 p-value를 해석합니다.</p>
+<ul>
+<li>F-test의 결과 값이 0.05보다 크면 등분산입니다. 이후 T-test의 옵션에서 등분산 조건을 선택합니다. 결과 값이 0.05보다 작으면 이분산입니다. 두 그룹의 분포 정도가 다르다는 것이죠. 이 경우에는 이후 T-test의 조건을 이분산으로 선택합니다. 데이터 비교 표에 문항 별로 등분산인지 이분산인지 결과를 표기합니다.</li>
+<li>T-test 함수를 계산합니다. 함수에 두 그룹에 대한 테스트 범위를 지정하고, 양측 또는 단측 분포, 등분산 또는 이분산 옵션을 지정합니다. 테스트 결과 값인 p-value가 0.05보다 크면 A, B 디자인에 대한 설문 응답은 차이가 없다고 판단합니다. 반대로 0.05보다 작으로 두 값은 차이가 있다고 판단합니다. 보통은 평균에서 두 그룹의 값이 차이가 있어도 통계적으로는 차이가 없다는 결과가 많이 나옵니다. T-test의 판별은 보수적인 편입니다. 엑셀 분석도구 팩을 사용하면 [그림 38]의 아래 표와 같이 비교 데이터의 평균과 분산, 양측 및 단측 검정 값이 모두 나오므로 분석 내용을 자세히 확인할 수 있습니다. 양측 검정 값은 단측 검정값의 2배수입니다.</li>
+<li>T-test는 비교적 보수적으로 판단한다고 이야기 했는데요, 예를 들어 p-value가 0.06이 나왔다면 0.05 신뢰구간에서는 차이가 없다는 판단이지만, 만약 신뢰 구간의 범위를 넓혀서 0.1로 한다면, 0.1보다는 작으므로 차이가 있다고 할 수도 있습니다. 기준 값을 0.05로 잡는 것은 통계적인 관습인데, 이를 변경하면 즉, 신뢰도를 낮추면 판정이 달라지게 됩니다. 실험을 해보면 0.05 신뢰구간에서는 차이가 없지만 0.1 신뢰구간에서는 차이가 있는 결과가 자주 나타납니다. 이 경우 0.1 (90%) 신뢰구간으로 설정했을 때는 차이가 난다고 추가적인 판정을 할 수 있으나 결과 값의 신뢰도는 낮아지므로 주의하여 판단합니다.</li>
+<li>이상의 방법으로 각 문항 별 A, B 디자인에 대한 응답이 차이가 있는지를 판별하고, 문항과 연계된 KPI의 개선이 충족되었는지, 아닌지를 판별합니다. 충족되지 않은 KPI는 왜 개선되지 않았는지를 분석해봐야 합니다. 그리고 설문 조사의 질문 문제나 설문 참여자 선별 문제, 참여 인원 수 문제 등 설문 조사 진행상의 문제가 있을 경우, 해당 내용과 결과 보정 방안에 대하여 조사 방법의 한계로 서술합니다.</li>
+</ul>
+</section>
+<section id="실습과제-10-ab-테스트-보고서-작성" class="level3">
+<h3 class="anchored" data-anchor-id="실습과제-10-ab-테스트-보고서-작성">실습과제 10: A/B 테스트 보고서 작성</h3>
+<p>A/B 테스트의 실행 내용과 결과를 요약한 보고서를 작성합니다. 목차에는 다음 항목을 포함합니다. 내용을 서술할 때 테스트 과정에 대하여 전혀 모르는 사람이 봐도 이해할 수 있도록 각 단계별로 상세하고, 논리적으로 설명합니다.</p>
+<ul>
+<li>테스트 수행 개요 (언제, 어떤 응답자, 몇 명이, 어떻게 수행했는지를 요약)</li>
+<li>테스트에 사용한 A 그룹, B 그룹 설문 링크 제시</li>
+<li>결과 요약 (각 KPI와 문항에 대하여 어떻게 결과가 나왔는지, 종합하면 어떤 부분은 개선되고 어떤 부분은 개선되지 않았는지 요약하여 서술)</li>
+<li>각 문항 별 제시 화면, 질문, 결과 분석 내용 정리 (질문 내용, 결과값, 평균, F-test, T-test의 내용 및 해석)</li>
+<li>AB 테스트의 비교 항목과 상관없는 문항에 대한 결과 요약 (사용자 프로필 관련/ 또는 T-검정과 관련 없는 항목에 대한 데이터 시각화 및 의미 해석)</li>
+<li>A/B 테스트의 결론 및 디자인 방향 제안(수정할 부분에 대한 컨셉), 조사 방법론의 한계</li>
+<li>R로 분석한 경우 html 보고서 파일로 제작해도 됩니다.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/fig31.png" class="img-fluid figure-img"></p>
+<figcaption>[그림 31] [그림 30]의 설문 문항에 대한 A/B 테스트 결과값 서술 예시</figcaption>
+</figure>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -741,13 +796,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch2. UX 디자인과 데이터, AI.html" class="pagination-link" aria-label="ch2. UX 디자인과 데이터, AI">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch2. UX 디자인과 데이터, AI</span></span>
+      <a href="./ch3. 실습 과제의 AB 테스팅 기획.html" class="pagination-link" aria-label="ch3. 실습 과제의 A/B 테스팅 기획">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ch3. 실습 과제의 A/B 테스팅 기획</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html" class="pagination-link" aria-label="part 2. 디자인 리서치를 위한 탐구적 데이터 분석">
-        <span class="nav-page-text"><span class="chapter-title">part 2. 디자인 리서치를 위한 탐구적 데이터 분석</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ch5. AB 테스팅 결과의 디자인 반영.html" class="pagination-link" aria-label="ch5. A/B 테스팅 결과의 디자인 반영">
+        <span class="nav-page-text"><span class="chapter-title">ch5. A/B 테스팅 결과의 디자인 반영</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
