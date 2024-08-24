@@ -8,7 +8,7 @@
 
 <meta name="author" content="이현진">
 
-<title>references – 데이터 기반 디자인과 A/B 테스팅</title>
+<title>References – 데이터 기반 디자인과 A/B 테스팅</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/bit2r/bitPublish/style.css">
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -82,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html"><span class="chapter-title">References</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -275,7 +294,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
@@ -283,181 +303,102 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#part-1.-ux-디자인과-데이터" id="toc-part-1.-ux-디자인과-데이터" class="nav-link active" data-scroll-target="#part-1.-ux-디자인과-데이터">Part 1. UX 디자인과 데이터</a></li>
+  <li><a href="#part-2.-디자인-리서치를-위한-탐구적-데이터-분석" id="toc-part-2.-디자인-리서치를-위한-탐구적-데이터-분석" class="nav-link" data-scroll-target="#part-2.-디자인-리서치를-위한-탐구적-데이터-분석">Part 2. 디자인 리서치를 위한 탐구적 데이터 분석</a></li>
+  <li><a href="#part-3.-기존-디자인a-디자인-리서치와-개선-디자인b-디자인-제안" id="toc-part-3.-기존-디자인a-디자인-리서치와-개선-디자인b-디자인-제안" class="nav-link" data-scroll-target="#part-3.-기존-디자인a-디자인-리서치와-개선-디자인b-디자인-제안">Part 3. 기존 디자인(A 디자인) 리서치와 개선 디자인(B 디자인) 제안</a></li>
+  <li><a href="#part-4.-개선-디자인의-검증-ab-testing" id="toc-part-4.-개선-디자인의-검증-ab-testing" class="nav-link" data-scroll-target="#part-4.-개선-디자인의-검증-ab-testing">Part 4. 개선 디자인의 검증: A/B Testing</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">References</h1>
+</div>
 
 
 
-<h4 class="anchored">
-Part 1. UX 디자인과 데이터
-</h4>
-<p>
-<strong>ch1. UX 디자인의 오늘과 변화의 방향</strong>
-</p>
-<p>
-(문헌1) Yvonne Rogers, Helen Sharp, Jennifer Preece, 『Interaction Design: Beyond Human-Computer Interaction 6th edition』, Wiley. Kindle Edition, (2023)
-</p>
-<p>
-(문헌2) Kate Moran, Sarah Gibbons, “Generative UI and Outcome-Oriented Design”, <a href="https://www.nngroup.com/articles/generative-ui/">https://www.nngroup.com/articles/generative-ui/</a>, (2024)
-</p>
-<p>
-<strong>ch2. UX 디자인과 데이터, AI</strong>
-</p>
-<p>
-(문헌 3) Spotify(스포티파이), Apple app store
-</p>
-<p>
-(문헌 4) Kate Moran, Jakob Nielsen, “AI for UX: Getting Started”, <a href="https://www.nngroup.com/articles/ai-ux-getting-started/">https://www.nngroup.com/articles/ai-ux-getting-started/</a>, (2023)
-</p>
-<p>
-(문헌 5) Figma Learn, “Config 2024에서 발표된 새로운 기능”, <a href="https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능">https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능</a>, (2024)
-</p>
-<p>
-<strong>ch3. 데이터 기반 디자인 (Data Driven Design)</strong>
-</p>
-<p>
-(문헌 3) Spotify(스포티파이), Apple app store
-</p>
-<p>
-(문헌 4) Kate Moran, Jakob Nielsen, “AI for UX: Getting Started”, <a href="https://www.nngroup.com/articles/ai-ux-getting-started/">https://www.nngroup.com/articles/ai-ux-getting-started/</a>, (2023)
-</p>
-<p>
-(문헌 5) Figma Learn, “Config 2024에서 발표된 새로운 기능”, <a href="https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능">https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능</a>, (2024)
-</p>
-<h4 class="anchored">
-Part 2. 디자인 리서치를 위한 탐구적 데이터 분석
-</h4>
-<p>
-<strong>ch1. 디자인 리서치와 탐구적 데이터 분석 (EDA: Exploratory Data Analysis)</strong>
-</p>
-<p>
-(문헌 9) Hadley Wichham, Garrett. Grolemund, 『R for Data Science(2e.)』, (2023), <a href="https://r4ds.hadley.nz/intro">https://r4ds.hadley.nz/intro</a>
-</p>
-<p>
-<strong>ch2. 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례</strong>
-</p>
-<p>
-(문헌 7) 이현진, 『데이터 드리븐 디자인』, UX리뷰, (2024), pp.100-143
-</p>
-<p>
-<strong>ch3. 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례</strong>
-</p>
-<p>
-(문헌 10) Dartmouth College, “StudentLife Study”, (2024.7.24), <a href="https://studentlife.cs.dartmouth.edu">https://studentlife.cs.dartmouth.edu</a>
-</p>
-<p>
-(문헌 11) Kaggle, “College Experience Study Dataset”, (2024.7.31), <a href="https://www.kaggle.com/datasets/subigyanepal/college-experience-dataset?resource=download">https://www.kaggle.com/datasets/subigyanepal/college-experience-dataset?resource=download</a>
-</p>
-<p>
-(문헌 12) Rui Wang, et al., ”SmartGPA: How Smartphones Can Assess and Predict Academic Performance of College Students”, UbiComp ’15, September 07-11, 2015, Osaka, Japan
-</p>
-<p>
-(문헌 13) R. Wang et. al., “Tracking Depression Dynamics in College Students Using MobilePhone and Wearable Sensing”, Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Vol. 2, No.&nbsp;1, Article 43. (2018).
-</p>
-<p>
-(문헌 14) D. L Mack, et al., “Mental Health and Behavior of College Students During the COVID-19 Pandemic: Longitudinal Mobile Smartphone and Ecological Momentary Assessment Study, Part II”, JOURNAL OF MEDICAL INTERNET RESEARCH, vol.&nbsp;23, iss. 6, e28892 (2021)
-</p>
-<p>
-(문헌 15) Subigya Nepal, et al.&nbsp;“Capturing the College Experience: A Four-Year Mobile Sensing Study of Mental Health, Resilience and Behavior of College Students during the Pandemic.” Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies. (2024)
-</p>
-<p>
-<strong>ch4. EDA를 위한 데이터 분석 도구들</strong>
-</p>
-<p>
-(문헌 16) Google marketing platform, “애널리틱스 기능” <a href="https://marketingplatform.google.com/intl/ko/about/analytics/features/">https://marketingplatform.google.com/intl/ko/about/analytics/features/</a>
-</p>
-<p>
-(문헌 17) Microsoft, “Power BI 둘러보기” <a href="https://powerbi.microsoft.com/ko-kr/guidedtour/power-platform/power-bi/2/1">https://powerbi.microsoft.com/ko-kr/guidedtour/power-platform/power-bi/2/1</a>
-</p>
-<p>
-(문헌 18) Tableau, “Tableau product” <a href="https://www.tableau.com/ko-kr/products/tableau">https://www.tableau.com/ko-kr/products/tableau</a>
-</p>
-<p>
-(문헌 19) Beausable, “Why Beausable”, <a href="https://www.beusable.net/ko/">https://www.beusable.net/ko/</a>
-</p>
-<p>
-<strong>ch5. Lean UX 프로세스와 데이터 기반 디자인</strong>
-</p>
-<p>
-(문헌 20) 로라 클라인, (김수영, 박기석 역), 『린 스타트업 실전 UX』, 한빛미디어, (2014)
-</p>
-<p>
-(문헌 21) Google Developers, “UXD: What is Lean UX?”, <a href="https://www.youtube.com/watch?v=7NkMm5WefBA/">https://www.youtube.com/watch?v=7NkMm5WefBA/</a>, (2023)
-</p>
-<h4 class="anchored">
-Part 3. 기존 디자인(A 디자인) 리서치와 개선 디자인(B 디자인) 제안
-</h4>
-<p>
-<strong>ch1. 실습과제의 디자인 프로세스, 주제 선정</strong>
-</p>
-<p>
-(문헌 22) 통합 데이터지도-공공 민간 빅데이터 통합검색 <a href="https://www.bigdata-map.or">https://www.bigdata-map.or</a>
-</p>
-<p>
-(문헌 23) MDIS 마이크로데이터 통합서비스 <a href="https://mdis.kostat.go.kr">https://mdis.kostat.go.kr</a>
-</p>
-<p>
-(문헌 24) 서울 열린데이터광장 <a href="https://data.seoul.go.kr">https://data.seoul.go.kr</a>
-</p>
-<p>
-<strong>ch2. 데이터 큐레이션과 EDA, 디자인 인사이트</strong>
-</p>
-<p>
-(문헌 25) Renee. Miller, “Big Data Curation”, 20th International Conference on Management of Data (COMAD), (2014), p.4
-</p>
-<p>
-(문헌 26) Google Dataset Search, <a href="https://datasetsearch.research.google.com">https://datasetsearch.research.google.com</a>
-</p>
-<p>
-<strong>ch4. Design Concept &amp; MVP (Minimum Viable Product) Design</strong>
-</p>
-<p>
-(문헌 27) Aaron Gitlin, “Becoming a data-aware designer”, <a href="https://uxdesign.cc/becoming-a-data-aware-designer-1d7614ebc3ed">https://uxdesign.cc/becoming-a-data-aware-designer-1d7614ebc3ed</a>
-</p>
-<p>
-(문헌 28) Paperless Post, “online invitations for all moments that matter”, <a href="https://www.paperlesspost.com">https://www.paperlesspost.com</a>
-</p>
-<h4 class="anchored">
-Part 4. 개선 디자인의 검증: A/B Testing
-</h4>
-<p>
-<strong>ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법</strong>
-</p>
-<p>
-(문헌 20) 로라 클라인, (김수영, 박기석 역), 『린 스타트업 실전 UX』, 한빛미디어, (2014)
-</p>
-<p>
-<strong>ch2. F-test와 T-test의 실습 방법들</strong>
-</p>
-<p>
-(문헌 29) 구글Docs 편집기 고객센터, “FTEST”, <a href="https://support.google.com/docs/answer/7004183?hl=ko&amp;ref_topic=3105600">https://support.google.com/docs/answer/7004183?hl=ko&amp;ref_topic=3105600</a>
-</p>
-<p>
-(문헌 30) 구글Docs 편집기 고객센터, “TTEST”, <a href="https://support.google.com/docs/answer/6055837?hl=ko">https://support.google.com/docs/answer/6055837?hl=ko</a>
-</p>
-<p>
-(문헌 31) Statistics Kingdom, “Two Sample T-Test Calculator”, <a href="https://www.statskingdom.com/140MeanT2eq.html">https://www.statskingdom.com/140MeanT2eq.html</a>
-</p>
-<p>
-(문헌 32) Statistics Kingdom, “Shapiro-Wilk Test Calculator”, <a href="https://www.statskingdom.com/shapiro-wilk-test-calculator.html">https://www.statskingdom.com/shapiro-wilk-test-calculator.html</a>
-</p>
-<p>
-(문헌 33) Statistics Kingdom, “Mann Whitney U test calculator (Wilcoxon rank-sum)”, <a href="https://www.statskingdom.com/170median_mann_whitney.html">https://www.statskingdom.com/170median_mann_whitney.html</a>
-</p>
-<p>
-(문헌 34) Emma Ding, “A/B Testing Real-Life Example”, <a href="https://www.youtube.com/watch?v=VuKIN9S8Ivs">https://www.youtube.com/watch?v=VuKIN9S8Ivs</a>
-</p>
-<hr>
-<p>
-<strong>본 교재는 홍익대학교 대학혁신지원사업단의 2024년 UROP(Undergraduate Research Opportunity Program) 과제의 연구 결과물입니다.</strong>
-</p>
-<p>
-<strong>(지도교수/저자: 디자인컨버전스 학부 이현진, 참여학생/디자인, 제작: 디자인컨버전스 학부 이지은, 선여민)</strong>
-</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<div id="refs" role="list" style="display: none">
+
+</div>
+<section id="part-1.-ux-디자인과-데이터" class="level2">
+<h2 class="anchored" data-anchor-id="part-1.-ux-디자인과-데이터">Part 1. UX 디자인과 데이터</h2>
+<p><strong>ch1. UX 디자인의 오늘과 변화의 방향</strong></p>
+<p>(문헌1) Yvonne Rogers, Helen Sharp, Jennifer Preece, 『Interaction Design: Beyond Human-Computer Interaction 6th edition』, Wiley. Kindle Edition, (2023)</p>
+<p>(문헌2) Kate Moran, Sarah Gibbons, “Generative UI and Outcome-Oriented Design”, <a href="https://www.nngroup.com/articles/generative-ui/">https://www.nngroup.com/articles/generative-ui/</a>, (2024)</p>
+<p><strong>ch2. UX 디자인과 데이터, AI</strong></p>
+<p>(문헌 3) Spotify(스포티파이), Apple app store</p>
+<p>(문헌 4) Kate Moran, Jakob Nielsen, “AI for UX: Getting Started”, <a href="https://www.nngroup.com/articles/ai-ux-getting-started/">https://www.nngroup.com/articles/ai-ux-getting-started/</a>, (2023)</p>
+<p>(문헌 5) Figma Learn, “Config 2024에서 발표된 새로운 기능”, <a href="https://help.figma.com/hc/ko/articles/24037640924823-Config-2024%EC%97%90%EC%84%9C-%EB%B0%9C%ED%91%9C%EB%90%9C-%EC%83%88%EB%A1%9C%EC%9A%B4-%EA%B8%B0%EB%8A%A5">https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능</a>, (2024)</p>
+<p><strong>ch3. 데이터 기반 디자인 (Data Driven Design)</strong></p>
+<p>(문헌 3) Spotify(스포티파이), Apple app store</p>
+<p>(문헌 4) Kate Moran, Jakob Nielsen, “AI for UX: Getting Started”, <a href="https://www.nngroup.com/articles/ai-ux-getting-started/">https://www.nngroup.com/articles/ai-ux-getting-started/</a>, (2023)</p>
+<p>(문헌 5) Figma Learn, “Config 2024에서 발표된 새로운 기능”, <a href="https://help.figma.com/hc/ko/articles/24037640924823-Config-2024%EC%97%90%EC%84%9C-%EB%B0%9C%ED%91%9C%EB%90%9C-%EC%83%88%EB%A1%9C%EC%9A%B4-%EA%B8%B0%EB%8A%A5">https://help.figma.com/hc/ko/articles/24037640924823-Config-2024에서-발표된-새로운-기능</a>, (2024)</p>
+</section>
+<section id="part-2.-디자인-리서치를-위한-탐구적-데이터-분석" class="level2">
+<h2 class="anchored" data-anchor-id="part-2.-디자인-리서치를-위한-탐구적-데이터-분석">Part 2. 디자인 리서치를 위한 탐구적 데이터 분석</h2>
+<p><strong>ch1. 디자인 리서치와 탐구적 데이터 분석 (EDA: Exploratory Data Analysis)</strong></p>
+<p>(문헌 9) Hadley Wichham, Garrett. Grolemund, 『R for Data Science(2e.)』, (2023), <a href="https://r4ds.hadley.nz/intro">https://r4ds.hadley.nz/intro</a></p>
+<p><strong>ch2. 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례</strong></p>
+<p>(문헌 7) 이현진, 『데이터 드리븐 디자인』, UX리뷰, (2024), pp.100-143</p>
+<p><strong>ch3. 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례</strong></p>
+<p>(문헌 10) Dartmouth College, “StudentLife Study”, (2024.7.24), <a href="https://studentlife.cs.dartmouth.edu/">https://studentlife.cs.dartmouth.edu</a></p>
+<p>(문헌 11) Kaggle, “College Experience Study Dataset”, (2024.7.31) <a href="https://www.kaggle.com/datasets/subigyanepal/college-experience-dataset?resource=download">https://www.kaggle.com/datasets/subigyanepal/college-experience-dataset?resource=download</a></p>
+<p>(문헌 12) Rui Wang, et al., ”SmartGPA: How Smartphones Can Assess and Predict Academic Performance of College Students”, UbiComp ’15, September 07-11, 2015, Osaka, Japan</p>
+<p>(문헌 13) R. Wang et. al., “Tracking Depression Dynamics in College Students Using MobilePhone and Wearable Sensing”, Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Vol. 2, No.&nbsp;1, Article 43. (2018).</p>
+<p>(문헌 14) D. L Mack, et al., “Mental Health and Behavior of College Students During the COVID-19 Pandemic: Longitudinal Mobile Smartphone and Ecological Momentary Assessment Study, Part II”, JOURNAL OF MEDICAL INTERNET RESEARCH, vol.&nbsp;23, iss. 6, e28892 (2021)</p>
+<p>(문헌 15) Subigya Nepal, et al.&nbsp;“Capturing the College Experience: A Four-Year Mobile Sensing Study of Mental Health, Resilience and Behavior of College Students during the Pandemic.” Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies. (2024)</p>
+<p><strong>ch4. EDA를 위한 데이터 분석 도구들</strong></p>
+<p>(문헌 16) Google marketing platform, “애널리틱스 기능” <a href="https://marketingplatform.google.com/intl/ko/about/analytics/features/">https://marketingplatform.google.com/intl/ko/about/analytics/features/</a></p>
+<p>(문헌 17) Microsoft, “Power BI 둘러보기” <a href="https://powerbi.microsoft.com/ko-kr/guidedtour/power-platform/power-bi/2/1">https://powerbi.microsoft.com/ko-kr/guidedtour/power-platform/power-bi/2/1</a></p>
+<p>(문헌 18) Tableau, “Tableau product” <a href="https://www.tableau.com/ko-kr/products/tableau">https://www.tableau.com/ko-kr/products/tableau</a></p>
+<p>(문헌 19) Beausable, “Why Beausable”, <a href="https://www.beusable.net/ko/">https://www.beusable.net/ko/</a></p>
+<p><strong>ch5. Lean UX 프로세스와 데이터 기반 디자인</strong></p>
+<p>(문헌 20) 로라 클라인, (김수영, 박기석 역), 『린 스타트업 실전 UX』, 한빛미디어,(2014)</p>
+<p>(문헌 21) Google Developers, “UXD: What is Lean UX?”, <a href="https://www.youtube.com/watch?v=7NkMm5WefBA">https://www.youtube.com/watch?v=7NkMm5WefBA</a>, (2023)</p>
+</section>
+<section id="part-3.-기존-디자인a-디자인-리서치와-개선-디자인b-디자인-제안" class="level2">
+<h2 class="anchored" data-anchor-id="part-3.-기존-디자인a-디자인-리서치와-개선-디자인b-디자인-제안">Part 3. 기존 디자인(A 디자인) 리서치와 개선 디자인(B 디자인) 제안</h2>
+<p><strong>ch1. 실습과제의 디자인 프로세스, 주제 선정</strong></p>
+<p>(문헌 22) 통합 데이터지도-공공 민간 빅데이터 통합검색 <a href="https://www.bigdata-map.or">https://www.bigdata-map.or</a></p>
+<p>(문헌 23) MDIS 마이크로데이터 통합서비스 <a href="https://mdis.kostat.go.kr">https://mdis.kostat.go.kr</a></p>
+<p>(문헌 24) 서울 열린데이터광장 <a href="https://data.seoul.go.kr">https://data.seoul.go.kr</a></p>
+<p><strong>ch2. 데이터 큐레이션과 EDA, 디자인 인사이트</strong></p>
+<p>(문헌 25) Renee. Miller, “Big Data Curation”, 20th International Conference on Management of Data (COMAD), (2014), p.4</p>
+<p>(문헌 26) Google Dataset Search, <a href="https://datasetsearch.research.google.com">https://datasetsearch.research.google.com</a></p>
+<p><strong>ch4. Design Concept &amp; MVP (Minimum Viable Product) Design</strong></p>
+<p>(문헌 27) Aaron Gitlin, “Becoming a data-aware designer”, <a href="https://uxdesign.cc/becoming-a-data-aware-designer-1d7614ebc3ed">https://uxdesign.cc/becoming-a-data-aware-designer-1d7614ebc3ed</a></p>
+<p>(문헌 28) Paperless Post, “online invitations for all moments that matter”, <a href="https://www.paperlesspost.com">https://www.paperlesspost.com</a></p>
+</section>
+<section id="part-4.-개선-디자인의-검증-ab-testing" class="level2">
+<h2 class="anchored" data-anchor-id="part-4.-개선-디자인의-검증-ab-testing">Part 4. 개선 디자인의 검증: A/B Testing</h2>
+<p><strong>ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법</strong></p>
+<p>(문헌 20) 로라 클라인, (김수영, 박기석 역), 『린 스타트업 실전 UX』, 한빛미디어,(2014)</p>
+<p><strong>ch2. F-test와 T-test의 실습 방법들</strong></p>
+<p>(문헌 29) 구글Docs 편집기 고객센터, “FTEST”, <a href="https://support.google.com/docs/answer/7004183?hl=ko&amp;ref_topic=3105600">https://support.google.com/docs/answer/7004183?hl=ko&amp;ref_topic=3105600</a></p>
+<p>(문헌 30) 구글Docs 편집기 고객센터, “TTEST”, [https://support.google.com/docs/answer/6055837?hl=ko](https://support.google.com</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
