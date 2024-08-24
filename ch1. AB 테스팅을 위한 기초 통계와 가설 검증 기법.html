@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.53">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="이현진">
+
+<title>ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법 – 데이터 기반 디자인과 A/B 테스팅</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ch2. F-test와 T-test의 실습 방법들.html" rel="next">
+<link href="./part 4. 개선 디자인의 검증 - A_B Testing.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/bit2r/bitPublish/style.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 4. 개선 디자인의 검증 - A_B Testing.html"><strong>part 4. 개선 디자인의 검증: A/B Testing</strong></a></li><li class="breadcrumb-item"><a href="./ch1. AB 테스팅을 위한 기초 통계와 가설 검증 기법.html"><span class="chapter-title">ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">데이터 기반 디자인과 A/B 테스팅</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="리더 모드 전환">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">머릿말: 이 책에서 다루는 것과 다루지 않는 것</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>part 1. UX 디자인과 데이터</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part 1. UX 디자인과 데이터.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">part 1. UX 디자인과 데이터</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch1. UX 디자인의 오늘과 변화의 방향.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch1. UX 디자인의 오늘과 변화의 방향</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch2. UX 디자인과 데이터, AI.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch2. UX 디자인과 데이터, AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch3. 데이터 기반 디자인 (Data Driven Design).html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch3. 데이터 기반 디자인 (Data Driven Design)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>part 2. 디자인 리서치를 위한 탐구적 데이터 분석</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">part 2. 디자인 리서치를 위한 탐구적 데이터 분석</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch1. 디자인 리서치와 탐구적 데이터 분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch1. 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch2.디자인 리서치를 위한 탐구적 데이터 분석 사례 (1).html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch2.디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2).html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch4. EDA를 위한 데이터 분석 도구들.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch4. EDA를 위한 데이터 분석 도구들</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch5. Lean UX 프로세스와 데이터 기반 디자인.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch5. Lean UX 프로세스와 데이터 기반 디자인</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>part 3. 기존 디자인(A 디자인) 리서치와 개선 디자인(B 디자인) 제안</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch1. 실습과제의 디자인 프로세스, 주제 선정.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch1. 실습과제의 디자인 프로세스, 주제 선정</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch2. 데이터 큐레이션과 EDA, 디자인 인사이트.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch2. 데이터 큐레이션과 EDA, 디자인 인사이트</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch3. 디자인 문제의 구조와 KPI.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch3. 디자인 문제의 구조와 KPI(Key Performance Indicator)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch4. Design Concept &amp; MVP(Minimum Viable Product) Design.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch4. Design Concept &amp; MVP(Minimum Viable Product) Design</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>part 4. 개선 디자인의 검증: A/B Testing</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part 4. 개선 디자인의 검증 - A_B Testing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">part 4. 개선 디자인의 검증 : A/B Testing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch1. AB 테스팅을 위한 기초 통계와 가설 검증 기법.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch2. F-test와 T-test의 실습 방법들.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch2. F-test와 T-test의 실습 방법들</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch3. 실습 과제의 AB 테스팅 기획.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch3. 실습 과제의 A/B 테스팅 기획</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch4. AB 테스팅 실행 및 결과의 해석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch4. A/B 테스팅 실행 및 결과의 해석</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch5. AB 테스팅 결과의 디자인 반영.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ch5. A/B 테스팅 결과의 디자인 반영</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./맺음말: 다음 테스트를 위하여.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">맺음말: 다음 테스트를 위하여</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#가설과-검정" id="toc-가설과-검정" class="nav-link active" data-scroll-target="#가설과-검정">가설과 검정</a></li>
+  <li><a href="#정규성과-등분산성" id="toc-정규성과-등분산성" class="nav-link" data-scroll-target="#정규성과-등분산성">정규성과 등분산성</a></li>
+  <li><a href="#f-testf-검정" id="toc-f-testf-검정" class="nav-link" data-scroll-target="#f-testf-검정">F-test(F-검정)</a></li>
+  <li><a href="#t-test-t-검정" id="toc-t-test-t-검정" class="nav-link" data-scroll-target="#t-test-t-검정">T-test (T 검정)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part 4. 개선 디자인의 검증 - A_B Testing.html"><strong>part 4. 개선 디자인의 검증: A/B Testing</strong></a></li><li class="breadcrumb-item"><a href="./ch1. AB 테스팅을 위한 기초 통계와 가설 검증 기법.html"><span class="chapter-title">ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>실습과제 8에서 타겟 서비스의 개선안 디자인을 완료하였다면, 이제부터는 과연 새로운 개선 디자인이 기존 디자인에 비하여 KPI를 높이는 효과가 있는지를 알아보겠습니다. 우리는 이 과정을 A/B 테스팅으로 불리는 통계적 분석 기법을 사용하여 실습하려고 합니다.</p>
+<p>A/B 테스트는 통계적으로 의미있는 데이터를 활용해서 사업적 중요성(KPI)을 기준으로 제품에 관련된 더 나은 의사결정을 하려는 목적의 평가 기법입니다. A/B 테스트의 시행 방법은 디자인의 구현 과정에서 화면이나 기능을 여러 버전으로 만들어서 서로 다른 사용자 그룹에 각기 다른 것을 보여주고 어떤 버전이 최선의 지표를 이끌어 내는지 찾아냅니다.(20)</p>
+<p>우선 실습에 필요한 기초적인 통계 개념들을 학습해 보겠습니다.</p>
+<section id="가설과-검정" class="level3">
+<h3 class="anchored" data-anchor-id="가설과-검정">가설과 검정</h3>
+<p>가설(Hypothesis)은 앞서 설명한 바와 같이 특정 현상이나 문제에 대해 검증 가능한 예측이나 추정을 의미합니다. 그리고 검정(statistical test)이란 통계학에서 특정 가설을 검증하기 위한 과정을 의미합니다.</p>
+<p>통계학의 가설은 귀무가설(H0)과 대립가설(H1)로 설정할 수 있는데, 귀무가설(H0)은 보통 “차이가 없다” 또는 “효과가 없다”는 가설이고, 대립가설(H1)은 “차이가 있다” 또는 “효과가 있다”는 가설입니다. 우리 실험에서 기존 디자인(A 디자인)의 KPI와 개선 디자인(B 디자인)의 KPI 값이 차이가 없다는 결과가 나오면 귀무가설이 채택된 것입니다.</p>
+<p>검정 결과는 데이터에서 검정 통계량을 계산하고, 검정 통계량과 유의 수준을 비교하여 귀무가설을 기각할지 여부를 결정합니다. 유의수준 (α)은 통계적 검정에서 귀무가설을 기각할 기준이 되는 값입니다. 일반적으로 0.05(5%)로 설정됩니다. p-value는 실제 데이터가 귀무가설 하에서 관측될 확률을 나타낸 값으로 , p-value가 유의수준(α)보다 작으면 귀무가설을 기각합니다. 즉 p-value가 유의 수준 값인 0.05보다 작으면 비교한 데이터는 ‘차이가 있다’, 또는 ’귀무가설을 기각한다’라고 판단합니다.</p>
+</section>
+<section id="정규성과-등분산성" class="level3">
+<h3 class="anchored" data-anchor-id="정규성과-등분산성">정규성과 등분산성</h3>
+<p>우리가 시행하려는 A/B 테스트의 방법을 통계학에서는 독립 표본 T-test라고 합니다. 이 테스트 기법을 사용하려면 우선 실험 데이터가 정규성과 등분산성을 만족해야합니다.</p>
+<ul>
+<li><p>정규성(Normality)이란 데이터가 정규 분포(가우시안 분포)를 따르는지를 의미합니다. 정규 분포는 데이터가 평균을 중심으로 대칭적으로 퍼지는 종 모양의 분포입니다. 30개 이상의 데이터가 있으면 중심극한정리(Central Limit Theorem)에 따라 데이터의 평균이 정규 분포에 가까워질 수 있다는 이론이 있습니다. 그러나, 이는 데이터의 분포가 정규 분포를 따른다는 보장은 아닙니다. 정규성을 확인하기 위해서는 여전히 통계적 검정이나 시각적 방법을 사용하는 것이 좋습니다. 정규성을 확인하는 시각적 방법은 히스토그램이나 Q-Q플롯으로 데이터 분포 그래프를 보고 시각적으로 정규 분포의 형태를 갖는지 평가할 수 있습니다. 그리고 통계적 검정 방법은 샤피로-윌크 검정(Shapiro-Wilk Test), 앤더슨-달링 검정, 콜모고로프-스미르노프 검정 방법이 있습니다.</p>
+<p>우리 프로젝트에서는 실험 데이터의 수를 30개 이상으로 하여 일단 정규성을 확보하고, 정규성 문제가 발생할 시 통계적 검정(샤피로-윌크 검정) 방법으로 결과를 보정합니다.</p></li>
+<li><p>등분산성(Homoscedasticity)은 두 개 이상의 그룹이 동일한 분산을 갖는다는 것을 의미합니다. 이는 각 그룹의 데이터 분포가 동일한 정도의 변동성을 가진다는 것을 전제로 합니다. 예를 들어, 두 반의 학생 성적을 비교할 때, 두 반의 성적 분포가 비슷하게 퍼져 있는지 확인하는 것입니다. 등분산성은 박스플롯(Boxplot)을 사용하여 각 그룹의 분포를 시각적으로 비교할 수 있고, 통계적 검정 방법은 F-검정(F-test), 레빈 검정(Levene’s Test), 바틀렛 검정(Bartlett’s Test)이 있습니다. 등분산성이 충족되지 않으면, 비모수 검정이나 등분산성을 가정하지 않는 검정을 사용합니다.</p>
+<p>우리 과제에서는 등분산성을 확인하기 위하여 가장 일반적으로 사용하는 F-검정을 실습할 것입니다.</p></li>
+</ul>
+</section>
+<section id="f-testf-검정" class="level3">
+<h3 class="anchored" data-anchor-id="f-testf-검정">F-test(F-검정)</h3>
+<p>F-검정은 두 그룹의 분산이 같은지 확인하는 데 유용한 통계적 방법입니다. 이를 통해 두 집단의 분산을 비교하여 등분산성을 검정할 수 있습니다. F-검정의 방법은 F 통계량과 유의 수준을 비교하여 귀무가설(등분산성 가정)을 기각할지 여부를 결정합니다. 등분산성을 만족하지 않는 경우는 비모수 검정이나 Welch의 t-검정 같은 대체 방법을 사용하여 그룹들의 차이를 비교할 수 있습니다.</p>
+<p>우리 실습에서는 비교 대상인 A, B 디자인의 응답 데이터에 대하여 먼저 F-test를 시행하여 등분산성을 확인하고, 등분산성을 만족하지 않으면, 등분산을 만족하지 않는 옵션으로 T-test를 실시할 예정입니다. 그럼 F-test 의 시행 방법을 아래의 건강 관리 앱 사례로 알아보겠습니다.</p>
+<p>💡 XXX 앱은 사용자의 일일 걸음 수, 수면 시간, 물 섭취량 등을 추적하는 헬스케어 앱이다. 최근 AI 기반의 맞춤형 건강 관리 기능을 새로 도입했다. 이 새로운 기능이 사용자의 건강 습관과 앱 사용 패턴에 미치는 영향을 테스트하고자 한다.</p>
+<p>여기에서 기존의 디자인 (A 디자인)과 AI 맞춤형 건강 관리 기능을 적용한 개선 디자인(B 디자인)을 사용한 사람들의 물 섭취 패턴에 변화가 있는지를 알아볼 것입니다. 먼저 두 그룹(기존 디자인 사용 그룹과 개선 디자인 사용 그룹)의 물 섭취량 데이터가 등분산을 만족하는지 보겠습니다. 이하의 예제에서 통계량 측정을 위한 프로그래밍 코드는 R을 기준으로 설명하고, 실습 과제에서는 R 이외의 다른 측정 방법들도 소개하도록 하겠습니다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 데이터 생성</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>before <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.2</span>, <span class="fl">1.5</span>, <span class="fl">1.3</span>, <span class="fl">1.4</span>, <span class="fl">1.6</span>, <span class="fl">1.3</span>, <span class="fl">1.7</span>, <span class="fl">1.5</span>, <span class="fl">1.4</span>, <span class="fl">1.6</span>)  <span class="co"># 섭취량, 리터 단위</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>after <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="fl">1.8</span>, <span class="fl">1.6</span>, <span class="fl">1.7</span>, <span class="fl">2.0</span>, <span class="fl">1.6</span>, <span class="fl">2.1</span>, <span class="fl">1.9</span>, <span class="fl">1.8</span>, <span class="fl">1.9</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># F-검정 수행</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">var.test</span>(before, after)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>수행 결과<span class="sc">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>F test to compare two variances</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span>  before and after</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>F <span class="ot">=</span> <span class="fl">0.68389</span>, num df <span class="ot">=</span> <span class="dv">9</span>, denom df <span class="ot">=</span> <span class="dv">9</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.5804</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>alternative hypothesis<span class="sc">:</span> true ratio of variances is not equal to <span class="dv">1</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span> percent confidence interval<span class="sc">:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> <span class="fl">0.1698687</span> <span class="fl">2.7533395</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>sample estimates<span class="sc">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>ratio of variances </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>         <span class="fl">0.6838906</span> </span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>위의 결과값을 해석해 보겠습니다. 결과값에서 p-value가 0.5804로 나왔네요. p-value가 유의 수준인 0.05보다 큰 값이므로 before 데이터와 after 데이터는 분산의 차이가 없다는 귀무 가설을 채택합니다. 즉 등분산입니다.</p>
+<p>그리고 F-검정은 3개이상 집단의 평균을 비교하여 차이 여부 검정하는 경우에도 사용합니다. 즉 비교 디자인이 세 개 이상(디자인 A, B, C안 등) 존재하는 경우는 F-검정으로 평균의 차이가 있는지를 확인할 수 있습니다. 또한 데이터가 수치 데이터가 아닌 범주 데이터일 때는 카이제곱 검정을 사용합니다.</p>
+</section>
+<section id="t-test-t-검정" class="level3">
+<h3 class="anchored" data-anchor-id="t-test-t-검정">T-test (T 검정)</h3>
+<p>이제 A/B 테스트의 판단 기준인 T-test에 대하여 알아보겠습니다. T-검정은 두 집단간 평균의 차이가 있는지의 여부를 검정하는 방법입니다. 두 비교 그룹의 평균값이 차이가 있으면, 두 그룹의 값은 차이가 있다고 판단하는 것입니다. T-검정에는 데이터 비교 유형에 따라 단일 표본, 독립 표본, 대응 표본의 T-검정으로 나뉘며, 각 유형에 따라 테스트의 방법(코드)이 조금 다릅니다. 위에서 본 헬스케어 앱을 가지고 각 검증 유형의 특징과 코드 수행 사례를 살펴보겠습니다.</p>
+<ul>
+<li><p><strong>단일 표본 T-test</strong> : 측정한 데이터의 평균이 특정 기준보다 유의미하게 다른지 혹은 큰지/작은지를 알아보는 분석 방법입니다. 아래와 같은 R코드를 사용합니다.</p>
+<p>R 문법: t.test(관측치, alternative = 판별 방향, mu=특정기준, conf.level = 신뢰수준)</p>
+<p>alternative에는 “greater”, “less”, “two.sided”가 있습니다. 각각 큰지/작은지/같은지를 구분하라는 명령입니다.</p>
+<p>신뢰수준 (Confidence Level)은 추정값이 참 값 범위 내에 있을 확률 의미하며, 예를들어 95% 신뢰수준은 추정값이 95%의 확률로 참 값 범위 내에 있다는 의미입니다. 신뢰수준과 유의수준은 ‘1-신뢰수준=유의수준’ 의 수식이 성립합니다. 아래의 가설로 T-검정을 해봅시다.</p>
+<p>💡 가설: AI 맞춤 관리 기능 도입 후 사용자들의 일일 평균 걸음 수가 8000보를 넘었다.</p>
+<p>R 코드로 T-검정을 실행합니다. 예시에 사용한 csv 형식의 데이터는 100명의 A디자인 사용 그룹, 100명의 B디자인 사용 그룹의 건강 정보를 가정하여 인공지능이 생성한 데이터입니다. 예시 데이터의 열 정보는 다음과 같습니다. T-test 옵션은 A 디자인 사용자의 데이터 평균 보다 B 디자인 사용자의 평균이 큰지를 검정하는 “greater”옵션을 사용했습니다.</p>
+<ul>
+<li>daily_steps: 일일 걸음 수</li>
+<li>sleep_hours: 수면 시간 (시간)</li>
+<li>exercise_minutes: 운동 시간 (분)</li>
+<li>stress_level: 스트레스 수준</li>
+<li>water_intake_pre: AI 맞춤 관리 기능 도입 이전 물 섭취량</li>
+<li>water_intake_post: AI 맞춤 관리 기능 도입 이후 물 섭취량</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 필요한 라이브러리를 로드합니다.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># CSV 파일을 로드합니다.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"mupdated_health_data.csv"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 단일 표본 t-검정을 수행합니다.</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>t_test_result <span class="ot">&lt;-</span> <span class="fu">t.test</span>(df<span class="sc">$</span>daily_steps, <span class="at">mu =</span> <span class="dv">8000</span>, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 결과를 출력합니다.</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(t_test_result)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>One Sample t<span class="sc">-</span>test</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span>  df<span class="sc">$</span>daily_steps</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fl">0.21082</span>, df <span class="ot">=</span> <span class="dv">199</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.4166</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>alternative hypothesis<span class="sc">:</span> true mean is greater than <span class="dv">8000</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span> percent confidence interval<span class="sc">:</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a> <span class="fl">7880.736</span>      <span class="cn">Inf</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>sample estimates<span class="sc">:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>mean of x </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a> <span class="fl">8017.439</span> </span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이 데이터의 경우 95% 신뢰 수준에서 p-value가 0.4166이므로 유의 수준 0.05보다 큽니다. 그러므로 개선된 앱이 사용자들의 걸음 수를 개선하지는 못했습니다. T-검정 결과를 그래프로 표현하면 아래와 같습니다. 기준 값인 8,000보를 중심으로 수집된 걸음수 값의 분포를 히스토그램으로 보여주고 있습니다.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 일일 걸음 수 분포를 시각화합니다.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> daily_steps)) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">500</span>, <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(daily_steps)), <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Daily Steps"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>   <span class="at">x =</span> <span class="st">"Daily Steps"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>   <span class="at">y =</span> <span class="st">"Frequency"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">subtitle =</span> <span class="fu">sprintf</span>(<span class="st">"T-test p-value: %s"</span>, formatted_p_value)) <span class="sc">+</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/fig26.png" class="img-fluid figure-img"></p>
+<figcaption>[그림 26]예시 데이터에 대한 단일 표본 T-test 결과의 시각화 그래프</figcaption>
+</figure>
+</div>
+<ul>
+<li><p><strong>독립 표본 T-test:</strong> 서로 다른 두개의 그룹 간 평균의 차이가 유의미 한지 여부를 판단하기 위한 검정입니다. 두개의 표본이 “독립”적 이기 위해서는 두개의 표본이 서로 관계 없는 모집단에서 추출 되었고, 표본 간에는 아무런 관계가 없어야 합니다. 우리가 사용하는 A/B 테스트 기법은 독립 표본 T-test로 기존 디자인(A 디자인)의 사용자와 개선 디자인(B 디자인)의 사용자는 서로 다른 사용자 집단이고, 관련이 없어야 합니다. 그래서 A 디자인의 사용자와 B 디자인의 사용자를 따로 모집하여 테스트를 시행합니다.</p>
+<p>R에서 독립표본 t-test를 하는 방법은 두가지가 있습니다. 하나는 분석을 원하는 두 집단의 평균을 각각 별개의 벡터 객체로 만들어 입력하는 방법 입니다. 유형 1 문법은 t.test(group 1의 관측치, group2의 관측치, t-test 유형, 신뢰범위)와 같고, 유형2의 문법은 하나의 데이터 프레임에서 집단을 구분하고자 하는 기준을 입력하는 것으로, t.test(관측치~집단 구분 기준, 데이터프레임, t-test 유형, 신뢰범위)와 같이 수행합니다.</p>
+<p>💡 가설: AI 맞춤 관리를 받은 그룹이 그렇지 않은 그룹보다 주간 운동 시간이 더 길다.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate weekly exercise minutes</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">weekly_exercise_minutes =</span> exercise_minutes <span class="sc">*</span> <span class="dv">7</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform independent two-sample t-test</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>t_test_result <span class="ot">&lt;-</span> <span class="fu">t.test</span>(weekly_exercise_minutes <span class="sc">~</span> group, <span class="at">data =</span> df, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the result</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"data: weekly_exercise_minutes by group</span><span class="sc">\n</span><span class="st">t = %.4f, df = %.2f, p-value = %.15f</span><span class="sc">\n</span><span class="st">alternative hypothesis: true difference in means between group A and group B is greater than 0</span><span class="sc">\n</span><span class="st">95 percent confidence interval:</span><span class="sc">\n</span><span class="st"> 156.8696      Inf</span><span class="sc">\n</span><span class="st">sample estimates:</span><span class="sc">\n</span><span class="st">mean in group A = %.3f, mean in group B = %.3f</span><span class="sc">\n</span><span class="st">"</span>, </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            t_test_result<span class="sc">$</span>statistic, t_test_result<span class="sc">$</span>parameter, t_test_result<span class="sc">$</span>p.value, </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            t_test_result<span class="sc">$</span>estimate[<span class="dv">1</span>], t_test_result<span class="sc">$</span>estimate[<span class="dv">2</span>]))</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span> weekly_exercise_minutes by group</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fl">7.1528</span>, df <span class="ot">=</span> <span class="fl">192.59</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.000000000008641</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>alternative hypothesis<span class="sc">:</span> true difference <span class="cf">in</span> means between group A and group B is greater than <span class="dv">0</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span> percent confidence interval<span class="sc">:</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a> <span class="fl">156.8696</span>      <span class="cn">Inf</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>sample estimates<span class="sc">:</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>mean <span class="cf">in</span> group A <span class="ot">=</span> <span class="fl">1056.917</span>, mean <span class="cf">in</span> group B <span class="ot">=</span> <span class="fl">852.906</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>T-test 결과를 해석하면, p-value가 매우 작게 나왔죠. 95% 신뢰 수준에서 두 값의 차이가 있다는 뜻이므로 AI 맞춤 관리 기능이 사용자들의 주간 운동 시간을 더 길게 한다는 판단을 할 수 있습니다. 아래의 박스 플롯 그래프를 보면 두 집단의 값 분포가 차이가 나는 것을 시각적으로도 확인할 수 있습니다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/fig27.png" class="img-fluid figure-img"></p>
+<figcaption>[그림 27]예시 데이터의 박스 플롯 그래프</figcaption>
+</figure>
+</div></li>
+<li><p><strong>대응 표본 T-test:</strong> 대응표본 t-test는 동일한 집단의 전-후 차이를 비교하기 위해 사용됩니다.</p>
+<p>예를 들어 초콜렛을 하루 30g씩 섭취하는 것이 수면 시간에 영향을 미치는지 여부나, 과외를 받는 것이 학교 성적에 영향을 미치는지 등등 특정 변인의 영향을 측정하기 위해 주로 사용됩니다. 주의할 점은 대응 표본은 실험 전-후를 비교하는 것이기 때문에 입력하는 관측치의 수가 반드시 같고, 동일 집단 이어야 합니다.</p>
+<p>💡 가설: AI 맞춤 관리 기능 도입 후 사용자들의 일일 평균 물 섭취량이 증가했다.</p>
+<p>이번에는 F-test 에서 사용한 예제를 이어서 T-test에서도 사용하겠습니다.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 데이터 생성</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>before <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.2</span>, <span class="fl">1.5</span>, <span class="fl">1.3</span>, <span class="fl">1.4</span>, <span class="fl">1.6</span>, <span class="fl">1.3</span>, <span class="fl">1.7</span>, <span class="fl">1.5</span>, <span class="fl">1.4</span>, <span class="fl">1.6</span>)  <span class="co"># 리터 단위</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>after <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="fl">1.8</span>, <span class="fl">1.6</span>, <span class="fl">1.7</span>, <span class="fl">2.0</span>, <span class="fl">1.6</span>, <span class="fl">2.1</span>, <span class="fl">1.9</span>, <span class="fl">1.8</span>, <span class="fl">1.9</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># T-검정 수행</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(before,after, <span class="at">paired=</span><span class="cn">TRUE</span>, <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Paired t<span class="sc">-</span>test</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span>  before and after</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="sc">-</span><span class="fl">20.821</span>, df <span class="ot">=</span> <span class="dv">9</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">6.367e-09</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>alternative hypothesis<span class="sc">:</span> true mean difference is not equal to <span class="dv">0</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span> percent confidence interval<span class="sc">:</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a> <span class="sc">-</span><span class="fl">0.3769409</span> <span class="sc">-</span><span class="fl">0.3030591</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>sample estimates<span class="sc">:</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>mean difference </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>          <span class="sc">-</span><span class="fl">0.34</span> </span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>결과를 해석해 보겠습니다. p-value가 6.367e-09이 나왔네요. 이것은 66.367곱하기 (0.1)의 9제곱이라는 뜻으로 매우 작은 수입니다. 즉 95% 신뢰 수준에서 두 값의 차이가 있다고 판단합니다. 새로운 기능은 사용자들의 물 섭취량을 개선했습니다.</p>
+<p>이상으로 T-test의 유형별 데이터 특성과 시행 방법을 알아보았습니다. 학습한 검정 기법들을 데이터의 특성에 맞게 적용하여 실습해보기 바랍니다.</p></li>
+</ul>
+<p>(문헌 20) 로라 클라인, (김수영, 박기석 역), 『린 스타트업 실전 UX』, 한빛미디어,(2014)</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./part 4. 개선 디자인의 검증 - A_B Testing.html" class="pagination-link" aria-label="part 4. 개선 디자인의 검증 : A/B Testing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">part 4. 개선 디자인의 검증 : A/B Testing</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ch2. F-test와 T-test의 실습 방법들.html" class="pagination-link" aria-label="ch2. F-test와 T-test의 실습 방법들">
+        <span class="nav-page-text"><span class="chapter-title">ch2. F-test와 T-test의 실습 방법들</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

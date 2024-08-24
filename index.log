@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.22)  23 AUG 2024 12:03
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.22)  24 AUG 2024 04:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1918,4 +1918,2462 @@ File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
 Writing index file index.idx
 (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page
+Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip267
+\f@nch@O@elh=\skip268
+\f@nch@O@erh=\skip269
+\f@nch@O@olh=\skip270
+\f@nch@O@orh=\skip271
+\f@nch@O@elf=\skip272
+\f@nch@O@erf=\skip273
+\f@nch@O@olf=\skip274
+\f@nch@O@orf=\skip275
+) (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2024/05/16 v1.7.0 fvextra - extensions and patches for fancyvrb
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2023/05/20 line numbers on paragraphs v5.3
+Invalid UTF-8 byte or sequence at line 292 replaced by U+FFFD.
+\linenopenalty=\count414
+\output=\toks52
+\linenoprevgraf=\count415
+\linenumbersep=\dimen359
+\linenumberwidth=\dimen360
+\c@linenumber=\count416
+\c@pagewiselinenumber=\count417
+\c@LN@truepage=\count418
+\c@internallinenumber=\count419
+\c@internallinenumbers=\count420
+\quotelinenumbersep=\dimen361
+\bframerule=\dimen362
+\bframesep=\dimen363
+\bframebox=\box123
+\linenoamsmath@ams@eqpen=\count421
+LaTeX Info: Redefining \\ on input line 3180.
+)
+\c@FancyVerbWriteLine=\count422
+\c@FancyVerbBufferIndex=\count423
+\c@FancyVerbBufferLength=\count424
+\c@FancyVerbBufferLine=\count425
+\c@FV@oldbufferlength=\count426
+\c@FV@TrueTabGroupLevel=\count427
+\c@FV@TrueTabCounter=\count428
+\FV@TabBox@Group=\box124
+\FV@TmpLength=\skip276
+\c@FV@HighlightLinesStart=\count429
+\c@FV@HighlightLinesStop=\count430
+\FV@LoopCount=\count431
+\FV@NCharsBox=\box125
+\FV@BreakIndent=\dimen364
+\FV@BreakIndentNChars=\count432
+\FV@BreakSymbolSepLeft=\dimen365
+\FV@BreakSymbolSepLeftNChars=\count433
+\FV@BreakSymbolSepRight=\dimen366
+\FV@BreakSymbolSepRightNChars=\count434
+\FV@BreakSymbolIndentLeft=\dimen367
+\FV@BreakSymbolIndentLeftNChars=\count435
+\FV@BreakSymbolIndentRight=\dimen368
+\FV@BreakSymbolIndentRightNChars=\count436
+\c@FancyVerbLineBreakLast=\count437
+\FV@LineBox=\box126
+\FV@LineIndentBox=\box127
+\c@FV@BreakBufferDepth=\count438
+\FV@LineWidth=\dimen369
+) (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
+File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
+\BKM@id=\count439
+)) (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen370
+\captionmargin=\dimen371
+\caption@leftmargin=\dimen372
+\caption@rightmargin=\dimen373
+\caption@width=\dimen374
+\caption@indent=\dimen375
+\caption@parindent=\dimen376
+\caption@hangindent=\dimen377
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count440
+\c@continuedfloat=\count441
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)) (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count442
+\float@exts=\toks53
+\float@box=\box128
+\@float@everytoks=\toks54
+\@floatcapt=\box129
+)
+\@float@every@codelisting=\toks55
+\c@codelisting=\count443
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count444
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count445
+) (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2024/08/18 v24.8 The Babel package
+\babel@savecnt=\count446
+\U@D=\dimen378
+\l@unhyphenated=\language8
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/generic/babel/xebabel.def)
+\bbl@readstream=\read5
+\bbl@dirlevel=\count447
+Package babel Info: You haven't specified a language as a class or package
+(babel)             option. I'll load 'nil'. Reported on input line 4271.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2024/08/18 v24.8 Nil language
+\l@nil=\language9
+))
+\everypar=\toks56
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/generic/babel/locale/ko/babel-korean.tex)
+Package babel Info: Importing data for korean
+(babel)             from babel-ko.ini. Reported on input line 701.
+Package babel Info: Hyphen rules for 'korean' set to \l@nil
+(babel)             (\language9). Reported on input line 701.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/generic/babel/locale/ko/babel-korean.tex) (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count448
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count449
+\c@listtotal=\count450
+\c@listcount=\count451
+\c@liststart=\count452
+\c@liststop=\count453
+\c@citecount=\count454
+\c@citetotal=\count455
+\c@multicitecount=\count456
+\c@multicitetotal=\count457
+\c@instcount=\count458
+\c@maxnames=\count459
+\c@minnames=\count460
+\c@maxitems=\count461
+\c@minitems=\count462
+\c@citecounter=\count463
+\c@maxcitecounter=\count464
+\c@savedcitecounter=\count465
+\c@uniquelist=\count466
+\c@uniquename=\count467
+\c@refsection=\count468
+\c@refsegment=\count469
+\c@maxextratitle=\count470
+\c@maxextratitleyear=\count471
+\c@maxextraname=\count472
+\c@maxextradate=\count473
+\c@maxextraalpha=\count474
+\c@abbrvpenalty=\count475
+\c@highnamepenalty=\count476
+\c@lownamepenalty=\count477
+\c@maxparens=\count478
+\c@parenlevel=\count479
+\blx@tempcnta=\count480
+\blx@tempcntb=\count481
+\blx@tempcntc=\count482
+\c@blx@maxsection=\count483
+\blx@maxsegment@0=\count484
+\blx@notetype=\count485
+\blx@parenlevel@text=\count486
+\blx@parenlevel@foot=\count487
+\blx@sectionciteorder@0=\count488
+\blx@sectionciteorderinternal@0=\count489
+\blx@entrysetcounter=\count490
+\blx@biblioinstance=\count491
+\labelnumberwidth=\skip277
+\labelalphawidth=\skip278
+\biblabelsep=\skip279
+\bibitemsep=\skip280
+\bibnamesep=\skip281
+\bibinitsep=\skip282
+\bibparsep=\skip283
+\bibhang=\skip284
+\blx@bcfin=\read6
+\blx@bcfout=\write6
+\blx@langwohyphens=\language10
+\c@mincomprange=\count492
+\c@maxcomprange=\count493
+\c@mincompwidth=\count494
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count495
+\c@savedafterword=\count496
+\c@annotator=\count497
+\c@savedannotator=\count498
+\c@author=\count499
+\c@savedauthor=\count500
+\c@bookauthor=\count501
+\c@savedbookauthor=\count502
+\c@commentator=\count503
+\c@savedcommentator=\count504
+\c@editor=\count505
+\c@savededitor=\count506
+\c@editora=\count507
+\c@savededitora=\count508
+\c@editorb=\count509
+\c@savededitorb=\count510
+\c@editorc=\count511
+\c@savededitorc=\count512
+\c@foreword=\count513
+\c@savedforeword=\count514
+\c@holder=\count515
+\c@savedholder=\count516
+\c@introduction=\count517
+\c@savedintroduction=\count518
+\c@namea=\count519
+\c@savednamea=\count520
+\c@nameb=\count521
+\c@savednameb=\count522
+\c@namec=\count523
+\c@savednamec=\count524
+\c@translator=\count525
+\c@savedtranslator=\count526
+\c@shortauthor=\count527
+\c@savedshortauthor=\count528
+\c@shorteditor=\count529
+\c@savedshorteditor=\count530
+\c@labelname=\count531
+\c@savedlabelname=\count532
+\c@institution=\count533
+\c@savedinstitution=\count534
+\c@lista=\count535
+\c@savedlista=\count536
+\c@listb=\count537
+\c@savedlistb=\count538
+\c@listc=\count539
+\c@savedlistc=\count540
+\c@listd=\count541
+\c@savedlistd=\count542
+\c@liste=\count543
+\c@savedliste=\count544
+\c@listf=\count545
+\c@savedlistf=\count546
+\c@location=\count547
+\c@savedlocation=\count548
+\c@organization=\count549
+\c@savedorganization=\count550
+\c@origlocation=\count551
+\c@savedoriglocation=\count552
+\c@origpublisher=\count553
+\c@savedorigpublisher=\count554
+\c@publisher=\count555
+\c@savedpublisher=\count556
+\c@language=\count557
+\c@savedlanguage=\count558
+\c@origlanguage=\count559
+\c@savedoriglanguage=\count560
+\c@pageref=\count561
+\c@savedpageref=\count562
+\shorthandwidth=\skip285
+\shortjournalwidth=\skip286
+\shortserieswidth=\skip287
+\shorttitlewidth=\skip288
+\shortauthorwidth=\skip289
+\shorteditorwidth=\skip290
+\locallabelnumberwidth=\skip291
+\locallabelalphawidth=\skip292
+\localshorthandwidth=\skip293
+\localshortjournalwidth=\skip294
+\localshortserieswidth=\skip295
+\localshorttitlewidth=\skip296
+\localshortauthorwidth=\skip297
+\localshorteditorwidth=\skip298
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count563
+\c@textcitetotal=\count564
+\c@textcitemaxnames=\count565
+\c@biburlbigbreakpenalty=\count566
+\c@biburlbreakpenalty=\count567
+\c@biburlnumpenalty=\count568
+\c@biburlucpenalty=\count569
+\c@biburllcpenalty=\count570
+\biburlbigskip=\muskip20
+\biburlnumskip=\muskip21
+\biburlucskip=\muskip22
+\biburllcskip=\muskip23
+\c@smartand=\count571
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count572
+\c@bbx:relatedtotal=\count573
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2024-07-20 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 722.
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count574
+\@quotereset=\count575
+No file index.aux.
+\openout1 = `index.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 737.
+LaTeX Font Info:    ... okay on input line 737.
+LaTeX Info: Redefining \microtypecontext on input line 737.
+Package microtype Info: Applying patch `item' on input line 737.
+Package microtype Info: Applying patch `toc' on input line 737.
+Package microtype Info: Applying patch `eqnum' on input line 737.
+Package microtype Info: Applying patch `footnote' on input line 737.
+Package microtype Info: Applying patch `verbatim' on input line 737.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `STIXTwoText-Regular.otf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* hratio: 1:1
+* vratio: 1:1
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 392.64804pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 574.74568pt, 85.35826pt)
+* \paperwidth=534.9118pt
+* \paperheight=731.23582pt
+* \textwidth=392.64804pt
+* \textheight=574.74568pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-41.59085pt
+* \headheight=12.0pt
+* \headsep=28.45274pt
+* \topskip=10.0pt
+* \footskip=42.67912pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=12.5pt plus 5.55573pt minus 2.7771pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Font shape `TU/D2Coding-Ver1.3.2-20180524.ttf(0)/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 737.
+\c@lstlisting=\count576
+Package hyperref Info: Link coloring ON on input line 737.
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Trying to load language 'korean'...
+Package biblatex Info: ... file 'korean.lbx' not found.
+
+Package biblatex Warning: Language 'korean' not supported.
+(biblatex)                Using dummy definitions on input line 737.
+
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout6 = `index.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'index.bbl' not found.
+No file index.bbl.
+Package biblatex Info: Reference section=0 on input line 737.
+Package biblatex Info: Reference segment=0 on input line 737.
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 740.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/m/n' will be
+(Font)              scaled to size 16.88712pt on input line 740.
+LaTeX Font Info:    Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/m/n' will be
+(Font)              scaled to size 19.0967pt on input line 740.
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 740.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/m/n' will be
+(Font)              scaled to size 11.72717pt on input line 740.
+LaTeX Font Info:    Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/m/n' will be
+(Font)              scaled to size 13.2616pt on input line 740.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 740.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 740.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 740.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 740.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 12.0011pt on input line 740.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 8.00073pt on input line 740.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 6.00055pt on input line 740.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 11.99872pt on input line 740.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 7.99915pt on input line 740.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 740.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 740.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 740.
+(/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+
+[1
+
+
+
+]
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/m/n' will be
+(Font)              scaled to size 24.88pt on input line 745.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/m/n' will be
+(Font)              scaled to size 24.31433pt on input line 745.
+LaTeX Font Info:    Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/m/n' will be
+(Font)              scaled to size 27.49571pt on input line 745.
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/b/n' will be
+(Font)              scaled to size 24.88pt on input line 745.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/b/n' will be
+(Font)              scaled to size 24.26422pt on input line 745.
+LaTeX Font Info:    Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/b/n' will be
+(Font)              scaled to size 27.30437pt on input line 745.
+No file index.toc.
+\tf@toc=\write7
+\openout7 = `index.toc'.
+
+
+
+[2]
+제 1 \bbl@ensure@korean {장}.
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/m/n' will be
+(Font)              scaled to size 20.74pt on input line 752.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/m/n' will be
+(Font)              scaled to size 20.26846pt on input line 752.
+LaTeX Font Info:    Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/m/n' will be
+(Font)              scaled to size 22.92046pt on input line 752.
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/b/n' will be
+(Font)              scaled to size 20.74pt on input line 752.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/b/n' will be
+(Font)              scaled to size 20.22668pt on input line 752.
+LaTeX Font Info:    Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/b/n' will be
+(Font)              scaled to size 22.76096pt on input line 752.
+
+
+[1
+
+
+]
+LaTeX Font Info:    Font shape `TU/NimbusSanL-Reg.otf(0)/m/n' will be
+(Font)              scaled to size 9.02664pt on input line 787.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `NimbusSanL-Reg.otf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(0)/m/n' will be
+(Font)              scaled to size 9.77264pt on input line 787.
+LaTeX Font Info:    Font shape `TU/NimbusSanL-Reg.otf(0)/m/n' will be
+(Font)              scaled to size 12.99835pt on input line 787.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(0)/m/n' will be
+(Font)              scaled to size 14.0726pt on input line 787.
+LaTeX Font Info:    Font shape `TU/NimbusSanL-Reg.otf(0)/b/n' will be
+(Font)              scaled to size 12.61317pt on input line 787.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(0)/b/n' will be
+(Font)              scaled to size 14.0436pt on input line 787.
+
+
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 827.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/m/n' will be
+(Font)              scaled to size 7.81812pt on input line 827.
+LaTeX Font Info:    Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/m/n' will be
+(Font)              scaled to size 8.84106pt on input line 827.
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'KoPubWorldDotum_ProLight.otf(2)' created
+(fontspec)             for font 'KoPubWorld Dotum_Pro Light.otf' with options
+(fontspec)             [Scale=MatchLowercase,ExternalLocation={_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9772695029871215]"[_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/KoPubWorld
+(fontspec)             Dotum_Pro Light.otf]/OT:script=latn;language=dflt;"
+
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(2)/m/n' will be
+(Font)              scaled to size 7.81812pt on input line 827.
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/b/n' will be
+(Font)              scaled to size 8.0pt on input line 827.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/b/n' will be
+(Font)              scaled to size 7.802pt on input line 827.
+
+LaTeX Font Warning: Font shape `TU/KoPubWorldDotum_ProLight.otf(2)/b/n' undefined
+(Font)              using `TU/KoPubWorldDotum_ProLight.otf(2)/m/n' instead on input line 827.
+
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(2)/b/n' will be
+(Font)              scaled to size 7.81812pt on input line 827.
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 827.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/b/n' will be
+(Font)              scaled to size 9.7525pt on input line 827.
+LaTeX Font Info:    Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/b/n' will be
+(Font)              scaled to size 10.97443pt on input line 827.
+LaTeX Font Info:    Font shape `TU/NimbusSanL-Reg.otf(0)/b/n' will be
+(Font)              scaled to size 8.75916pt on input line 827.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(0)/b/n' will be
+(Font)              scaled to size 9.7525pt on input line 827.
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[3]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[4]
+
+[5
+
+]
+
+[6]
+제 2 \bbl@ensure@korean {장}.
+
+
+[7
+
+]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[8
+
+]
+제 3 \bbl@ensure@korean {장}.
+LaTeX Font Info:    Font shape `TU/NimbusSanL-Reg.otf(0)/m/n' will be
+(Font)              scaled to size 10.83197pt on input line 947.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(0)/m/n' will be
+(Font)              scaled to size 11.72717pt on input line 947.
+LaTeX Font Info:    Font shape `TU/NimbusSanL-Reg.otf(0)/b/n' will be
+(Font)              scaled to size 10.51099pt on input line 947.
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(0)/b/n' will be
+(Font)              scaled to size 11.703pt on input line 947.
+
+
+[9]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[10]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[11] (/cloud/home/r2564481/.TinyTeX/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
+File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
+)
+
+LaTeX Font Warning: Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/solid/n' undefined
+(Font)              using `TU/KoPubWorldDotum_ProLight.otf(1)/m/n' instead on input line 1047.
+
+
+LaTeX Font Warning: Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/solid/n' undefined
+(Font)              using `TU/KoPubWorldBatang_ProLight.otf(0)/m/n' instead on input line 1047.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1052--1054
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1056
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1060
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1062
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1064--1066
+
+ []
+
+LaTeX Font Info:    Font shape `TU/KoPubWorldDotum_ProLight.otf(1)/solid/n' will be
+(Font)              scaled to size 9.77264pt on input line 1073.
+LaTeX Font Info:    Font shape `TU/KoPubWorldBatang_ProLight.otf(0)/solid/n' will be
+(Font)              scaled to size 11.05133pt on input line 1073.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1080
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1082
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 1092--1094
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1096
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1098--1100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1112--1114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1136
+
+ []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1152--1154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1154--1156
+
+ []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[16]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[17]
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 1425.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 5.5pt on input line 1425.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 10.00092pt on input line 1425.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 7.00064pt on input line 1425.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 5.5005pt on input line 1425.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 1425.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 1425.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 5.4994pt on input line 1425.
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[18]
+제 4 \bbl@ensure@korean {장}.
+
+
+[19
+
+]
+File: img/fig1.png Graphic file (type bmp)
+<img/fig1.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[20]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[21]
+File: img/fig2.png Graphic file (type bmp)
+<img/fig2.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[22]
+Missing character: There is no 에 (U+C5D0) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 서 (U+C11C) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 발 (U+BC1C) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 표 (U+D45C) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 된 (U+B41C) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 새 (U+C0C8) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 로 (U+B85C) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 운 (U+C6B4) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 기 (U+AE30) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 능 (U+B2A5) in font [_extensions/bit2r/bitPublish/fonts/STIXTwoText/STIXTwoText-Regular.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[23]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[24
+
+]
+제 5 \bbl@ensure@korean {장}.
+
+
+[25]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[26]
+
+[27
+
+]
+
+[28]
+제 6 \bbl@ensure@korean {장}.
+
+
+[29
+
+]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[30
+
+]
+제 7 \bbl@ensure@korean {장}.
+
+
+[31]
+File: img/fig3.png Graphic file (type bmp)
+<img/fig3.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[32]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[33]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[34
+
+]
+제 8 \bbl@ensure@korean {장}.
+
+
+[35]
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[36]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[37]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[38]
+File: img/fig4.png Graphic file (type bmp)
+<img/fig4.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[39]
+File: img/fig5.png Graphic file (type bmp)
+<img/fig5.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[40]
+File: img/fig6.png Graphic file (type bmp)
+<img/fig6.png>
+File: img/fig7.png Graphic file (type bmp)
+<img/fig7.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[41]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[42]
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[43]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[44]
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[45]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[46]
+제 9 \bbl@ensure@korean {장}.
+
+
+[47
+
+]
+File: img/fig8.png Graphic file (type bmp)
+<img/fig8.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[48]
+File: img/fig9.png Graphic file (type bmp)
+<img/fig9.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[49]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[50]
+File: img/fig10.png Graphic file (type bmp)
+<img/fig10.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[51]
+File: img/fig11.png Graphic file (type bmp)
+<img/fig11.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[52]
+File: img/fig12.png Graphic file (type bmp)
+<img/fig12.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[53]
+File: img/fig13.png Graphic file (type bmp)
+<img/fig13.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[54]
+File: img/fig14.png Graphic file (type bmp)
+<img/fig14.png>
+File: img/fig15.png Graphic file (type bmp)
+<img/fig15.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[55]
+File: img/fig16.png Graphic file (type bmp)
+<img/fig16.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[56]
+Overfull \hbox (26.01416pt too wide) in paragraph at lines 2591--2593
+[]\TU/STIXTwoText-Regular.otf(0)/m/n/10 (\TU/KoPubWorldBatang_ProLight.otf(0)/solid/n/10 문 헌 \TU/STIXTwoText-Regular.otf(0)/m/n/10 10) Dartmouth College, “StudentLife Study”, (2024.7.24), [][]https:\TU/KoPubWorldBatang_ProLight.otf(0)/solid/n/10 //\TU/STIXTwoText-Regular.otf(0)/m/n/10 studentlife.cs.dartmouth.edu[][] 
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 2601--2605
+[]\TU/STIXTwoText-Regular.otf(0)/m/n/10 (\TU/KoPubWorldBatang_ProLight.otf(0)/solid/n/10 문 헌 \TU/STIXTwoText-Regular.otf(0)/m/n/10 13) R. Wang et. al., “Tracking Depression Dynamics in College Students Using
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 2601--2605
+\TU/STIXTwoText-Regular.otf(0)/m/n/10 MobilePhone and Wearable Sensing”, Proceedings of the ACM on Interactive, Mobile,
+ []
+
+
+Underfull \hbox (badness 6542) in paragraph at lines 2606--2610
+\TU/STIXTwoText-Regular.otf(0)/m/n/10 theCOVID\TU/KoPubWorldBatang_ProLight.otf(0)/solid/n/10 -\TU/STIXTwoText-Regular.otf(0)/m/n/10 19 Pandemic: Longitudinal Mobile Smartphone andEcological Momentary
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 2611--2615
+\TU/STIXTwoText-Regular.otf(0)/m/n/10 Pandemic.” Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous
+ []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[57]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[58]
+제 10 \bbl@ensure@korean {장}.
+
+
+[59
+
+]
+File: img/fig17.png Graphic file (type bmp)
+<img/fig17.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[60]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[61]
+File: img/fig18.png Graphic file (type bmp)
+<img/fig18.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[62]
+File: img/fig19.png Graphic file (type bmp)
+<img/fig19.png>
+
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[63]
+File: img/fig20.png Graphic file (type bmp)
+<img/fig20.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[64]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[65]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[66
+
+]
+제 11 \bbl@ensure@korean {장}.
+
+
+[67]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[68]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[69]
+File: img/fig21.png Graphic file (type bmp)
+<img/fig21.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[70]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[71]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[72
+
+]
+
+[73]
+
+[74]
+제 12 \bbl@ensure@korean {장}.
+
+
+[75
+
+]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[76
+
+]
+제 13 \bbl@ensure@korean {장}.
+
+
+[77]
+File: img/fig22.png Graphic file (type bmp)
+<img/fig22.png>
+
+Underfull \vbox (badness 1635) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[78]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[79]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[80]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[81]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[82
+
+]
+제 14 \bbl@ensure@korean {장}.
+
+
+[83]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[84]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[85]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[86]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[87]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[88]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[89]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[90]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[91]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[92
+
+]
+제 15 \bbl@ensure@korean {장}.
+
+
+[93]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[94]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[95]
+File: img/fig23.png Graphic file (type bmp)
+<img/fig23.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[96]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[97]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[98]
+제 16 \bbl@ensure@korean {장}.
+
+
+[99
+
+]
+File: img/fig24.png Graphic file (type bmp)
+<img/fig24.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[100]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[101]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[102]
+File: img/fig25.png Graphic file (type bmp)
+<img/fig25.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[103]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[104]
+
+[105
+
+]
+
+[106]
+제 17 \bbl@ensure@korean {장}.
+
+
+[107
+
+]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[108
+
+]
+제 18 \bbl@ensure@korean {장}.
+
+
+[109]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[110]
+Missing character: There is no 💡 (U+1F4A1) in font [_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/KoPubWorld Dotum_Pro Light.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+
+Underfull \vbox (badness 1715) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[111]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[112]
+Missing character: There is no 💡 (U+1F4A1) in font [_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/KoPubWorld Dotum_Pro Light.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 💡 (U+1F4A1) in font [_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/KoPubWorld Dotum_Pro Light.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+
+Underfull \vbox (badness 1509) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[113]
+LaTeX Font Info:    Font shape `TU/D2Coding-Ver1.3.2-20180524.ttf(0)/m/n' will be
+(Font)              scaled to size 4.74998pt on input line 4226.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 4226.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 5.00046pt on input line 4226.
+LaTeX Font Info:    Font shape `TU/STIXTwoMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 4226.
+LaTeX Font Info:    Font shape `TU/STIXTwoText-Regular.otf(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 4226.
+File: img/fig26.png Graphic file (type bmp)
+<img/fig26.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[114]
+Missing character: There is no 💡 (U+1F4A1) in font [_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/KoPubWorld Dotum_Pro Light.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 💡 (U+1F4A1) in font [_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/KoPubWorld Dotum_Pro Light.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[115]
+LaTeX Font Info:    Font shape `TU/D2Coding-Ver1.3.2-20180524.ttf(0)/b/n' will be
+(Font)              scaled to size 9.49997pt on input line 4288.
+File: img/fig27.png Graphic file (type bmp)
+<img/fig27.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[116]
+Missing character: There is no 💡 (U+1F4A1) in font [_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/KoPubWorld Dotum_Pro Light.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 💡 (U+1F4A1) in font [_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/KoPubWorld Dotum_Pro Light.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
+
+Overfull \vbox (1.53519pt too high) detected at line 4350
+ []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[117]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[118]
+제 19 \bbl@ensure@korean {장}.
+
+
+[119
+
+]
+File: img/fig28.png Graphic file (type bmp)
+<img/fig28.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[120]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[121]
+File: img/fig29.png Graphic file (type bmp)
+<img/fig29.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[122]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[123]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[124]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[125]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[126]
+제 20 \bbl@ensure@korean {장}.
+
+
+[127
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[128]
+File: img/fig30.png Graphic file (type bmp)
+<img/fig30.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[129]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[130]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[131]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[132
+
+]
+제 21 \bbl@ensure@korean {장}.
+
+
+[133]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[134]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[135]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[136]
+File: img/fig31.png Graphic file (type bmp)
+<img/fig31.png>
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[137]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[138
+
+]
+제 22 \bbl@ensure@korean {장}.
+
+
+[139]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[140]
+File: img/fig32.png Graphic file (type bmp)
+<img/fig32.png>
+File: img/fig33.png Graphic file (type bmp)
+<img/fig33.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[141]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[142]
+제 23 \bbl@ensure@korean {장}.
+
+
+[143
+
+]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[144]
+Underfull \hbox (badness 10000) in paragraph at lines 5183--5186
+$[][] [] [][][][][][][][] [] [][][][][][][][][][][][][][] [][] [][][][][][] [][] [][][][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [][] [][][] [] [][] [] [][] [] [][] [] [][] []$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5194--5197
+$[][] [] [][][][][][][][] [] [][][][][][][][][][][][][][] [][] [][][][][][] [][] [][][][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [][] [][][] [] [][] [] [][] [] [][] [] [][] []$
+ []
+
+
+
+[145
+
+]
+Overfull \hbox (26.01416pt too wide) in paragraph at lines 5219--5221
+[]\TU/STIXTwoText-Regular.otf(0)/m/n/10 (\TU/KoPubWorldBatang_ProLight.otf(0)/solid/n/10 문 헌 \TU/STIXTwoText-Regular.otf(0)/m/n/10 10) Dartmouth College, “StudentLife Study”, (2024.7.24), [][]https:\TU/KoPubWorldBatang_ProLight.otf(0)/solid/n/10 //\TU/STIXTwoText-Regular.otf(0)/m/n/10 studentlife.cs.dartmouth.edu[][] 
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 5229--5233
+[]\TU/STIXTwoText-Regular.otf(0)/m/n/10 (\TU/KoPubWorldBatang_ProLight.otf(0)/solid/n/10 문 헌 \TU/STIXTwoText-Regular.otf(0)/m/n/10 13) R. Wang et. al., “Tracking Depression Dynamics in College Students Using
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 5229--5233
+\TU/STIXTwoText-Regular.otf(0)/m/n/10 MobilePhone and Wearable Sensing”, Proceedings of the ACM on Interactive, Mobile,
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 5234--5238
+\TU/STIXTwoText-Regular.otf(0)/m/n/10 the COVID\TU/KoPubWorldBatang_ProLight.otf(0)/solid/n/10 -\TU/STIXTwoText-Regular.otf(0)/m/n/10 19 Pandemic: Longitudinal Mobile Smartphone and Ecological Momentary
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 5239--5243
+\TU/STIXTwoText-Regular.otf(0)/m/n/10 Pandemic.” Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous
+ []
+
+
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[146]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[147]
+
+
+Package fontspec Info: 
+(fontspec)             KoPubWorld Dotum_Pro Light scale = 0.9772695029871215.
+
+[148]
+
+LaTeX Warning: Empty bibliography on input line 5320.
+
+No file index.ind.
+
+enddocument/afterlastpage: lastpage setting LastPage.
+(./index.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+ ***********
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 5326.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                index
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'index.run.xml'.
+\openout1 = `index.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 56230 strings out of 476173
+ 1119364 string characters out of 5784305
+ 2135367 words of memory out of 5000000
+ 77892 multiletter control sequences out of 15000+600000
+ 565976 words of font info for 156 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 108i,13n,140p,1582b,2745s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on index.pdf (150 pages).

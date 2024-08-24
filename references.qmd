@@ -99,4 +99,4 @@
 
 (문헌 29) 구글Docs 편집기 고객센터, “FTEST”, [https://support.google.com/docs/answer/7004183?hl=ko&ref_topic=3105600](https://support.google.com/docs/answer/7004183?hl=ko&ref_topic=3105600)
 
-(문헌 30) 구글Docs 편집기 고객센터, “TTEST”, [https://support.google.com/docs/answer/6055837?hl=ko](https://support.google.com
+(문헌 30) 구글Docs 편집기 고객센터, “TTEST”, <https://support.google.com/docs/answer/6055837?hl=ko>
