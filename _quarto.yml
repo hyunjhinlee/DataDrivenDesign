@@ -74,6 +74,7 @@ format:
     tbl-cap-location: bottom
     lst-cap-location: bottom
     bibliography: references.bib
+    css: /_extensions/bit2r/bitPublish/style.css  # CSS 파일 경로 추가
 
 webr:
   packages: ["stringr", "dplyr"]

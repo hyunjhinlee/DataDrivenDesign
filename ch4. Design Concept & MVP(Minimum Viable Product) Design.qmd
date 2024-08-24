@@ -54,6 +54,7 @@ MVP를 통해 기업은 위험을 최소화하고, 실제 사용자 요구에 �
 
 여기까지 기존 디자인의(A 디자인) 리서치와 개선 디자인(B 디자인) 제안 단원을 마치고, 다음 단계에서는 통계적 가설 검증 개념을 적용한 데이터 기반 디자인 검증(A/B테스트)에 대하여 자세히 알아보고, 개선 디자인에 대한 디자인 검증 실습을 진행하도록 하겠습니다.
 
-(문헌 27) Aaron Gitlin, “Becoming a data-aware designer”, https://uxdesign.cc/becoming-a-data-aware-designer-1d7614ebc3ed
+(문헌 27) Aaron Gitlin, “Becoming a data-aware designer”, <https://uxdesign.cc/becoming-a-data-aware-designer-1d7614ebc3ed>
 
-(문헌 28) Paperless Post, “online invitations for all moments that matter”, https://www,paperlesspost.com
+(문헌 28) Paperless Post, “online invitations for all moments that matter”, <https://www,paperlesspost.com>
+

@@ -72,4 +72,4 @@ Lean UX를 수행하기 위하여 이해해야하는 KPI, Hypothesis, MVP, A/B �
 
 (문헌 20) 로라 클라인, (김수영, 박기석 역), 『린 스타트업 실전 UX』, 한빛미디어,(2014)
 
-(문헌 21) Google Developers, “UXD: What is Lean UX?”, https://www.youtube.com/watch?v=7NkMm5WefBA
+(문헌 21) Google Developers, “UXD: What is Lean UX?”, <https://www.youtube.com/watch?v=7NkMm5WefBA/>, (2023)

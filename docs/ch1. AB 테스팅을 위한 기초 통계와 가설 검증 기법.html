@@ -105,6 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/bit2r/bitPublish/style.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -404,9 +405,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>단일 표본 T-test : 측정한 데이터의 평균이 특정 기준보다 유의미하게 다른지 혹은 큰지/작은지를 알아보는 분석 방법입니다. 아래와 같은 R코드를 사용합니다.</p>
 <p>R 문법: t.test(관측치, alternative = 판별 방향, mu=특정기준, conf.level = 신뢰수준)</p>
 <p>alternative에는 “greater”, “less”, “two.sided”가 있습니다. 각각 큰지/작은지/같은지를 구분하라는 명령입니다.</p>
-<p>신뢰수준 (Confidence Level)은 추정값이 참 값 범위 내에 있을 확률 의미하며, <strong>예를들어</strong> 95% 신뢰수준은 추정값이 95%의 확률로 참 값 범위 내에 있다는 의미입니다. 신뢰수준과 유의수준은 ‘1-신뢰수준=유의수준’ 의 수식이 성립합니다. 아래의 가설로 T-검정을 해봅시다.</p>
+<p>신뢰수준 (Confidence Level)은 추정값이 참 값 범위 내에 있을 확률 의미하며, 예를들어 95% 신뢰수준은 추정값이 95%의 확률로 참 값 범위 내에 있다는 의미입니다. 신뢰수준과 유의수준은 ‘1-신뢰수준=유의수준’ 의 수식이 성립합니다. 아래의 가설로 T-검정을 해봅시다.</p>
 <p>💡 가설: AI 맞춤 관리 기능 도입 후 사용자들의 일일 평균 걸음 수가 8000보를 넘었다.</p>
-<p>R 코드로 T-검정 실행합니다. 예시에 사용한 csv 형식의 데이터는 100명의 A디자인 사용 그룹, 100명의 B디자인 사용 그룹의 건강 정보를 가정하여 인공지능이 생성한 데이터입니다. 예시 데이터의 열 정보는 다음과 같습니다. T-test 옵션은 A 디자인 사용자의 데이터 평균 보다 B 디자인 사용자의 평균이 큰지를 검정하는 “greater”옵션을 사용했습니다.</p>
+<p>R 코드로 T-검정을 실행합니다. 예시에 사용한 csv 형식의 데이터는 100명의 A디자인 사용 그룹, 100명의 B디자인 사용 그룹의 건강 정보를 가정하여 인공지능이 생성한 데이터입니다. 예시 데이터의 열 정보는 다음과 같습니다. T-test 옵션은 A 디자인 사용자의 데이터 평균 보다 B 디자인 사용자의 평균이 큰지를 검정하는 “greater”옵션을 사용했습니다.</p>
 <ul>
 <li>daily_steps: 일일 걸음 수</li>
 <li>sleep_hours: 수면 시간 (시간)</li>

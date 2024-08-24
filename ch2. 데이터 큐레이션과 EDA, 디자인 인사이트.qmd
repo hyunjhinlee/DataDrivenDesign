@@ -86,4 +86,4 @@
 
 (문헌25) Renee. Miller, “Big Data Curation”, 20th International Conference on Management of Data (COMAD), (2014), p.4
 
-(문헌26) Google Dataset Search, https://datasetsearch.research.google.com
+(문헌 26) Google Dataset Search, <https://datasetsearch.research.google.com>, (2023)
