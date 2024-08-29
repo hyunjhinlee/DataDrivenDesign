@@ -1,0 +1,108 @@
+\babel@toc {korean}{}\relax 
+\contentsline {chapter}{목차}{ii}{section*.1}%
+\contentsline {chapter}{머릿말: 이 책에서 다루는 것과 다루지 않는 것}{1}{chapter*.2}%
+\contentsline {section}{이 책에서 다루는 것:}{2}{chapter*.2}%
+\contentsline {section}{이 책에서 다루지 않는 것:}{3}{chapter*.2}%
+\contentsline {part}{I\hspace {1em}\textbf {part 1. UX 디자인과 데이터}}{5}{part.1}%
+\contentsline {chapter}{part 1. UX 디자인과 데이터}{7}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}ch1. UX 디자인의 오늘과 변화의 방향}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Switching to Digital (디자인 대상의 변화)}{9}{section.1.1}%
+\contentsline {section}{\numberline {1.2}from User to People (서비스를 사용하는 주체의 변화)}{10}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Data Driven Design (디자인 방법론의 변화)}{11}{section.1.3}%
+\contentsline {section}{\numberline {1.4}참고 교재의 목차로 알아보는 UX Design의 키워드}{12}{section.1.4}%
+\contentsline {section}{\numberline {1.5}실습과제 1 : 내 디자인 프로젝트 리뷰}{16}{section.1.5}%
+\contentsline {section}{\numberline {1.6}실습과제 1 Check Point!}{17}{section.1.6}%
+\contentsline {chapter}{\numberline {2}ch2. UX 디자인과 데이터, AI}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}데이터의 시각으로 해석한 디자인}{19}{section.2.1}%
+\contentsline {section}{\numberline {2.2}데이터와 AI의 관계}{20}{section.2.2}%
+\contentsline {section}{\numberline {2.3}UX 디자인 대상으로서의 AI와 UX 디자인 도구로서의 AI}{21}{section.2.3}%
+\contentsline {chapter}{\numberline {3}ch3. 데이터 기반 디자인 (Data Driven Design)}{25}{chapter.3}%
+\contentsline {part}{II\hspace {1em}\textbf {part 2. 디자인 리서치를 위한 탐구적 데이터 분석}}{27}{part.2}%
+\contentsline {chapter}{part 2. 디자인 리서치를 위한 탐구적 데이터 분석}{29}{chapter*.6}%
+\contentsline {chapter}{\numberline {4}ch1. 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis)}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}디자인 리서치란}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}탐구적 데이터 분석이란}{32}{section.4.2}%
+\contentsline {section}{\numberline {4.3}디자인 리서치와 탐구적 데이터 분석의 만남}{32}{section.4.3}%
+\contentsline {chapter}{\numberline {5}ch2.디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}미세먼지 정보 앱 디자인을 위한 미세먼지 데이터 분석 사례 개요}{35}{section.5.1}%
+\contentsline {section}{\numberline {5.2}1) 유사 앱 서비스에 대한 앱스토어의 사용자 평가 데이터로 사용자 니즈 발견하기}{36}{section.5.2}%
+\contentsline {section}{\numberline {5.3}2) 서울시 미세먼지 측정 데이터에 대한 탐구적 분석 인사이트 도출}{38}{section.5.3}%
+\contentsline {section}{\numberline {5.4}201 8}{39}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}3) 미세먼지 측정 데이터의 변수 현황 및 디자인 인사이트}{43}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}4) 데이터 변수 패턴 기반의 디자인 컨셉 도출}{45}{subsection.5.4.2}%
+\contentsline {chapter}{\numberline {6}ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례}{49}{chapter.6}%
+\contentsline {section}{\numberline {6.1}StudentLife 데이터 분석 사례 개요}{49}{section.6.1}%
+\contentsline {section}{\numberline {6.2}1) 실험 참여 대학생의 학기중 생활 패턴 분석}{50}{section.6.2}%
+\contentsline {section}{\numberline {6.3}2) 코로나 기간 동안의 학생 생활 패턴 변화 분석}{53}{section.6.3}%
+\contentsline {section}{\numberline {6.4}3) 코로나 기간 전후의 학생 생활 및 정신 건강 상태에 대한 데이터 분석}{56}{section.6.4}%
+\contentsline {chapter}{\numberline {7}ch4. EDA를 위한 데이터 분석 도구들}{61}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Google Analytics (GA)}{61}{section.7.1}%
+\contentsline {section}{\numberline {7.2}주요 서비스}{61}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Power BI}{63}{section.7.3}%
+\contentsline {section}{\numberline {7.4}주요 서비스}{63}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Tableau}{64}{section.7.5}%
+\contentsline {section}{\numberline {7.6}주요 서비스}{65}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Beusable}{66}{section.7.7}%
+\contentsline {section}{\numberline {7.8}주요 서비스}{66}{section.7.8}%
+\contentsline {chapter}{\numberline {8}ch5. Lean UX 프로세스와 데이터 기반 디자인}{69}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Lean Design Process의 개념}{69}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Lean UX에 사용하는 주요 용어들}{70}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Lean UX Process Diagram (Learn\textgreater {} Build \textgreater {} Measure \textgreater {} Learn \textgreater 의 반복)}{72}{section.8.3}%
+\contentsline {part}{III\hspace {1em}\textbf {part 3. 기존 디자인(A 디자인) 리서치와 개선 디자인(B 디자인) 제안}}{75}{part.3}%
+\contentsline {chapter}{part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안}{77}{chapter*.26}%
+\contentsline {chapter}{\numberline {9}ch1. 실습과제의 디자인 프로세스, 주제 선정}{79}{chapter.9}%
+\contentsline {section}{\numberline {9.1}실습 과제의 개요 및 디자인 프로세스}{79}{section.9.1}%
+\contentsline {section}{\numberline {9.2}프로젝트 주제 선정}{81}{section.9.2}%
+\contentsline {section}{\numberline {9.3}실습과제 2 : 실습 과제의 타겟 서비스(A 디자인) 제안}{82}{section.9.3}%
+\contentsline {section}{\numberline {9.4}실습과제 2 Check Point!}{82}{section.9.4}%
+\contentsline {chapter}{\numberline {10}ch2. 데이터 큐레이션과 EDA, 디자인 인사이트}{85}{chapter.10}%
+\contentsline {section}{\numberline {10.1}데이터 큐레이션의 여러 방법들}{85}{section.10.1}%
+\contentsline {section}{\numberline {10.2}1) 기존의 데이터를 수집하여 큐레이션하는 경우}{85}{section.10.2}%
+\contentsline {section}{\numberline {10.3}2) 데이터를 새로 생성하여 큐레이션 하는 경우}{86}{section.10.3}%
+\contentsline {section}{\numberline {10.4}탐구적 데이터 분석(EDA)의 과정과 방법}{86}{section.10.4}%
+\contentsline {section}{\numberline {10.5}1) 데이터 구조와 변수의 이해}{87}{section.10.5}%
+\contentsline {section}{\numberline {10.6}2) 변수 별 현황값의 이해 (기술 통계: Descriptive Statistics)}{88}{section.10.6}%
+\contentsline {section}{\numberline {10.7}3) 변수의 시각화, 변수 간 시각화를 통한 데이터 변동과 패턴 이해}{88}{section.10.7}%
+\contentsline {section}{\numberline {10.8}실습과제 3: 데이터 큐레이션과 EDA}{89}{section.10.8}%
+\contentsline {section}{\numberline {10.9}실습과제 3 Check Point!}{90}{section.10.9}%
+\contentsline {section}{\numberline {10.10}실습과제 4: 타겟 서비스(A 디자인) 현황 분석}{90}{section.10.10}%
+\contentsline {section}{\numberline {10.11}데이터 큐레이션, 탐구적 데이터 분석, 타겟 서비스 분석에서 AI의 활용}{92}{section.10.11}%
+\contentsline {chapter}{\numberline {11}ch3. 디자인 문제의 구조와 KPI(Key Performance Indicator)}{95}{chapter.11}%
+\contentsline {section}{\numberline {11.1}데이터 모델과 디자인 문제의 모델링}{95}{section.11.1}%
+\contentsline {section}{\numberline {11.2}실습과제 5: 디자인 문제의 구조 도출}{96}{section.11.2}%
+\contentsline {section}{\numberline {11.3}문제의 구조와 핵심성과지표(KPI, Key Performance Indicator)의 연계}{98}{section.11.3}%
+\contentsline {section}{\numberline {11.4}실습과제 6: 주요 사용자 경험의 문제로 부터 KPI 도출하기}{99}{section.11.4}%
+\contentsline {chapter}{\numberline {12}ch4. Design Concept \& MVP(Minimum Viable Product) Design}{101}{chapter.12}%
+\contentsline {section}{\numberline {12.1}디자인 콘셉트와 가설(hypothesis)}{101}{section.12.1}%
+\contentsline {section}{\numberline {12.2}실습과제 7: 프로젝트의 디자인 콘셉트 개발}{103}{section.12.2}%
+\contentsline {section}{\numberline {12.3}디자인 콘셉트를 반영한 최소기능제품(MVP: Minimum Viable Product) 디자인}{104}{section.12.3}%
+\contentsline {section}{\numberline {12.4}실습과제 8: 기존 A 디자인 화면과 대응되는 개선 디자인 B안의 화면 디자인 개발}{104}{section.12.4}%
+\contentsline {part}{IV\hspace {1em}\textbf {part 4. 개선 디자인의 검증: A/B Testing}}{107}{part.4}%
+\contentsline {chapter}{part 4. 개선 디자인의 검증 : A/B Testing}{109}{chapter*.31}%
+\contentsline {chapter}{\numberline {13}ch1. A/B 테스팅을 위한 기초 통계와 가설 검증 기법}{111}{chapter.13}%
+\contentsline {section}{\numberline {13.1}가설과 검정}{111}{section.13.1}%
+\contentsline {section}{\numberline {13.2}정규성과 등분산성}{112}{section.13.2}%
+\contentsline {section}{\numberline {13.3}F-test(F-검정)}{113}{section.13.3}%
+\contentsline {section}{\numberline {13.4}T-test (T 검정)}{114}{section.13.4}%
+\contentsline {chapter}{\numberline {14}ch2. F-test와 T-test의 실습 방법들}{121}{chapter.14}%
+\contentsline {section}{\numberline {14.1}구글 스프레드 시트를 사용한 가설 검정 (F-test, T-test)}{121}{section.14.1}%
+\contentsline {section}{\numberline {14.2}엑셀의 분석도구팩을 사용한 가설 검정 (F-test, T-test)}{122}{section.14.2}%
+\contentsline {section}{\numberline {14.3}통계 계산기: T-Test Calculator를 사용한 가설 검정}{123}{section.14.3}%
+\contentsline {section}{\numberline {14.4}사용자 로그 데이터로 T-test 하기: e-commerce business A/B test case study}{126}{section.14.4}%
+\contentsline {chapter}{\numberline {15}ch3. 실습 과제의 A/B 테스팅 기획}{129}{chapter.15}%
+\contentsline {section}{\numberline {15.1}설문을 통한 A/B 테스트를 기획할 때 유의할 점}{129}{section.15.1}%
+\contentsline {section}{\numberline {15.2}실습과제 9: A/B 테스팅을 위한 설문 기획}{131}{section.15.2}%
+\contentsline {section}{\numberline {15.3}A/B 테스팅을 위한 설문 기획 Check Point!}{132}{section.15.3}%
+\contentsline {chapter}{\numberline {16}ch4. A/B 테스팅 실행 및 결과의 해석}{135}{chapter.16}%
+\contentsline {section}{\numberline {16.1}설문 실행}{135}{section.16.1}%
+\contentsline {section}{\numberline {16.2}설문 데이터 검수와 데이터 편집}{136}{section.16.2}%
+\contentsline {section}{\numberline {16.3}F-Test, T-Test 실행과 결과 해석}{137}{section.16.3}%
+\contentsline {section}{\numberline {16.4}실습과제 10: A/B 테스트 보고서 작성}{138}{section.16.4}%
+\contentsline {chapter}{\numberline {17}ch5. A/B 테스팅 결과의 디자인 반영}{141}{chapter.17}%
+\contentsline {section}{\numberline {17.1}실습과제 11: 프로젝트의 최종 디자인 개선안 (디자인 B') 제시}{142}{section.17.1}%
+\contentsline {chapter}{\numberline {18}맺음말: 다음 테스트를 위하여}{145}{chapter.18}%
+\contentsline {chapter}{References}{147}{chapter*.40}%
+\contentsline {section}{Part 1. UX 디자인과 데이터}{147}{chapter*.40}%
+\contentsline {section}{Part 2. 디자인 리서치를 위한 탐구적 데이터 분석}{148}{chapter*.40}%
+\contentsline {section}{Part 3. 기존 디자인(A 디자인) 리서치와 개선 디자인(B 디자인) 제안}{149}{chapter*.40}%
+\contentsline {section}{Part 4. 개선 디자인의 검증: A/B Testing}{150}{chapter*.40}%

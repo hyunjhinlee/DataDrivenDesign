@@ -15,7 +15,9 @@ lang: ko-KR
 book:
   title: "데이터 기반 디자인과 A/B 테스팅"
   reader-mode: true
-  subtitle: "데이터 기반 디자인과 A/B 테스팅의 핵심 개념과 사례<br>모바일 앱 디자인 대상의 단계별 실습 과제 수록"
+  subtitle: |
+    데이터 기반 디자인과 A/B 테스팅의 핵심 개념과 사례 \\\
+    모바일 앱 디자인 대상의 단계별 실습 과제 수록
   author:
     - name: "이현진"
       affiliations: "홍익대학교"

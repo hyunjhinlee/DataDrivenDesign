@@ -4,14 +4,9 @@ version: 0.4.2
 
 contributes:
   format:
-    html:
-      theme: cosmo
-      css: "_extensions/bit2r/bitPublish/style.css"
     pdf:
       documentclass: book
-      geometry:                            # 4x6 배판 도서를 위한 설정
-        # 이하 재단선이 없는 조판 ----------------------------------------------     
-        # - paper=b5paper
+      geometry:
         - paperheight=257mm
         - paperwidth=188mm
         - top=25mm    
@@ -21,29 +16,17 @@ contributes:
         - left=25mm
         - right=25mm
         - centering     
-        # 이하 재단선을 넣는 조판 ----------------------------------------------
-        # - paper=a4paper
-        # - layoutwidth=190mm
-        # - layoutheight=260mm
-        # - layouthoffset=10mm
-        # - layoutvoffset=18.5mm
-        # - showcrop
-        # - top=20mm
-        # - headsep=10mm
-        # - bottom=30mm
-        # - footskip=15mm
-        # - left=25mm
-        # - right=25mm
-        # - centering            
       fig-cap-location: bottom
       tbl-cap-location: bottom
-      toc-title: "목차"
+      toc: true               # 목차 활성화
+      toc-depth: 2            # 목차 깊이 설정
       crossref:
         fig-title: "그림"
         tbl-title: "표"
       include-in-header:
         - text: |
             \usepackage{fancyhdr}
+            \usepackage{tocbibind}   % 목차에 목차, 목록 포함
             \pagestyle{fancy}
 
             %% 폰트 사이즈 정의
@@ -84,7 +67,6 @@ contributes:
             %% 코드 overflow 방지
             \usepackage{fvextra}
             \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-            
         - file: bitPublish.tex
       include-after-body:
         - text: |

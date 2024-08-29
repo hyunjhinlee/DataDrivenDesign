@@ -1,131 +1,74 @@
 {
   "index.qmd": {
-    "index.html": "a08722ee"
-  },
-  "intro.qmd": {
-    "intro.html": "ae0e5ea3"
-  },
-  "summary.qmd": {
-    "summary.html": "f45c5306"
-  },
-  "references.qmd": {
-    "references.html": "ddb0ad0d"
-  },
-  "1-1 UX 디자인의 오늘과 변화의 방향.qmd": {
-    "1-1 UX 디자인의 오늘과 변화의 방향.html": "3aba74aa"
-  },
-  "1-2 UX 디자인과 데이터, AI.qmd": {
-    "1-2 UX 디자인과 데이터, AI.html": "bb52bc61"
-  },
-  "1-3 데이터 기반 디자인 (Data Driven Design).qmd": {
-    "1-3 데이터 기반 디자인 (Data Driven Design).html": "7c3717e3"
-  },
-  "2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis).qmd": {
-    "2-1 디자인 리서치와 탐구적 데이터 분석 (EDA:Exploratory Data Analysis).html": "664c6fee"
-  },
-  "2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례.qmd": {
-    "2-2 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1): 서울시 미세먼지 측정 데이터 분석 사례.html": "87f29b6d"
-  },
-  "2-3 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례.qmd": {
-    "2-3 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2): StudentLife 데이터 분석 사례.html": "8e19578b"
-  },
-  "2-4 EDA를 위한 데이터 분석 도구들.qmd": {
-    "2-4 EDA를 위한 데이터 분석 도구들.html": "1fbd8456"
-  },
-  "2-5 Lean UX 프로세스와 데이터 기반 디자인.qmd": {
-    "2-5 Lean UX 프로세스와 데이터 기반 디자인.html": "a9ea3463"
-  },
-  "ch1 UX 디자인의 오늘과 변화의 방향.qmd": {
-    "ch1 UX 디자인의 오늘과 변화의 방향.html": "3be8c61b"
-  },
-  "ch2 UX 디자인과 데이터, AI.qmd": {
-    "ch2 UX 디자인과 데이터, AI.html": "8f8980e2"
-  },
-  "ch3 데이터 기반 디자인 (Data Driven Design).qmd": {
-    "ch3 데이터 기반 디자인 (Data Driven Design).html": "9041efe9"
+    "index.html": "a0bd3f60"
   },
   "part 1. UX 디자인과 데이터.qmd": {
-    "part 1. UX 디자인과 데이터.html": "5c695b25"
-  },
-  "part 2. 디자인 리서치를 위한 탐구적 데이터 분석.qmd": {
-    "part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html": "93e301d4"
-  },
-  "ch1 디자인 리서치와 탐구적 데이터 분석.qmd": {
-    "ch1 디자인 리서치와 탐구적 데이터 분석.html": "6812a946"
-  },
-  "ch2 디자인 리서치를 위한 탐구적 데이터 분석.qmd": {
-    "ch2 디자인 리서치를 위한 탐구적 데이터 분석.html": "c690fcff"
-  },
-  "ch3 디자인 리서치를 위한 탐구적 데이터 분석.qmd": {
-    "ch3 디자인 리서치를 위한 탐구적 데이터 분석.html": "d85c5847"
-  },
-  "ch4 EDA를 위한 데이터 분석 도구들.qmd": {
-    "ch4 EDA를 위한 데이터 분석 도구들.html": "dc3cac16"
-  },
-  "ch5 Lean UX 프로세스와 데이터 기반 디자인.qmd": {
-    "ch5 Lean UX 프로세스와 데이터 기반 디자인.html": "d5841c2f"
-  },
-  "221.qmd": {
-    "221.html": "df8b99e9"
+    "part 1. UX 디자인과 데이터.html": "4c6edf09"
   },
   "ch1. UX 디자인의 오늘과 변화의 방향.qmd": {
-    "ch1. UX 디자인의 오늘과 변화의 방향.html": "b7396dad"
+    "ch1. UX 디자인의 오늘과 변화의 방향.html": "e4583126"
   },
   "ch2. UX 디자인과 데이터, AI.qmd": {
-    "ch2. UX 디자인과 데이터, AI.html": "cbbb5389"
+    "ch2. UX 디자인과 데이터, AI.html": "4e85610d"
   },
   "ch3. 데이터 기반 디자인 (Data Driven Design).qmd": {
-    "ch3. 데이터 기반 디자인 (Data Driven Design).html": "4cd17002"
+    "ch3. 데이터 기반 디자인 (Data Driven Design).html": "2f2ed1d7"
+  },
+  "part 2. 디자인 리서치를 위한 탐구적 데이터 분석.qmd": {
+    "part 2. 디자인 리서치를 위한 탐구적 데이터 분석.html": "d7e31d2a"
   },
   "ch1. 디자인 리서치와 탐구적 데이터 분석.qmd": {
-    "ch1. 디자인 리서치와 탐구적 데이터 분석.html": "857ba395"
+    "ch1. 디자인 리서치와 탐구적 데이터 분석.html": "692a7a97"
   },
   "ch2.디자인 리서치를 위한 탐구적 데이터 분석 사례 (1).qmd": {
-    "ch2.디자인 리서치를 위한 탐구적 데이터 분석 사례 (1).html": "e0930826"
+    "ch2.디자인 리서치를 위한 탐구적 데이터 분석 사례 (1).html": "43cb4c4f"
   },
   "ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2).qmd": {
-    "ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2).html": "7b1a0db9"
+    "ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2).html": "0f24af37"
   },
   "ch4. EDA를 위한 데이터 분석 도구들.qmd": {
-    "ch4. EDA를 위한 데이터 분석 도구들.html": "4d98e2ae"
+    "ch4. EDA를 위한 데이터 분석 도구들.html": "9aa8930e"
   },
   "ch5. Lean UX 프로세스와 데이터 기반 디자인.qmd": {
-    "ch5. Lean UX 프로세스와 데이터 기반 디자인.html": "c2b8b34d"
+    "ch5. Lean UX 프로세스와 데이터 기반 디자인.html": "c01c1093"
   },
   "part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안.qmd": {
-    "part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안.html": "6859540a"
+    "part 3. 기존 디자인(A 디자인)리서치와 개선 디자인(B 디자인) 제안.html": "df71e7f8"
   },
   "ch1. 실습과제의 디자인 프로세스, 주제 선정.qmd": {
-    "ch1. 실습과제의 디자인 프로세스, 주제 선정.html": "b4c011de"
+    "ch1. 실습과제의 디자인 프로세스, 주제 선정.html": "c317e90d"
   },
   "ch2. 데이터 큐레이션과 EDA, 디자인 인사이트.qmd": {
-    "ch2. 데이터 큐레이션과 EDA, 디자인 인사이트.html": "7f40f047"
+    "ch2. 데이터 큐레이션과 EDA, 디자인 인사이트.html": "bce48410"
   },
   "ch3. 디자인 문제의 구조와 KPI.qmd": {
-    "ch3. 디자인 문제의 구조와 KPI.html": "ac0ff276"
+    "ch3. 디자인 문제의 구조와 KPI.html": "d0da7f4f"
   },
   "ch4. Design Concept & MVP(Minimum Viable Product) Design.qmd": {
-    "ch4. Design Concept & MVP(Minimum Viable Product) Design.html": "fe0b3699"
+    "ch4. Design Concept & MVP(Minimum Viable Product) Design.html": "978295ca"
   },
   "part 4. 개선 디자인의 검증 - A_B Testing.qmd": {
-    "part 4. 개선 디자인의 검증 - A_B Testing.html": "476b882b"
+    "part 4. 개선 디자인의 검증 - A_B Testing.html": "35932b8f"
   },
   "ch1. AB 테스팅을 위한 기초 통계와 가설 검증 기법.qmd": {
-    "ch1. AB 테스팅을 위한 기초 통계와 가설 검증 기법.html": "9c2578f8"
+    "ch1. AB 테스팅을 위한 기초 통계와 가설 검증 기법.html": "780bea76"
   },
   "ch2. F-test와 T-test의 실습 방법들.qmd": {
-    "ch2. F-test와 T-test의 실습 방법들.html": "d679e57e"
+    "ch2. F-test와 T-test의 실습 방법들.html": "6b674804"
   },
   "ch3. 실습 과제의 AB 테스팅 기획.qmd": {
-    "ch3. 실습 과제의 AB 테스팅 기획.html": "c74ded92"
+    "ch3. 실습 과제의 AB 테스팅 기획.html": "9930ac42"
   },
   "ch4. AB 테스팅 실행 및 결과의 해석.qmd": {
-    "ch4. AB 테스팅 실행 및 결과의 해석.html": "d3fd0569"
+    "ch4. AB 테스팅 실행 및 결과의 해석.html": "84f561aa"
   },
   "ch5. AB 테스팅 결과의 디자인 반영.qmd": {
-    "ch5. AB 테스팅 결과의 디자인 반영.html": "00716b62"
+    "ch5. AB 테스팅 결과의 디자인 반영.html": "84de46c1"
   },
   "맺음말: 다음 테스트를 위하여.qmd": {
-    "맺음말: 다음 테스트를 위하여.html": "c55a933a"
+    "맺음말: 다음 테스트를 위하여.html": "f7b5ee1b"
+  },
+  "references.qmd": {
+    "references.html": "ad9b0a82"
   }
 }

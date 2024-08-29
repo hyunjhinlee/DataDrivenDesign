@@ -1,12 +1,12 @@
 # ch4. EDA를 위한 데이터 분석 도구들
 
-### Google Analytics (GA)
+## Google Analytics (GA)
 
 Google Analytics는 웹사이트와 앱의 사용자 행동을 추적하고 분석하여, 마케팅 전략을 개선하고 사용자 경험을 최적화하는 데 도움을 주는 도구입니다. 이를 통해 사용자들이 어떤 경로로 사이트에 도착했는지, 어떤 페이지에서 얼마나 머무르는지, 어떤 행동을 하는지 등을 상세히 분석할 수 있습니다. 서비스에 가입하면 데이터 분석이 필요한 웹 서비스에 GA와 연계하는 코드를 삽입하여 데이터를 추출하고, 다양한 GUI 메뉴로 데이터 현황을 탐색할 수 있습니다. (16)
 
 [애널리틱스 기능](https://marketingplatform.google.com/intl/ko/about/analytics/features/)
 
-### 주요 서비스
+## 주요 서비스
 
 -   데이터 수집 및 관리
 
@@ -33,15 +33,15 @@ Google Analytics는 웹사이트와 앱의 사용자 행동을 추적하고 분�
 
 -   단점: 고급 기능을 활용하려면 일정 수준 이상의 기술 지식이 필요할 수 있습니다. 그리고 대규모 트래픽이 발생하는 웹사이트에서는 샘플링 데이터를 제공하여 전체 데이터를 반영하지 않을 수 있습니다.
 
-    ![\[그림 17\] Google Analytics의 데이터 시각화 화면](img/fig17.png)
+    ![Google Analytics의 데이터 시각화 화면](img/fig17.png){fig-align="center"}
 
-### Power BI
+## Power BI
 
 Power BI는 Microsoft에서 제공하는 비즈니스 분석 서비스로, 데이터를 시각화하고 공유 가능한 보고서를 생성하며, 인사이트를 도출하는 클라우드 기반 솔루션입니다. 사용 방법은 Power BI Desktop 설치 후, 다양한 데이터 소스를(Excel, SQL Server 등) 연결하고, 실시간 데이터 가져오기 하여 분석을 시행합니다. Power BI Desktop에서 보고서 작성 후에는 Power BI 서비스(웹)에서 공유 및 대시보드를 관리합니다. 이를 통해 사용자들은 데이터 기반의 의사 결정을 내릴 수 있습니다. (17)
 
 [Power BI 둘러보기](https://powerbi.microsoft.com/ko-kr/guidedtour/power-platform/power-bi/2/1)
 
-### 주요 서비스
+## 주요 서비스
 
 -   데이터 통합: 다양한 데이터 소스(엑셀, SQL 데이터베이스, 클라우드 서비스 등)와 연결하여 데이터를 통합합니다. 특히 Microsoft 제품과의 통합에 강점을 가집니다.
 -   대시보드 생성: 실시간 데이터 시각화와 대시보드를 생성하여 데이터를 한눈에 파악할 수 있습니다.
@@ -51,9 +51,9 @@ Power BI는 Microsoft에서 제공하는 비즈니스 분석 서비스로, 데�
 -   사용자 친화적 인터페이스와 협업 지원: 직관적이고 사용하기 쉬운 인터페이스를 제공하고, 팀 내에서 보고서를 공유하고 협업할 수 있습니다.
 -   단점: 초보자에게는 초기 설정이 복잡할 수 있습니다. 무료 버전의 기능이 제한적이며, 대용량 데이터를 처리하는 데 제한이 있을 수 있습니다.
 
-![\[그림 18\] Power BI의 데시보드 구성 화면](img/fig18.png)
+![Power BI의 데시보드 구성 화면](img/fig18.png)
 
-### Tableau
+## Tableau
 
 Tableau는 데이터를 시각적으로 분석하고 이해할 수 있게 돕는 비즈니스 인텔리전스(BI) 도구입니다.
 
@@ -61,7 +61,7 @@ Tableau는 고급 데이터 시각화 기능에 강점을 갖고 있어, 히트�
 
 [Tableau product](https://www.tableau.com/ko-kr/products/tableau)
 
-### 주요 서비스
+## 주요 서비스
 
 -   데이터 통합: 다양한 소스의 데이터를 통합하여 일관된 분석 가능합니다.
 
@@ -71,23 +71,23 @@ Tableau는 고급 데이터 시각화 기능에 강점을 갖고 있어, 히트�
 
 -   단점: 고급 기능을 완전히 익히는 데 시간이 필요합니다.
 
-    ![\[그림 19\] Tableau를 사용한 인터렉티브 대시보드](img/fig19.png)
+    ![Tableau를 사용한 인터렉티브 대시보드](img/fig19.png)
 
 이 세가지 서비스는 세계적으로 가장 많이 사용되는 데이터 분석 서비스이고, 최근에는 AI 기술을 사용한 시각화 및 예측 서비스가 강화되는 추세입니다. Google Analytics는 주로 웹사이트 분석에, Power BI는 비즈니스 인텔리전스 및 데이터 분석에, Tableau는 고급 데이터 시각화에 좀 더 특화되어 있다고 할 수 있습니다.
 
-### Beusable
+## Beusable
 
 Beusable은 UX를 위한 데이터 분석에 특화된 국내 서비스로, 사용자 경험을 개선하기 위해 시각화된 데이터 분석 기능을 제공합니다. 주요 기능으로는 Journey Map과 UX Heatmap이 있으며, 이를 통해 고객 여정을 시각적으로 파악하고, 문제 구간을 분석하여 개선안을 도출할 수 있습니다. 설치가 간편하고, 직관적인 UI를 제공합니다. (19)
 
 [Why Beausable](https://www.beusable.net/ko/)
 
-### 주요 서비스
+## 주요 서비스
 
 -   Journey Map: 고객의 전환 과정을 시각화하여 분석합니다.
 -   UX Heatmap: 페이지 내 사용자 행동을 시각화하여 문제점을 파악합니다.
 -   간편한 설치: 한 줄의 코드 설치로 데이터 수집 및 분석이 가능합니다.
 
-![\[그림 20\] Beausable의 고객 여정 분석 화면](img/fig20.png)
+![Beausable의 고객 여정 분석 화면](img/fig20.png)
 
 (문헌 16)Google marketing platform, “애널리틱스 기능” <https://marketingplatform.google.com/intl/ko/about/analytics/features/>
 
