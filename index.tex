@@ -592,30 +592,20 @@
 \makeindex
 
 \usepackage{fancyhdr}
-\usepackage{tocbibind}   % 목차에 목차, 목록 포함
+\usepackage{tocbibind}
 \pagestyle{fancy}
-
-%% 폰트 사이즈 정의
 \newcommand{\changesize}{%
   \fontsize{8}{10}\selectfont
 }
-
-%% 머리글 바닥글의 위한 폰트 스타일 정의
-% 장/절 번호 파트: 볼드 돋움체
 \newcommand{\numberfont}{%
   \hangulfontspec[ExternalLocation=_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/]{KoPubWorld Dotum_Pro Light.otf}\bfseries\selectfont
 }
-% 장/절 라벨 파트: 돋움체
 \newcommand{\labelfont}{%
   \hangulfontspec[ExternalLocation=_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/]{KoPubWorld Dotum_Pro Light.otf}\selectfont
 }
-%% 페이지 번호 파트
 \newcommand*\pagefont{\normalfont\bfseries\sffamily}
-
-%% Rule 라인 제거
-\renewcommand {\headrulewidth}{0pt} % 라인 제거
-\renewcommand {\footrulewidth}{0pt} % 라인 제거
-
+\renewcommand {\headrulewidth}{0pt}
+\renewcommand {\footrulewidth}{0pt}
 \makeatletter
 \DeclareRobustCommand{\format@sec@number}[2]{{\numberfont\upshape#1}#2}
 \renewcommand{\chaptermark}[1]{%
@@ -623,14 +613,9 @@
 \renewcommand{\sectionmark}[1]{%
   \markright{{\numberfont \thesection.} {\labelfont #1}}{}}
 \makeatother
-
 \fancyhf{}
-\fancyhead[EL]{\changesize \numberfont --- 데이터 기반 디자인과 A/B 테스팅의 핵심 개념과 사례}
-\fancyhead[OR]{\changesize \numberfont 모바일 앱 디자인 대상의 단계별 실습 과제 수록 ---}
 \fancyfoot[EL]{{\pagefont\thepage}{\hskip4mm}{\changesize \leftmark}}
 \fancyfoot[OR]{{\changesize \rightmark}{\hskip4mm}{\pagefont\thepage}}
-
-%% 코드 overflow 방지
 \usepackage{fvextra}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 \makeatletter
@@ -714,11 +699,10 @@
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{데이터 기반 디자인과 A/B 테스팅의 핵심 개념과 사례
-\textbackslash{}\\
+\subtitle{데이터 기반 디자인과 A/B 테스팅의 핵심 개념과 사례 ~\\
 모바일 앱 디자인 대상의 단계별 실습 과제 수록}
 \author{이현진}
-\date{2024년 08월 29일}
+\date{2024년 09월 07일}
 
 \begin{document}
 \frontmatter
@@ -1616,10 +1600,10 @@ Analysis)}\label{ch1.-uxb514uxc790uxc778-uxb9acuxc11cuxce58uxc640-uxd0d0uxad6cux
 Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일반적인 값과
 비정상적인 값의 상태, 변수 간의 상관관계와 구조를 확인할 수 있다고
 하였습니다. 그는 저서에서 탐구적 데이터 분석 과정에 대하여 {[}그림
-3{]}과 같이 표현했는데, 먼저 데이터를 가져오기 하여(Import) 정리한(Tidy)
-뒤, 데이터를 분석에 적합한 형태로 변형하고(Transform), 데이터
-시각화(Visualize)와 데이터 모델링(Model)을 반복적으로 수행하여 목표한
-분석 결과가 나오면, 분석 내용을 이해하기 좋은 형태로
+4.1{]}과 같이 표현했는데, 먼저 데이터를 가져오기 하여(Import)
+정리한(Tidy) 뒤, 데이터를 분석에 적합한 형태로 변형하고(Transform),
+데이터 시각화(Visualize)와 데이터 모델링(Model)을 반복적으로 수행하여
+목표한 분석 결과가 나오면, 분석 내용을 이해하기 좋은 형태로
 소통한다고(Communicate) 설명합니다.
 
 \begin{figure}[H]
@@ -1643,7 +1627,7 @@ Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일
 수행하지만, 데이터 과학에서는 대상 데이터 형식을 정제하여 통계적 분석과
 통계적 시각화 기법으로 결과를 도출한다는 점이 다릅니다.
 
-그리고 위컴이 제시한 {[}그림 3{]}의 '탐구적 데이터 분석 프로세스
+그리고 위컴이 제시한 {[}그림 4.1{]}의 '탐구적 데이터 분석 프로세스
 다이어그램'에는 데이터의 탐색이 의미 있는 인사이트를 발견할 때까지
 반복적으로 수행되는 속성이 표현되어 있는데, 이는 디자인 프로세스의
 반복적 속성과도 상통합니다. 그래서 교재의 데이터 기반 디자인
@@ -1718,10 +1702,10 @@ Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일
 내용 및 언급 건수
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2083}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2083}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2083}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2083}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1667}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 주요 데이터 변수
@@ -1729,7 +1713,7 @@ Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 미세미세 앱 평가내용 (총 188건 중 언급 건수)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-에어비주얼 앱 평가내용(총 109건 중 언급건수)
+에 어비주얼 앱 평 가내용(총 109건 중 언급건수)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -1744,12 +1728,12 @@ Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일
 \begin{minipage}[t]{\linewidth}\raggedright
 아침(3)\\
 외출(1)\\
-수시확인(2)\strut
+수 시확인(2)\strut
 \end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-해외 정보 확인(3) 운동, 야외활동(1) 아침(2)\\
+해외 정보 확인(3) 운동, 야 외활동(1) 아침(2)\\
 환기(2)\\
 외출(2)\\
-수시확인(4)\strut
+수 시확인(4)\strut
 \end{minipage} \\
 서비스 내용 데이터 & 서비스 불만 및 오류 &
 \begin{minipage}[t]{\linewidth}\raggedright
@@ -1763,19 +1747,19 @@ Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일
 기타(3)\strut
 \end{minipage} \\
 & 신뢰성 & \begin{minipage}[t]{\linewidth}\raggedright
-신뢰함(16)\\
+신 뢰함(16)\\
 신뢰성 제기(8)\strut
 \end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-신뢰함(14)\\
+신 뢰함(14)\\
 신뢰성 제기(1)\strut
 \end{minipage} \\
 & 앱의 장점 & \begin{minipage}[t]{\linewidth}\raggedright
-편리한 디자인(22) 한눈에 보임(9)\\
+편리한 디 자인(22) 한눈에 보임(9)\\
 상세 설명(6)\\
 캐릭터 표현(8)\\
 알림(4)\strut
 \end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-편리한 디자인(4)\\
+편리한 디 자인(4)\\
 한눈에 보임(2)\\
 상세 설명(7) 지역 정보(6) 바람 방향 정보(2)\strut
 \end{minipage} \\
@@ -1783,12 +1767,12 @@ Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일
 \begin{minipage}[t]{\linewidth}\raggedright
 감사(29)\\
 좋음(41)\\
-잘 사용중(20)\\
+잘 사 용중(20)\\
 추천 / 필수(14)\strut
 \end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
 감사(10)\\
 좋음(28)\\
-잘 사용중(5)\\
+잘 사 용중(5)\\
 추천 / 필수(4)\strut
 \end{minipage} \\
 \end{longtable}
@@ -1829,34 +1813,31 @@ Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0694}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-시간 ( 월,일 , 시간)
+시간 (월, 일, 시간)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-측 정소 번호
+측정소 번호
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-미 세 먼지 값 ( 10pm)
+미세 먼지 값 (10pm)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-초미 세 먼지 값 ( 2 .5pm)
+초 미세 먼지 값 (2.5pm)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-월 (달)
+월 ( 달 )
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-시 간 (시)
+시간 (시)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-측 정소 위 치 (구)
+측정소 위치 (구)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\begin{minipage}[t]{\linewidth}\raggedright
-2018- 0 1-01\\
-00 : 00:00\strut
-\end{minipage} & 101 & 29 & 17 & 1 & 0 & 종 로구 \\
+2018- 01-01 00: 00:00 & 101 & 29 & 17 & 1 & 0 & 종로구 \\
 \end{longtable}
 
 서울 25개 측정소의 2018년 미세먼지 데이터 : 209,785개의 측정값 (서울
@@ -1864,15 +1845,15 @@ Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일
 2,150,195개의 측정값도 같은 형식임.)
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1111}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0972}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0972}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0972}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0972}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1250}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-시간 (월, 일 ,시간)
+시간 (월, 일, 시간)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 기온
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -1882,18 +1863,13 @@ Wichham)은 탐구적 데이터 분석 방법을 통하여 각 변수 별로 일
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 습도
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-풍 향이름
+풍향 이름
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\begin{minipage}[t]{\linewidth}\raggedright
-\section{201 8}\label{section}
-
-01-01\\
-0 0 :00:00\strut
-\end{minipage} & -3.2 & 0.5 & 110 & 40 & 동남동 \\
+2018- 01-01 00: 00:00 & -3.2 & 0.5 & 110 & 40 & 동남동 \\
 \end{longtable}
 
 서울 기상 관측소 (108번 측정소)의 2018년 날씨 데이터 : 8,740개의 측정값
@@ -2029,9 +2005,9 @@ x축의 4월, 12월 주변 구간에서 측정량이 높게 나타나고, 여름
 데이터 패턴을 반영한 디자인 인사이트
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2639}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2361}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2917}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2917}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 주요 변수관련 데이터의 질문 사항: 신뢰성, 데이터 제공 시점 ( 년
@@ -2100,7 +2076,7 @@ x축의 4월, 12월 주변 구간에서 측정량이 높게 나타나고, 여름
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1944}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1944}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1944}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3611}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1944}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 주요 데이터 변수
@@ -2117,26 +2093,26 @@ x축의 4월, 12월 주변 구간에서 측정량이 높게 나타나고, 여름
 \endlastfoot
 사용자 데이터 & 질병/ 가족 구성 등 & 특정 사용자 집단별 서비스 니즈와
 상관 없이 서비스를 자주 사용하는 사용자의 필요 반영 & \textless 서비스를
-자주 사용하는 사용 자\textgreater 서비스를 자주 사용하는(일별 사용 및
+자주 사용하는 사용 자 \textgreater 서비스를 자주 사 용하는(일별 사용 및
 수시 사용) 일반 사용자를 타겟으로함. \\
 사용자 상황 데이터 & 사용 시점과 빈도, 환경(날씨, 지역) & 매일 및 수시
 확인 시점 별 정보 니즈 반영 환경 정보는 지역 상황에 따라 필요성이 다름
 날씨는 풍향만 미세먼지에 영향있음. & \textless 매일 확인\textgreater{}
 일별 통합 예측시 시간대별 예측 정보 제공 \textless 수시
-확인\textgreater{} 측정 시점(시간별) 정보, 1-3시간 후 추이 정보 강조
+확인\textgreater{} 측정 시 점(시간별) 정보, 1-3시간 후 추이 정보 강조
 사용자 선택 옵션으로 지역별 날씨, 미세먼지 상세 정보 제공 \\
 서비스 내용 데이터 (서비스 가치) & 정 보의신뢰성/ 정확성 확보 & 년간 시
 즌 /월별/일별/ 시간별 발생 패턴이 다름 & \textless 미세먼지 시즌 별 정보
-표현 차별화\textgreater{} 미세먼지 집중 기간 (11월-5월)과 그 외 기간의
-정보 표현 차별화 여름 및 가을 (6-10월)에는 미세먼지 정보 외 부가 생활
+표현 차별화\textgreater{} 미세먼지 집중 기간 ( 11월-5월)과 그 외 기간의
+정보 표현 차별화 여름 및 가을 ( 6-10월)에는 미세먼지 정보 외 부가 생활
 정보 제공 시간별 측정량 중심의 정보 표현 \\
 & 정보 설명성 (요약, 상세 설명) & 미세/초미세 먼지의 데이터 특징이 다름
 일별 요약은 대표값으로 부적절함 미세먼지의 경우 아주 나쁨 단계 범위가
-너무 넓음 & \textless 요약 설명\textgreater{} 미세, 초미세먼지의 표현
-방법 차별화 미세 먼지의 아주 나쁨 단계 세분화 (초미세먼지는 그대로 사용)
-아주 나쁨 단계의 경각심 표현 강화 \textless 상세 설명\textgreater{}
-시간별 정보 중심으로 설명 사용자 옵션으로 사용자 요구에 따른 상세 설명
-방법, 알림 방법 제공 \\
+너무 넓음 & \textless 요약 설명\textgreater{} 미세, 초 미세먼지의 표현
+방법 차별화 미세 먼지의 아주 나쁨 단계 세분화 (초 미세먼지는 그대로
+사용) 아주 나쁨 단계의 경각심 표현 강화 \textless 상세
+설명\textgreater{} 시간별 정보 중심으로 설명 사용자 옵션으로 사용자
+요구에 따른 상세 설명 방법, 알림 방법 제공 \\
 & 관심 부가 서비스 & 알림, 위젯 등에서 요약 정보 요구 & \textless 정보
 상황에 의한 알림/위젯 디자인\textgreater{} 나쁨 빈도 높은 지역에는 알림
 방법 강화 시간별 알림 및 관심 지역 중심의 알림, 위젯 디자인 제공 \\
@@ -2155,7 +2131,7 @@ x축의 4월, 12월 주변 구간에서 측정량이 높게 나타나고, 여름
 개선하였는지 검증해 볼 필요가 있겠죠. 이 검증 과정이 교재의 후반부에서
 학습할 A/B 테스팅 입니다.
 
-(문헌 7) 이현진, 『데이터 드리븐 디자인』, UX리뷰, (2024), pp.100-143
+(문헌 7) 이현진, 『데이터 드리븐 디자인』, UX리뷰, (2024), pp.100-143 w
 
 \chapter{ch3.디자인 리서치를 위한 탐구적 데이터 분석 사례 (2):
 StudentLife 데이터 분석
@@ -2399,8 +2375,8 @@ Nullity Correlation은 데이터 분석에서 결측값(Missing Values) 간의
 것입니다. 이는 한 변수의 데이터가 결측되면 다른 변수도 결측될 가능성이
 높다는 것을 의미합니다.
 
-{[}그림 14{]}에서, 대부분의 위치 관련 특성들은 1의 값을 가지는데, 이는
-하나의 위치 특성이 나타나면 다른 위치 특성도 거의 항상 나타난다는 것을
+그림 6.7에서, 대부분의 위치 관련 특성들은 1의 값을 가지는데, 이는 하나의
+위치 특성이 나타나면 다른 위치 특성도 거의 항상 나타난다는 것을
 의미합니다. 위치 특성은 GPS 데이터의 가용성에 따라 달라지기 때문에, GPS
 데이터가 있을 때는 위치 특성들이 모두 존재하거나, 없을 때는 모두
 존재하지 않는 것이 논리적입니다. 1.0 상관관계에 대한 예시로 ****``Total
@@ -2904,8 +2880,8 @@ Lean UX를 수행하기 위하여 이해해야하는 KPI, Hypothesis, MVP, A/B
 검증(Measure)하는 반복적인 과정을 원하는 수준의 KPI에 도달할 때까지
 반복하여 진행합니다. 최종 디자인 목표가 달성될 때까지
 Learn\textgreater{} Build \textgreater{} Measure \textgreater{} Learn
-\textgreater 의 과정은 반복됩니다. 이 과정을 그림으로 표현하면 {[}그림
-22{]}과 같습니다.
+\textgreater 의 과정은 반복됩니다. 이 과정을 그림으로 표현하면 그림8.1과
+같습니다.
 
 애플은 앱 디자인 프로세스를 설명할 때 같은 개념을 Think\textgreater{}
 Make\textgreater{} Check\textgreater{} Think의 반복적 프로세스로
@@ -3001,7 +2977,7 @@ B' 디자인에 대하여도 A/B 테스팅을 실시하여 개선 여부를 검�
 제한된 시간 여건에서 B' 디자인을 제안하는 것으로 학기 과제를 마치게
 됩니다.
 
-실습 과제의 진행 프로세스는 {[}그림 22{]}와 같이 더블 다이아몬드 디자인
+실습 과제의 진행 프로세스는 그림9.1과 같이 더블 다이아몬드 디자인
 프로세스와 린 UX 디자인 프로세스의 융합으로 진행됩니다.
 
 실습 과제의 내용을 주 별 활동 단위로 나누어 정리하면 다음과 같습니다.
@@ -3314,7 +3290,6 @@ EDA}\label{uxc2e4uxc2b5uxacfcuxc81c-3-uxb370uxc774uxd130-uxd050uxb808uxc774uxc15
 구체적인 데이터 큐레이션과 탐구적 데이터 분석을 시행해보겠습니다.
 
 \begin{itemize}
-\tightlist
 \item
   먼저, 타겟 서비스가 정해졌으니, 우리의 실습 과제를 명확하게 정의하는
   프로젝트 선언문(Project Statement)을 작성합니다. 실습 과제의 내용을 한
@@ -3323,14 +3298,12 @@ EDA}\label{uxc2e4uxc2b5uxacfcuxc81c-3-uxb370uxc774uxd130-uxd050uxb808uxc774uxc15
   구성합니다. 본 과제의 특징을 반영하여 다음의 문장 요소를 템플릿으로
   사용하여 작성해도 됩니다.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Project Statement: (리서치한 데이터 내용의) 데이터 인사이트를
-    기반으로 (Target Service) 앱의 (사용자 경험A), (사용자 경험B) 에
-    대한 개선 디자인을 제안한다. (+ 제안한 디자인은 A/B 테스트를 통하여
-    앱 서비스의 개선 여부를 검증한다.)
-  \end{itemize}
+  \begin{quote}
+  Project Statement: (리서치한 데이터 내용의) 데이터 인사이트를 기반으로
+  (Target Service) 앱의 (사용자 경험A), (사용자 경험B) 에 대한 개선
+  디자인을 제안한다. (+ 제안한 디자인은 A/B 테스트를 통하여 앱 서비스의
+  개선 여부를 검증한다.)
+  \end{quote}
 \item
   데이터 큐레이션: 기존의 데이터를 검색, 수집하는 방법으로 데이터
   큐레이션을 실시합니다. 타겟 서비스를 선정할 때 분석한 데이터에 더하여,
@@ -3488,7 +3461,7 @@ Point!}\label{uxc2e4uxc2b5uxacfcuxc81c-3-check-point}
 Conference on Management of Data (COMAD), (2014), p.4
 
 (문헌26) Google Dataset Search,
-\url{https://datasetsearch.research.google.com}
+\url{https://datasetsearch.research.google.com} {[}{]}
 
 \chapter{ch3. 디자인 문제의 구조와 KPI(Key Performance
 Indicator)}\label{ch3.-uxb514uxc790uxc778-uxbb38uxc81cuxc758-uxad6cuxc870uxc640-kpikey-performance-indicator}
@@ -3675,11 +3648,10 @@ KPI는 조직의 목표 달성 정도를 측정하기 위한 핵심 성과 지�
   것입니다.
 \end{itemize}
 
-\chapter{ch4. Design Concept \& MVP(Minimum Viable Product)
-Design}\label{ch4.-design-concept-mvpminimum-viable-product-design}
-
-\section{디자인 콘셉트와
+\chapter{디자인 콘셉트와
 가설(hypothesis)}\label{uxb514uxc790uxc778-uxcf58uxc149uxd2b8uxc640-uxac00uxc124hypothesis}
+
+\# ch4. Design Concept \& MVP(Minimum Viable Product) Design
 
 실습과제 6에서 KPI를 설정했다면 KPI를 개선할 수 있는 디자인 해결안의
 콘셉트를 개발해보겠습니다. UX 디자인 콘셉트는 디자인을 통하여 사용자
@@ -3712,10 +3684,12 @@ Design}\label{ch4.-design-concept-mvpminimum-viable-product-design}
 
 다음 내용은 예시의 가설(hypothesis)입니다.
 
+\begin{quote}
 ``카드 보낼 준비가 된 사용자들은 더 많은 코인을 한꺼번에 구매하는 것이
 더 가치 있다고 인식하기 때문에 더 큰 코인 패키지를 구매할 것이다. 이는
 평균 주문 금액(Average Order Value)을 증가시키고, 전환율에는 큰 변화가
 없으면서도 전체적인 수익을 높이는 결과를 가져올 것이다.``
+\end{quote}
 
 개선 디자인에 대한 A/B 테스트 결과는 어땠을까요? 개선 디자인에서 수익이
 증가했을 뿐 아니라 구매로 이어지는 전환율도 높아지는 좋은 성과를
@@ -3996,10 +3970,12 @@ F-test를 시행하여 등분산성을 확인하고, 등분산성을 만족하�
 등분산을 만족하지 않는 옵션으로 T-test를 실시할 예정입니다. 그럼 F-test
 의 시행 방법을 아래의 건강 관리 앱 사례로 알아보겠습니다.
 
+\begin{quote}
 XXX 앱은 사용자의 일일 걸음 수, 수면 시간, 물 섭취량 등을 추적하는
 헬스케어 앱이다. 최근 AI 기반의 맞춤형 건강 관리 기능을 새로 도입했다.
 이 새로운 기능이 사용자의 건강 습관과 앱 사용 패턴에 미치는 영향을
 테스트하고자 한다.
+\end{quote}
 
 여기에서 기존의 디자인 (A 디자인)과 AI 맞춤형 건강 관리 기능을 적용한
 개선 디자인(B 디자인)을 사용한 사람들의 물 섭취 패턴에 변화가 있는지를
@@ -4320,7 +4296,7 @@ T-test)}\label{uxc5d1uxc140uxc758-uxbd84uxc11duxb3c4uxad6cuxd329uxc744-uxc0acuxc
 \textgreater{} 기타 출력 옵션 설정을 하면 아래 그림의 하단 표와 같이
 정리된 표 형태로 검정 테스트 관련 값들이 출력됩니다.
 
-{[}그림 28{]}은 수업에서 사용한 연습 데이터로 3개 설문 문항에 대하여 각
+그림 14.1은 수업에서 사용한 연습 데이터로 3개 설문 문항에 대하여 각
 문항의 A디자인(우), B디자인(좌)에 대한 사용자 응답 결과를 대응하여
 입력하였고, 각 문항 별로 등분산 여부(FTEST)와 두 값의 차이 여부(TTEST)를
 24, 25행에 출력한 사례입니다. 그리고 그림에서 상단 입력 내용 창에는 문항
@@ -4360,7 +4336,7 @@ T-test)}\label{uxc5d1uxc140uxc758-uxbd84uxc11duxb3c4uxad6cuxd329uxc744-uxc0acuxc
 \section{통계 계산기: T-Test Calculator를 사용한 가설
 검정}\label{uxd1b5uxacc4-uxacc4uxc0b0uxae30-t-test-calculatoruxb97c-uxc0acuxc6a9uxd55c-uxac00uxc124-uxac80uxc815}
 
-아래 {[}그림 29{]}는 {[}그림 28{]}의 5번 문항 데이터를 T-Test Calculator
+아래 그림 14.2는 그림 14.1의 5번 문항 데이터를 T-Test Calculator
 서비스에 넣어서 데이터 분석과 해석을 출력한 사례입니다. 이것은 웹기반의
 통계 계산 서비스를 활용한 것으로, GUI메뉴로 데이터를 입력하면, 해당 통계
 계산을 해서 출력과 자세한 데이터 분석을 제공합니다. 현재 테스트
@@ -4979,8 +4955,8 @@ B' 디자인은 서비스의 실질적인 최종 디자인은 아닙니다. 새�
 
 }
 
-\caption{{[}그림 32{]}의 프로젝트에 대한 기존 디자인 A,개선 디자인 B,
-최종 디자인 B' 화면의 디자인 비교 서술 예시}
+\caption{그림 17.1의 프로젝트에 대한 기존 디자인 A,개선 디자인 B, 최종
+디자인 B' 화면의 디자인 비교 서술 예시}
 
 \end{figure}%
 

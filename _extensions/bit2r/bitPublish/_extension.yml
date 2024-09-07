@@ -1,7 +1,6 @@
 title: "bitPublish"
 author: "Choonghyun Ryu"
 version: 0.4.2
-
 contributes:
   format:
     pdf:
@@ -18,38 +17,28 @@ contributes:
         - centering     
       fig-cap-location: bottom
       tbl-cap-location: bottom
-      toc: true               # 목차 활성화
-      toc-depth: 2            # 목차 깊이 설정
+      toc: true  # 목차 활성화
+      toc-depth: 2  # 목차 깊이 설정
       crossref:
         fig-title: "그림"
         tbl-title: "표"
       include-in-header:
         - text: |
             \usepackage{fancyhdr}
-            \usepackage{tocbibind}   % 목차에 목차, 목록 포함
+            \usepackage{tocbibind}
             \pagestyle{fancy}
-
-            %% 폰트 사이즈 정의
             \newcommand{\changesize}{%
               \fontsize{8}{10}\selectfont
             }
-
-            %% 머리글 바닥글의 위한 폰트 스타일 정의
-            % 장/절 번호 파트: 볼드 돋움체
             \newcommand{\numberfont}{%
               \hangulfontspec[ExternalLocation=_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/]{KoPubWorld Dotum_Pro Light.otf}\bfseries\selectfont
             }
-            % 장/절 라벨 파트: 돋움체
             \newcommand{\labelfont}{%
               \hangulfontspec[ExternalLocation=_extensions/bit2r/bitPublish/fonts/KOPUBWORLD_OTF_FONTS/]{KoPubWorld Dotum_Pro Light.otf}\selectfont
             }
-            %% 페이지 번호 파트
             \newcommand*\pagefont{\normalfont\bfseries\sffamily}
-
-            %% Rule 라인 제거
-            \renewcommand {\headrulewidth}{0pt} % 라인 제거
-            \renewcommand {\footrulewidth}{0pt} % 라인 제거
-
+            \renewcommand {\headrulewidth}{0pt}
+            \renewcommand {\footrulewidth}{0pt}
             \makeatletter
             \DeclareRobustCommand{\format@sec@number}[2]{{\numberfont\upshape#1}#2}
             \renewcommand{\chaptermark}[1]{%
@@ -57,25 +46,24 @@ contributes:
             \renewcommand{\sectionmark}[1]{%
               \markright{{\numberfont \thesection.} {\labelfont #1}}{}}
             \makeatother
-
             \fancyhf{}
-            \fancyhead[EL]{\changesize \numberfont --- 데이터 기반 디자인과 A/B 테스팅의 핵심 개념과 사례}
-            \fancyhead[OR]{\changesize \numberfont 모바일 앱 디자인 대상의 단계별 실습 과제 수록 ---}
             \fancyfoot[EL]{{\pagefont\thepage}{\hskip4mm}{\changesize \leftmark}}
             \fancyfoot[OR]{{\changesize \rightmark}{\hskip4mm}{\pagefont\thepage}}
-
-            %% 코드 overflow 방지
             \usepackage{fvextra}
             \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-        - file: bitPublish.tex
+        - file: bitPublish.tex  # 이 설정은 유지
       include-after-body:
         - text: |
             \printindex
-      pdf-engine: xelatex
+      pdf-engine: xelatex  # PDF 엔진은 Xelatex 유지
       latex-makeindex: texindy
       latex-makeindex-opts: -Mlang/korean/utf8-lang
       cite-method: biblatex
       linkcolor: highlight
       urlcolor: highlight
-      keep-tex: false
+      keep-tex: true  # tex 파일을 유지하여 디버깅 가능하게 설정
       keep-md: false
+
+# 추가적인 설정
+editor_options:
+  chunk_output_type: console
