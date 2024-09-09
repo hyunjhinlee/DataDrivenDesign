@@ -1,0 +1,100 @@
+project:
+  type: book
+  output-dir: docs
+  preview:
+    browser: true
+  resources:
+    - "data/*.mp3"
+  render:
+    - "*.qmd"
+    - "!*.Rmd"
+    - "!to_do.qmd"
+
+lang: ko-KR
+
+book:
+  title: "데이터 기반 디자인과 A/B 테스팅"
+  reader-mode: true
+  subtitle: |
+    데이터 기반 디자인과 A/B 테스팅의 핵심 개념과 사례 \
+    모바일 앱 디자인 대상의 단계별 실습 과제 수록
+  author:
+    - name: "이현진"
+      affiliations: "홍익대학교"
+  date: last-modified
+  date-format: "YYYY년 MM월 DD일"
+  chapters:
+    - index.qmd
+    - part: "**Part 1. UX 디자인과 데이터**"
+      chapters:
+        - "part 1. UX 디자인과 데이터.qmd"
+        - "ch1. UX 디자인의 오늘과 변화의 방향.qmd"
+        - "ch2. UX 디자인과 데이터, AI.qmd"
+        - "ch3. 데이터 기반 디자인 (Data Driven Design).qmd"
+    
+    - part: "**Part 2. 디자인 리서치를 위한 탐구적 데이터 분석**"
+      chapters:
+        - "part 2. 디자인 리서치를 위한 탐구적 데이터 분석.qmd"
+        - "ch1. 디자인 리서치와 탐구적 데이터 분석.qmd"
+        - "ch2. 디자인 리서치를 위한 탐구적 데이터 분석 사례 (1).qmd"
+        - "ch3. 디자인 리서치를 위한 탐구적 데이터 분석 사례 (2).qmd"
+        - "ch4. EDA를 위한 데이터 분석 도구들.qmd"
+        - "ch5. Lean UX 프로세스와 데이터 기반 디자인.qmd"
+    
+    - part: "**Part 3. 기존 디자인(A 디자인) 리서치와 개선 디자인(B 디자인) 제안**"
+      chapters:
+        - "part 3. 기존 디자인(A 디자인) 리서치와 개선 디자인(B 디자인) 제안.qmd"
+        - "ch1. 실습과제의 디자인 프로세스, 주제 선정.qmd"
+        - "ch2. 데이터 큐레이션과 EDA, 디자인 인사이트.qmd"
+        - "ch3. 디자인 문제의 구조와 KPI.qmd"
+        - "ch4. Design Concept & MVP(Minimum Viable Product) Design.qmd"
+    
+    - part: "**Part 4. 개선 디자인의 검증: A/B Testing**"
+      chapters:
+        - "part 4. 개선 디자인의 검증 - A_B Testing.qmd"
+        - "ch1. AB 테스팅을 위한 기초 통계와 가설 검증 기법.qmd"
+        - "ch2. F-test와 T-test의 실습 방법들.qmd"
+        - "ch3. 실습 과제의 AB 테스팅 기획.qmd"
+        - "ch4. AB 테스팅 실행 및 결과의 해석.qmd"
+        - "ch5. AB 테스팅 결과의 디자인 반영.qmd"
+    - "맺음말: 다음 테스트를 위하여.qmd"
+    - references.qmd
+
+format:
+  html:
+    theme:
+      light: [cosmo, r2bit.scss]
+    mermaid:
+      theme: neutral
+    number-depth: 3
+    number-sections: false
+    colorlinks: true
+    code-overflow: wrap
+    code-link: true
+    author-meta: "이현진"
+    callout-appearance: simple
+    tbl-cap-location: bottom
+    lst-cap-location: bottom
+    css: style.css
+
+webr:
+  packages: ["stringr", "dplyr"]
+
+engine: knitr
+
+knitr:
+  opts_chunk:
+    message: false
+    warning: false
+    collapse: true
+    code-overflow: wrap
+    fig-crop: false
+    comment: "#>"
+    R.options:
+      knitr.graphics.auto_pdf: true
+
+editor_options:
+  chunk_output_type: console
+
+editor:
+  source: true
